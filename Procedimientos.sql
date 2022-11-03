@@ -52,3 +52,89 @@ close Medicamentos
 
 Deallocate Medicamentos
 
+
+create procedure Insertar_Medicamento
+@IdLaboratorio int,@Nombre varchar(30),@PrecioCompra money, @precioVenta money,@Stock int, @stockMinimo int
+as
+begin
+insert into Medicamento values(@IdLaboratorio,@Nombre,@PrecioCompra,@precioVenta,@Stock,@stockMinimo)
+end
+
+execute Insertar_Medicamento 0,'Lorazepam',222,555,2,1
+
+select * from Medicamento
+
+create procedure Actualizar_Medicamento
+ @idMedicamento int, @IdLaboratorio int,@Nombre varchar(30),@PrecioCompra money, @precioVenta money,@Stock int, @stockMinimo int
+as
+update Medicamento
+set Nombre=@Nombre, PrecioCompra=@PrecioCompra,PrecioVenta=@precioVenta,Stock=Stock+@Stock,StockMinimo=@stockMinimo,IdLaboratorio=@IdLaboratorio
+where IdMedicamento=@idMedicamento
+
+execute Actualizar_Medicamento 0,0,'Lorazepam',222,555,55,1
+
+select * from Medicamento
+create procedure Insertar_Laboratorio
+ @Nombre varchar(30)
+as
+begin 
+insert into Laboratorio values(@Nombre)
+end
+
+execute Insertar_Laboratorio 'Ramos'
+
+select * from Laboratorio
+ create procedure Actualizar_Laboratorio
+@idLaboratorio int, @NombreCambiado varchar(30)
+as
+	begin
+		update Laboratorio 
+		set Nombre=@NombreCambiado
+		where IdLaboratorio=@idLaboratorio
+	end
+
+execute Actualizar_Laboratorio 0,'Ramos S.A'
+
+select * from Laboratorio
+
+/*
+create table Medicamento(
+	IdMedicamento int primary key identity(0, 1),
+	IdLaboratorio int,
+	Nombre varchar(30) not null,
+	PrecioCompra money not null,
+	PrecioVenta money not null,
+	Stock int not null,
+	StockMinimo int not null
+)
+go
+
+*/
+create Procedure Mostrar_Medicamentos
+as 
+begin
+select	M.IdMedicamento as [Id del Medicamento], (select Nombre from Laboratorio where IdLaboratorio=M.IdLaboratorio) as Laboratorio,
+M.Nombre as [Medicamento], Round(M.PrecioCompra,2) as [Precio comprado], ROUND(M.PrecioVenta,2) as [Precio a vender], M.Stock as [Cantidad en inventario], M.StockMinimo as [Cantidad minima a tener]
+from Medicamento as M
+end
+execute Mostrar_Medicamentos
+
+create procedure Mostrar_Laboratorios
+as
+begin 
+select L.IdLaboratorio as [Id del Laboratorio], L.Nombre as [Laboratorio]  from Laboratorio as L
+end
+
+execute Mostrar_Laboratorios
+
+
+create procedure CantidadMedicamento	
+as
+begin 
+select count(*) as CantidadMedicamento from Medicamento 
+end
+execute CantidadMedicamento
+/*
+
+
+*/

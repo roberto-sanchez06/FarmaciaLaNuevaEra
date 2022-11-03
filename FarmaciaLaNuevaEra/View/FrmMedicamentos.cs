@@ -33,6 +33,7 @@ namespace FarmaciaLaNuevaEra.View
         {
             FrmEspecificacionMedicamento frmEspecificacionMedicamento = new FrmEspecificacionMedicamento();
             frmEspecificacionMedicamento.ShowDialog();
+            dgvMedicamentos.DataSource = CMedicamentos.MostrarMedicamentos();
 ;        }
     }
 }

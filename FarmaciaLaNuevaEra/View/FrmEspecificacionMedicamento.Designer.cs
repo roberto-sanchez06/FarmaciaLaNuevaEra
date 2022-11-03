@@ -45,10 +45,11 @@ namespace FarmaciaLaNuevaEra.View
             this.lblStock = new System.Windows.Forms.Label();
             this.txtStock = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblStockMinimo = new System.Windows.Forms.Label();
-            this.txtMinimo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtStockMinimo = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAgregarLaboratorio = new System.Windows.Forms.Label();
             this.btnAgregarLaboratorio = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnAgregarMedicamento = new Guna.UI2.WinForms.Guna2Button();
+            this.lblLaboratorio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -241,26 +242,26 @@ namespace FarmaciaLaNuevaEra.View
             this.lblStockMinimo.TabIndex = 17;
             this.lblStockMinimo.Text = "Cantidades mínimas:";
             // 
-            // txtMinimo
+            // txtStockMinimo
             // 
-            this.txtMinimo.BorderColor = System.Drawing.Color.Silver;
-            this.txtMinimo.BorderRadius = 3;
-            this.txtMinimo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMinimo.DefaultText = "";
-            this.txtMinimo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMinimo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMinimo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMinimo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMinimo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMinimo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMinimo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMinimo.Location = new System.Drawing.Point(175, 229);
-            this.txtMinimo.Name = "txtMinimo";
-            this.txtMinimo.PasswordChar = '\0';
-            this.txtMinimo.PlaceholderText = "";
-            this.txtMinimo.SelectedText = "";
-            this.txtMinimo.Size = new System.Drawing.Size(124, 36);
-            this.txtMinimo.TabIndex = 16;
+            this.txtStockMinimo.BorderColor = System.Drawing.Color.Silver;
+            this.txtStockMinimo.BorderRadius = 3;
+            this.txtStockMinimo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStockMinimo.DefaultText = "";
+            this.txtStockMinimo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtStockMinimo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtStockMinimo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStockMinimo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStockMinimo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStockMinimo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtStockMinimo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStockMinimo.Location = new System.Drawing.Point(175, 229);
+            this.txtStockMinimo.Name = "txtStockMinimo";
+            this.txtStockMinimo.PasswordChar = '\0';
+            this.txtStockMinimo.PlaceholderText = "";
+            this.txtStockMinimo.SelectedText = "";
+            this.txtStockMinimo.Size = new System.Drawing.Size(124, 36);
+            this.txtStockMinimo.TabIndex = 16;
             // 
             // lblAgregarLaboratorio
             // 
@@ -289,6 +290,7 @@ namespace FarmaciaLaNuevaEra.View
             this.btnAgregarLaboratorio.PressedState.ImageSize = new System.Drawing.Size(38, 38);
             this.btnAgregarLaboratorio.Size = new System.Drawing.Size(51, 54);
             this.btnAgregarLaboratorio.TabIndex = 19;
+            this.btnAgregarLaboratorio.Click += new System.EventHandler(this.btnAgregarLaboratorio_Click);
             // 
             // btnAgregarMedicamento
             // 
@@ -306,6 +308,17 @@ namespace FarmaciaLaNuevaEra.View
             this.btnAgregarMedicamento.TabIndex = 20;
             this.btnAgregarMedicamento.Text = "Agregar";
             this.btnAgregarMedicamento.Tile = true;
+            this.btnAgregarMedicamento.Click += new System.EventHandler(this.btnAgregarMedicamento_Click);
+            // 
+            // lblLaboratorio
+            // 
+            this.lblLaboratorio.AutoSize = true;
+            this.lblLaboratorio.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLaboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblLaboratorio.Location = new System.Drawing.Point(21, 339);
+            this.lblLaboratorio.Name = "lblLaboratorio";
+            this.lblLaboratorio.Size = new System.Drawing.Size(0, 16);
+            this.lblLaboratorio.TabIndex = 21;
             // 
             // FrmEspecificacionMedicamento
             // 
@@ -313,11 +326,12 @@ namespace FarmaciaLaNuevaEra.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(381, 445);
+            this.Controls.Add(this.lblLaboratorio);
             this.Controls.Add(this.btnAgregarMedicamento);
             this.Controls.Add(this.btnAgregarLaboratorio);
             this.Controls.Add(this.lblAgregarLaboratorio);
             this.Controls.Add(this.lblStockMinimo);
-            this.Controls.Add(this.txtMinimo);
+            this.Controls.Add(this.txtStockMinimo);
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.lblPrecioDeVenta);
@@ -333,6 +347,7 @@ namespace FarmaciaLaNuevaEra.View
             this.Name = "FrmEspecificacionMedicamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmEspecificacionMedicamento";
+            this.Load += new System.EventHandler(this.FrmEspecificacionMedicamento_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,7 +364,7 @@ namespace FarmaciaLaNuevaEra.View
         private System.Windows.Forms.Label lblCantidadDeLetras;
         private System.Windows.Forms.Label lblAgregarLaboratorio;
         private System.Windows.Forms.Label lblStockMinimo;
-        private Guna.UI2.WinForms.Guna2TextBox txtMinimo;
+        private Guna.UI2.WinForms.Guna2TextBox txtStockMinimo;
         private System.Windows.Forms.Label lblStock;
         private Guna.UI2.WinForms.Guna2TextBox txtStock;
         private System.Windows.Forms.Label lblPrecioDeVenta;
@@ -358,5 +373,6 @@ namespace FarmaciaLaNuevaEra.View
         private Guna.UI2.WinForms.Guna2TextBox txtPrecioDeCompra;
         private Guna.UI2.WinForms.Guna2ImageButton btnAgregarLaboratorio;
         private Guna.UI2.WinForms.Guna2Button btnAgregarMedicamento;
+        private System.Windows.Forms.Label lblLaboratorio;
     }
 }

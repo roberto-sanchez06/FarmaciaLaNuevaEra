@@ -29,6 +29,10 @@ namespace FarmaciaLaNuevaEra.Controller
         {
             return DLaboratorio.MostrarLaboratorios();
         }
+        public static DataTable MostrarLaboratorio(int id)
+        {
+            return DLaboratorio.MostrarLaboratorio(id);
+        }
 
     }
 }

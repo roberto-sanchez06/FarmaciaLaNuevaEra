@@ -21,6 +21,7 @@ namespace FarmaciaLaNuevaEra.Data
             try
             {
                 SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
@@ -47,7 +48,9 @@ namespace FarmaciaLaNuevaEra.Data
             SqlConnection SqlCon = new SqlConnection();
             try
             {
+
                 SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
@@ -91,6 +94,28 @@ namespace FarmaciaLaNuevaEra.Data
             }
             return DtResultado;
         }
+        public static DataTable MostrarLaboratorio(int id)
+        {
+            DataTable DtResultado = new DataTable("MostrarLaboratorios");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "MostrarLaboratorio";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.Add(Parametros.parametro("@idLaboratorio", SqlDbType.Int, 0, id));
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
 
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
     }
 }

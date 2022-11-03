@@ -27,8 +27,10 @@ namespace FarmaciaLaNuevaEra.Data
             try
             {
                 SqlCon.ConnectionString = Conexion.Cn;
+                
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
+                SqlCon.Open();
                 SqlCmd.Connection = SqlCon;
                 SqlCmd.CommandText = "Insertar_Medicamento";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
