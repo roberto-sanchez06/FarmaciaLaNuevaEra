@@ -33,6 +33,7 @@ namespace FarmaciaLaNuevaEra.View
                 {
                     DataRow dr;
                     dr = dato.Rows[0];
+
                     if(dr["Resultado"].ToString()=="Acceso Exitoso")
                     {
                         MessageBox.Show("Si");

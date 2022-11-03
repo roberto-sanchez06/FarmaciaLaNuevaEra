@@ -39,3 +39,19 @@ F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debu
 F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
 F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
 F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmPrincipal.resources
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
