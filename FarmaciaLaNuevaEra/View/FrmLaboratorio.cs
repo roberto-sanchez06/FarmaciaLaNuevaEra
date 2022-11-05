@@ -27,15 +27,16 @@ namespace FarmaciaLaNuevaEra.View
 
         private void btnAgregarLaboratorio_Click(object sender, EventArgs e)
         {
-           
+
             FrmEspecificacionLaboratorio frmEspecificacionLaboratorio = new FrmEspecificacionLaboratorio(true);
             frmEspecificacionLaboratorio.Show();
             dgvLaboratorios.DataSource = CLaboratorio.MostrarLaboratorios(cmbTipoLaboratorio.SelectedIndex == 0 ? true : false);
+
         }
 
         private void FrmLaboratorio_Activated(object sender, EventArgs e)
         {
-            dgvLaboratorios.DataSource = CLaboratorio.MostrarLaboratorios(cmbTipoLaboratorio.SelectedIndex==0 ? true : false);
+            dgvLaboratorios.DataSource = CLaboratorio.MostrarLaboratorios(cmbTipoLaboratorio.SelectedIndex == 0 ? true : false);
         }
 
         private void dgvLaboratorios_MouseClick(object sender, MouseEventArgs e)
@@ -44,6 +45,7 @@ namespace FarmaciaLaNuevaEra.View
             {
                 ContextMenu m = new ContextMenu();
                 m.MenuItems.Add(new MenuItem("Actualizar"));
+                m.MenuItems[0].Click += MenuItemsActualizar_Laboratorio;
                 if (cmbTipoLaboratorio.SelectedIndex == 0)
                 {
                     m.MenuItems.Add(new MenuItem("Eliminar laboratorio"));
@@ -58,28 +60,35 @@ namespace FarmaciaLaNuevaEra.View
                 Dictionary<string, dynamic> Laboratorio = new Dictionary<string, dynamic>();
                 Laboratorio.Add("Id", dgvLaboratorios.Rows[currentMouseOverRow].Cells[0].Value);
                 Laboratorio.Add("Nombre", dgvLaboratorios.Rows[currentMouseOverRow].Cells[1].Value);
+                m.MenuItems[0].Tag = Laboratorio;
                 m.MenuItems[1].Tag = Laboratorio;
                 if (currentMouseOverRow >= 0)
                 {
                     m.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
                 }
 
-                m.Show(dgvLaboratorios , new Point(e.X, e.Y));
+                m.Show(dgvLaboratorios, new Point(e.X, e.Y));
 
             }
+        }
+        private void MenuItemsActualizar_Laboratorio(object sender, EventArgs e)
+        {
+            MenuItem menuItem = (sender as MenuItem);
+            Dictionary<string, dynamic> Laboratorio = (Dictionary<string, dynamic>)menuItem.Tag;
+            int Id = Laboratorio["Id"];
+            FrmEspecificacionLaboratorio frmEspecificacionLaboratorio = new FrmEspecificacionLaboratorio(false, Laboratorio["Nombre"], Id,cmbTipoLaboratorio.SelectedIndex==0 ? true: false);
+            frmEspecificacionLaboratorio.ShowDialog();
+            dgvLaboratorios.DataSource = CLaboratorio.MostrarLaboratorios(cmbTipoLaboratorio.SelectedIndex == 0 ? true : false);
+
         }
 
         private void MenuItemsVolver_Laboratorio(object sender, EventArgs e)
         {
             MenuItem menuItem = (sender as MenuItem);
             Dictionary<string, dynamic> Laboratorio = (Dictionary<string, dynamic>)menuItem.Tag;
-
             int Id = Laboratorio["Id"];
-                CLaboratorio.ActualizarLaboratorio(Id, Laboratorio["Nombre"], true);
-         
-           
-                MessageBox.Show(Laboratorio["Nombre"] + " Se ha reestablecido");
-            
+            CLaboratorio.ActualizarLaboratorio(Id, Laboratorio["Nombre"], true);
+            MessageBox.Show(Laboratorio["Nombre"] + " Se ha reestablecido");
             dgvLaboratorios.DataSource = CLaboratorio.MostrarLaboratorios(false);
 
         }
@@ -87,7 +96,7 @@ namespace FarmaciaLaNuevaEra.View
         private void MenuItemsEliminar_Click(object sender, EventArgs e)
         {
             MenuItem menuItem = (sender as MenuItem);
-            Dictionary<string, dynamic> Laboratorio =(Dictionary<string,dynamic>) menuItem.Tag;
+            Dictionary<string, dynamic> Laboratorio = (Dictionary<string, dynamic>)menuItem.Tag;
 
             int Id = Laboratorio["Id"];
             CLaboratorio.ActualizarLaboratorio(Id, Laboratorio["Nombre"], false);
@@ -102,7 +111,8 @@ namespace FarmaciaLaNuevaEra.View
             {
                 dgvLaboratorios.DataSource = CLaboratorio.MostrarLaboratorios(true);
             }
-            else {
+            else
+            {
                 dgvLaboratorios.DataSource = CLaboratorio.MostrarLaboratorios(false);
             }
         }

@@ -14,13 +14,23 @@ namespace FarmaciaLaNuevaEra.View
     public partial class FrmEspecificacionLaboratorio : Form
     {
         private bool Creacion;
-
+        private int ID;
       
         public FrmEspecificacionLaboratorio(bool creacion)
         {
             InitializeComponent();
             this.Creacion = creacion;
             this.StEstado.Enabled = Creacion == true ? false : true;
+        }
+        public FrmEspecificacionLaboratorio(bool creacion,string nombre,int id,bool check)
+        {
+            InitializeComponent();
+            this.txtNombre.Text = nombre;
+            Creacion = creacion;
+            this.StEstado.Enabled = Creacion == true ? false : true;
+            this.btnAgregarLaboratorio.Text = "Actualizar";
+            this.StEstado.Checked = check;
+            this.ID = id;
         }
         private bool VerificarFormulario()
         {
@@ -37,7 +47,12 @@ namespace FarmaciaLaNuevaEra.View
                 MessageBox.Show("Rellene todo el formulario");
                 return;
             }
-            CLaboratorio.InsertarLaboratorio(txtNombre.Text);
+            if(Creacion)
+                CLaboratorio.InsertarLaboratorio(txtNombre.Text);
+            else
+            {
+                CLaboratorio.ActualizarLaboratorio(ID,txtNombre.Text,StEstado.Checked);
+            }
             this.Close();
         }
 

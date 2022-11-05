@@ -38,6 +38,8 @@ namespace FarmaciaLaNuevaEra.View
             this.StEstado = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.lblEstado = new System.Windows.Forms.Label();
             this.btnAgregarLaboratorio = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -60,7 +62,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblCantidadDeLetras.AutoSize = true;
             this.lblCantidadDeLetras.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadDeLetras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCantidadDeLetras.Location = new System.Drawing.Point(279, 80);
+            this.lblCantidadDeLetras.Location = new System.Drawing.Point(279, 89);
             this.lblCantidadDeLetras.Name = "lblCantidadDeLetras";
             this.lblCantidadDeLetras.Size = new System.Drawing.Size(30, 16);
             this.lblCantidadDeLetras.TabIndex = 12;
@@ -71,7 +73,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblNombreLaboratorio.AutoSize = true;
             this.lblNombreLaboratorio.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreLaboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNombreLaboratorio.Location = new System.Drawing.Point(26, 22);
+            this.lblNombreLaboratorio.Location = new System.Drawing.Point(26, 31);
             this.lblNombreLaboratorio.Name = "lblNombreLaboratorio";
             this.lblNombreLaboratorio.Size = new System.Drawing.Size(133, 16);
             this.lblNombreLaboratorio.TabIndex = 11;
@@ -90,7 +92,7 @@ namespace FarmaciaLaNuevaEra.View
             this.txtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.Location = new System.Drawing.Point(23, 41);
+            this.txtNombre.Location = new System.Drawing.Point(23, 50);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.PlaceholderText = "";
@@ -107,7 +109,7 @@ namespace FarmaciaLaNuevaEra.View
             this.StEstado.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.StEstado.CheckedState.InnerColor = System.Drawing.Color.White;
             this.StEstado.Enabled = false;
-            this.StEstado.Location = new System.Drawing.Point(162, 127);
+            this.StEstado.Location = new System.Drawing.Point(162, 132);
             this.StEstado.Name = "StEstado";
             this.StEstado.Size = new System.Drawing.Size(35, 20);
             this.StEstado.TabIndex = 13;
@@ -121,7 +123,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEstado.Location = new System.Drawing.Point(26, 129);
+            this.lblEstado.Location = new System.Drawing.Point(26, 134);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(123, 16);
             this.lblEstado.TabIndex = 14;
@@ -145,12 +147,39 @@ namespace FarmaciaLaNuevaEra.View
             this.btnAgregarLaboratorio.Tile = true;
             this.btnAgregarLaboratorio.Click += new System.EventHandler(this.btnAgregarLaboratorio_Click);
             // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.CustomIconSize = 8F;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.DimGray;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(317, 0);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(23, 29);
+            this.guna2ControlBox2.TabIndex = 23;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.CustomIconSize = 8F;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.DimGray;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(341, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(28, 28);
+            this.guna2ControlBox1.TabIndex = 22;
+            // 
             // FrmEspecificacionLaboratorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(371, 246);
+            this.Controls.Add(this.guna2ControlBox2);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.btnAgregarLaboratorio);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.StEstado);
@@ -159,6 +188,7 @@ namespace FarmaciaLaNuevaEra.View
             this.Controls.Add(this.txtNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEspecificacionLaboratorio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmEspecificacionLaboratorio";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,5 +205,7 @@ namespace FarmaciaLaNuevaEra.View
         private Guna.UI2.WinForms.Guna2TextBox txtNombre;
         private System.Windows.Forms.Label lblEstado;
         private Guna.UI2.WinForms.Guna2Button btnAgregarLaboratorio;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

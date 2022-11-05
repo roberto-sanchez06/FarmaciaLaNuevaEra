@@ -35,23 +35,10 @@ namespace FarmaciaLaNuevaEra.View
             frmEspecificacionMedicamento.ShowDialog();
             dgvMedicamentos.DataSource = CMedicamentos.MostrarMedicamentos(cmbTipoMedicamento.SelectedIndex==0 ? true : false);
 ;        }
-
         private void dgvMedicamentos_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
-                ContextMenu m = new ContextMenu();
-                m.MenuItems.Add(new MenuItem("Actualizar"));
-                if (cmbTipoMedicamento.SelectedIndex == 0)
-                {
-                    m.MenuItems.Add(new MenuItem("Eliminar medicamento"));
-                    m.MenuItems[1].Click += MenuItemsEliminar_Click;
-                }
-                else
-                {
-                    m.MenuItems.Add(new MenuItem("Volver medicamento"));
-                    m.MenuItems[1].Click += MenuItemsVolver_Medicamento;
-                }
                 int currentMouseOverRow = dgvMedicamentos.HitTest(e.X, e.Y).RowIndex;
                 Dictionary<string, dynamic> Medicamento = new Dictionary<string, dynamic>();
                 Medicamento.Add("Id", dgvMedicamentos.Rows[currentMouseOverRow].Cells[0].Value);
@@ -61,17 +48,45 @@ namespace FarmaciaLaNuevaEra.View
                 Medicamento.Add("PrecioVendido", dgvMedicamentos.Rows[currentMouseOverRow].Cells[5].Value);
                 Medicamento.Add("CantidadInventario", dgvMedicamentos.Rows[currentMouseOverRow].Cells[6].Value);
                 Medicamento.Add("CantidadMinima", dgvMedicamentos.Rows[currentMouseOverRow].Cells[7].Value);
-                //Medicamento.Add("IdLaboratorio")
-                m.MenuItems[1].Tag = Medicamento;
-                if (currentMouseOverRow >= 0)
+                ContextMenu m = new ContextMenu();
+                if (cmbTipoMedicamento.SelectedIndex == 0)
                 {
-                    m.MenuItems.Add(new MenuItem(string.Format("Do something to row {0}", currentMouseOverRow.ToString())));
+                    m.MenuItems.Add(new MenuItem("Actualizar"));
+                    m.MenuItems[0].Click += MenuItemsActualizar_Medicamento;
+                    m.MenuItems[0].Tag = Medicamento;
                 }
+               
+                if (cmbTipoMedicamento.SelectedIndex == 0)
+                {
+                    m.MenuItems.Add(new MenuItem("Eliminar medicamento"));
+                    m.MenuItems[1].Click += MenuItemsEliminar_Click;
+                    m.MenuItems[1].Tag = Medicamento;
+                }
+                else
+                {
+                    m.MenuItems.Add(new MenuItem("Volver medicamento"));
+                    m.MenuItems[0].Click += MenuItemsVolver_Medicamento;
+                    m.MenuItems[0].Tag = Medicamento;
+                }
+               
+       
 
                 m.Show(dgvMedicamentos, new Point(e.X, e.Y));
 
             }
         }
+        private void MenuItemsActualizar_Medicamento(object sender, EventArgs e)
+        {
+            MenuItem menuItem = (sender as MenuItem);
+            Dictionary<string, dynamic> Medicamento = (Dictionary<string, dynamic>)menuItem.Tag;
+            int Id = Medicamento["Id"];
+            int IdLaboratorio = Medicamento["IdLaboratorio"];
+            FrmEspecificacionMedicamento frmEspecificacionMedicamento = 
+           new FrmEspecificacionMedicamento(IdLaboratorio, Id, Medicamento["Nombre"], Medicamento["PrecioComprado"], Medicamento["PrecioVendido"],  Medicamento["CantidadMinima"],Medicamento["CantidadInventario"],true);
+            frmEspecificacionMedicamento.ShowDialog();
+            dgvMedicamentos.DataSource = CMedicamentos.MostrarMedicamentos(true);
+        }
+
 
         private void MenuItemsVolver_Medicamento(object sender, EventArgs e)
         {
@@ -86,7 +101,7 @@ namespace FarmaciaLaNuevaEra.View
             }
             else
             {
-                MessageBox.Show(Medicamento["Nombre"] + " Se ha reestablecido");
+                MessageBox.Show(Medicamento["Nombre"] + " se ha reestablecido");
 
             }
             dgvMedicamentos.DataSource = CMedicamentos.MostrarMedicamentos(false);
@@ -99,7 +114,7 @@ namespace FarmaciaLaNuevaEra.View
             int Id = Medicamento["Id"];
             int IdLaboratorio = Medicamento["IdLaboratorio"];
             CMedicamentos.ActualizarMedicamento(Id, IdLaboratorio,Medicamento["Nombre"], Medicamento["PrecioComprado"], Medicamento["PrecioVendido"], Medicamento["CantidadInventario"], Medicamento["CantidadMinima"], false);
-            MessageBox.Show(Medicamento["Nombre"] + " Se ha eliminado");
+            MessageBox.Show(Medicamento["Nombre"] + " se ha eliminado");
             dgvMedicamentos.DataSource = CMedicamentos.MostrarMedicamentos(true);
         }
 

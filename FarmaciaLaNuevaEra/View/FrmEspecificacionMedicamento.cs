@@ -14,6 +14,10 @@ namespace FarmaciaLaNuevaEra.View
     public partial class FrmEspecificacionMedicamento : Form
     {
         private int IdLaboratorio = -1;
+        private int Cantidad;
+        private bool Estado;
+        private int Id;
+        private bool Creacion;
         public void AgregarTooltips()
         {
             ToolTip toolTipAgregarLaboratorio = new ToolTip();
@@ -22,9 +26,26 @@ namespace FarmaciaLaNuevaEra.View
         public FrmEspecificacionMedicamento()
         {
             InitializeComponent();
+            AgregarTooltips();
+        }
+
+        public FrmEspecificacionMedicamento(int idLaboratorio, int id,string nombre, decimal PrecioCompra, decimal PrecioVenta, int CantidadMinima, int cantidad,bool estado)
+        {
+            InitializeComponent();
+            this.btnNombre.Text = nombre;
+            this.txtPrecioDeVenta.Text = PrecioVenta.ToString();
+            this.txtPrecioDeCompra.Text = PrecioCompra.ToString();
+            this.txtStockMinimo.Text = CantidadMinima.ToString();
+            this.Cantidad = cantidad;
+            this.IdLaboratorio = idLaboratorio;
+            this.Estado = estado;
+            this.Id = id;
+            btnAgregarLaboratorio.Text = "Actualizar";
+            this.Creacion = false;
+            AgregarTooltips();
         }
         #region txtNombre
-   
+
         private void btnNombre_TextChanged(object sender, EventArgs e)
         {
             if (btnNombre.Text.Length >= 30)
@@ -152,7 +173,15 @@ namespace FarmaciaLaNuevaEra.View
                 MessageBox.Show("El precio de compra no puede ser mayor que el precio de venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            CMedicamentos.InsertarMedicamento(IdLaboratorio,btnNombre.Text,Convert.ToDecimal(txtPrecioDeCompra.Text), Convert.ToDecimal(txtPrecioDeVenta.Text),0, Convert.ToInt32(txtStockMinimo.Text));
+            if (Creacion)
+                CMedicamentos.InsertarMedicamento(IdLaboratorio, btnNombre.Text, Convert.ToDecimal(txtPrecioDeCompra.Text), Convert.ToDecimal(txtPrecioDeVenta.Text), 0, Convert.ToInt32(txtStockMinimo.Text));
+            else
+            {
+                CMedicamentos.ActualizarMedicamento(Id, IdLaboratorio, btnNombre.Text, Convert.ToDecimal(txtPrecioDeCompra.Text), Convert.ToDecimal(txtPrecioDeVenta.Text), Cantidad, Convert.ToInt32(txtStockMinimo.Text), true);
+                this.Close();
+            }
+               
+
             LimpiarFormulario();
         }
     }
