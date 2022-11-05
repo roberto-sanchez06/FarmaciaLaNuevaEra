@@ -39,6 +39,7 @@ namespace FarmaciaLaNuevaEra.View
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
+            this.imbVentas = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -114,12 +115,29 @@ namespace FarmaciaLaNuevaEra.View
             this.guna2NotificationPaint1.Location = new System.Drawing.Point(96, 0);
             this.guna2NotificationPaint1.TargetControl = this.btnMedicamentos;
             // 
+            // imbVentas
+            // 
+            this.imbVentas.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imbVentas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imbVentas.HoverState.ImageSize = new System.Drawing.Size(75, 75);
+            this.imbVentas.Image = ((System.Drawing.Image)(resources.GetObject("imbVentas.Image")));
+            this.imbVentas.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imbVentas.ImageRotate = 0F;
+            this.imbVentas.ImageSize = new System.Drawing.Size(80, 80);
+            this.imbVentas.Location = new System.Drawing.Point(264, 114);
+            this.imbVentas.Name = "imbVentas";
+            this.imbVentas.PressedState.ImageSize = new System.Drawing.Size(70, 70);
+            this.imbVentas.Size = new System.Drawing.Size(114, 96);
+            this.imbVentas.TabIndex = 5;
+            this.imbVentas.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.imbVentas);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.btnMedicamentos);
@@ -144,5 +162,6 @@ namespace FarmaciaLaNuevaEra.View
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2NotificationPaint guna2NotificationPaint1;
+        private Guna.UI2.WinForms.Guna2ImageButton imbVentas;
     }
 }

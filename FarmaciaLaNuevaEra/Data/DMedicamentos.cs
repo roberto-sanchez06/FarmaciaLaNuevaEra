@@ -99,6 +99,7 @@ namespace FarmaciaLaNuevaEra.Data
             try
             {    // Cargando el conexión al servidor
                 SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;

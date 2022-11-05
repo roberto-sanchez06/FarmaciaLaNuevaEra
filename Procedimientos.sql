@@ -81,7 +81,7 @@ begin
 insert into Laboratorio values(@Nombre)
 end
 
-execute Insertar_Laboratorio 'Ramos'
+execute Insertar_Laboratorio 'Ramos S.A'
 
 select * from Laboratorio
  create procedure Actualizar_Laboratorio
@@ -138,3 +138,53 @@ execute CantidadMedicamento
 
 
 */
+
+create procedure VentaValidacion @IdPedido int 
+as 
+begin 
+	declare @IdMedicamento int, @CantidadPedida int, @CantidadMedicamento int
+	declare detalleOrdenPedido Cursor for Select IdMedicamento, CantidadPedida from DetalleOrdenPedido where @IdPedido = DetalleOrdenPedido.IdPedidos
+	Open detalleOrdenPedido 
+	fetch detalleOrdenPedido into @IdMedicamento, @CantidadPedida
+	while(@@FETCH_STATUS = 0)
+	begin 
+		select @CantidadMedicamento = Medicamento.Stock from Medicamento where @IdMedicamento = Medicamento.IdMedicamento
+		if(@CantidadPedida > @CantidadMedicamento)
+		begin
+		update Pedidos set Estado = 0
+		break
+		end
+	end
+end
+
+
+create procedure MostrarPedidos @Mes int, @Ano int
+as 
+begin
+Select p.IdPedidos as [Id del Pedido], p.IdEmpleado as [Id del Empleado],
+	p.Fecha as [Fecha], p.Estado as [Estado del pedido]
+from Pedidos p
+where MONTH(p.Fecha) = @Mes and YEAR(p.Fecha) = @Ano
+end
+
+create procedure CrearPedidos @IdEmpleado int
+as 
+declare @fecha datetime, @IdPedido int
+set @fecha = GETDATE()
+Insert into Pedidos values(@IdEmpleado, @fecha, 1)
+
+create procedure CrearDetallePedidos @IdPedido int, @IdMedicamento int, @CantidadPedida int
+as
+begin
+Insert into DetalleOrdenPedido values (@IdPedido, @IdMedicamento, @CantidadPedida)
+end
+
+Insert into Empleado values('Kevin', 'Admin', '0')
+
+create procedure UltimoPedido
+as 
+begin
+	Select Top 1 IdPedidos as [Id]
+	from Pedidos
+	order by IdPedidos desc
+end

@@ -29,12 +29,12 @@ go
 
 create table Pedidos(
 	IdPedidos int primary key identity(0, 1),
-	IdLaboratorio int,
 	IdEmpleado int,
 	Fecha datetime not null, 
 	Estado bit not null,
 )
 go 
+
 
 create table Laboratorio(
 	IdLaboratorio int primary key identity(0, 1),
@@ -47,10 +47,6 @@ add foreign key(IdEmpleado)
 references Empleado(IdEmpleado)
 go 
 
-alter table Pedidos
-add foreign key(IdLaboratorio)
-references Laboratorio(IdLaboratorio)
-go 
 
 create table Medicamento(
 	IdMedicamento int primary key identity(0, 1),
@@ -181,7 +177,3 @@ create table EstadoResultado(
 	Fecha datetime
 )
 go
-
-
-backup database Farmacia
-to disk = 'D:\BackupFarmacia.bak'

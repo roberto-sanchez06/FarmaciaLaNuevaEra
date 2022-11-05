@@ -40,5 +40,14 @@ namespace FarmaciaLaNuevaEra.View
         {
             this.guna2NotificationPaint1.Text = CMedicamentos.CantidadMedicamentos().ToString();
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmVentas frmVentas = new FrmVentas();
+            frmVentas.ShowDialog();
+
+            this.Show();
+        }
     }
 }
