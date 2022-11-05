@@ -21,7 +21,7 @@ namespace FarmaciaLaNuevaEra.View
 
         private void FrmMiniLaboratorio_Load(object sender, EventArgs e)
         {
-            this.dgvLaboratorio.DataSource = CLaboratorio.MostrarLaboratorios();
+            this.dgvLaboratorio.DataSource = CLaboratorio.MostrarLaboratorios(true);
         }
 
         private void dgvLaboratorio_CellClick(object sender, DataGridViewCellEventArgs e)

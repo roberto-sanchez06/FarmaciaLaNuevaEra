@@ -56,3 +56,5 @@ C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\Farmaci
 C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
 C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
 C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniLaboratorio.resources
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionLaboratorio.resources
+C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmLaboratorio.resources

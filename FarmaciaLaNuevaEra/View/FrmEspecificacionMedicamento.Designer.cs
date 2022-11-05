@@ -42,8 +42,6 @@ namespace FarmaciaLaNuevaEra.View
             this.txtPrecioDeCompra = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPrecioDeVenta = new System.Windows.Forms.Label();
             this.txtPrecioDeVenta = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblStock = new System.Windows.Forms.Label();
-            this.txtStock = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblStockMinimo = new System.Windows.Forms.Label();
             this.txtStockMinimo = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAgregarLaboratorio = new System.Windows.Forms.Label();
@@ -199,44 +197,12 @@ namespace FarmaciaLaNuevaEra.View
             this.txtPrecioDeVenta.Size = new System.Drawing.Size(124, 36);
             this.txtPrecioDeVenta.TabIndex = 12;
             // 
-            // lblStock
-            // 
-            this.lblStock.AutoSize = true;
-            this.lblStock.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblStock.Location = new System.Drawing.Point(21, 210);
-            this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(71, 16);
-            this.lblStock.TabIndex = 15;
-            this.lblStock.Text = "Cantidades:";
-            // 
-            // txtStock
-            // 
-            this.txtStock.BorderColor = System.Drawing.Color.Silver;
-            this.txtStock.BorderRadius = 3;
-            this.txtStock.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStock.DefaultText = "";
-            this.txtStock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStock.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStock.Location = new System.Drawing.Point(18, 229);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.PasswordChar = '\0';
-            this.txtStock.PlaceholderText = "";
-            this.txtStock.SelectedText = "";
-            this.txtStock.Size = new System.Drawing.Size(124, 36);
-            this.txtStock.TabIndex = 14;
-            // 
             // lblStockMinimo
             // 
             this.lblStockMinimo.AutoSize = true;
             this.lblStockMinimo.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStockMinimo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblStockMinimo.Location = new System.Drawing.Point(178, 210);
+            this.lblStockMinimo.Location = new System.Drawing.Point(15, 199);
             this.lblStockMinimo.Name = "lblStockMinimo";
             this.lblStockMinimo.Size = new System.Drawing.Size(116, 16);
             this.lblStockMinimo.TabIndex = 17;
@@ -255,7 +221,7 @@ namespace FarmaciaLaNuevaEra.View
             this.txtStockMinimo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStockMinimo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtStockMinimo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStockMinimo.Location = new System.Drawing.Point(175, 229);
+            this.txtStockMinimo.Location = new System.Drawing.Point(12, 218);
             this.txtStockMinimo.Name = "txtStockMinimo";
             this.txtStockMinimo.PasswordChar = '\0';
             this.txtStockMinimo.PlaceholderText = "";
@@ -332,8 +298,6 @@ namespace FarmaciaLaNuevaEra.View
             this.Controls.Add(this.lblAgregarLaboratorio);
             this.Controls.Add(this.lblStockMinimo);
             this.Controls.Add(this.txtStockMinimo);
-            this.Controls.Add(this.lblStock);
-            this.Controls.Add(this.txtStock);
             this.Controls.Add(this.lblPrecioDeVenta);
             this.Controls.Add(this.txtPrecioDeVenta);
             this.Controls.Add(this.lblPrecioDeCompra);
@@ -365,8 +329,6 @@ namespace FarmaciaLaNuevaEra.View
         private System.Windows.Forms.Label lblAgregarLaboratorio;
         private System.Windows.Forms.Label lblStockMinimo;
         private Guna.UI2.WinForms.Guna2TextBox txtStockMinimo;
-        private System.Windows.Forms.Label lblStock;
-        private Guna.UI2.WinForms.Guna2TextBox txtStock;
         private System.Windows.Forms.Label lblPrecioDeVenta;
         private Guna.UI2.WinForms.Guna2TextBox txtPrecioDeVenta;
         private System.Windows.Forms.Label lblPrecioDeCompra;

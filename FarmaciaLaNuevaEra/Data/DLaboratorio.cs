@@ -13,6 +13,7 @@ namespace FarmaciaLaNuevaEra.Data
     {
         public int ID { get; set; }
         public string Nombre { get; set; }
+        public bool Estado { get; set; }
         public string InsertarLaboratorio(DLaboratorio laboratorio)
         {
             string rpta = "";
@@ -56,8 +57,9 @@ namespace FarmaciaLaNuevaEra.Data
                 SqlCmd.Connection = SqlCon;
                 SqlCmd.CommandText = "Actualizar_Laboratorio";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
-                SqlCmd.Parameters.Add(Parametros.parametro("@idLaboratorio", SqlDbType.Int, 0, laboratorio.Nombre));  
+                SqlCmd.Parameters.Add(Parametros.parametro("@idLaboratorio", SqlDbType.Int, 0, laboratorio.ID));  
                 SqlCmd.Parameters.Add(Parametros.parametro("@NombreCambiado", SqlDbType.VarChar, 30, laboratorio.Nombre));
+                SqlCmd.Parameters.Add(Parametros.parametro("@estado", SqlDbType.Bit, 0, laboratorio.Estado));
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
             }
             catch (Exception ex)
@@ -71,7 +73,7 @@ namespace FarmaciaLaNuevaEra.Data
             return rpta;
         }
 
-        public static DataTable MostrarLaboratorios()
+        public static DataTable MostrarLaboratorios(bool tipoLaboratorio)
         {
             DataTable DtResultado = new DataTable("MostrarLaboratorios");
             SqlConnection SqlCon = new SqlConnection();
@@ -80,10 +82,10 @@ namespace FarmaciaLaNuevaEra.Data
                 SqlCon.ConnectionString = Conexion.Cn;
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
+                SqlCmd.Connection = SqlCon; 
                 SqlCmd.CommandText = "Mostrar_Laboratorios";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
-
+                SqlCmd.Parameters.Add(Parametros.parametro("@tipoLaboratorio", SqlDbType.Bit, 0, tipoLaboratorio));
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
 

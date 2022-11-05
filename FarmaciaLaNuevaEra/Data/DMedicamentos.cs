@@ -19,6 +19,7 @@ namespace FarmaciaLaNuevaEra.Data
         public int Stock { get; set; }
         public int StockMinimo { get; set; }
 
+        public bool Estado { get; set; }
         public string InsertarMedicamento(DMedicamentos medicamento)
         {
             string rpta = "";
@@ -40,7 +41,7 @@ namespace FarmaciaLaNuevaEra.Data
                 SqlCmd.Parameters.Add(Parametros.parametro("@precioVenta", SqlDbType.Money, 0, medicamento.PrecioVenta));
                 SqlCmd.Parameters.Add(Parametros.parametro("@Stock", SqlDbType.Int, 0, medicamento.Stock));
                 SqlCmd.Parameters.Add(Parametros.parametro("@stockMinimo", SqlDbType.Int, 0, medicamento.StockMinimo));
-
+                SqlCmd.Parameters.Add(Parametros.parametro("@estado", SqlDbType.Bit, 0, medicamento.Estado));
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
 
 
@@ -78,6 +79,7 @@ namespace FarmaciaLaNuevaEra.Data
                 SqlCmd.Parameters.Add(Parametros.parametro("@precioVenta", SqlDbType.Money, 0, medicamento.PrecioVenta));
                 SqlCmd.Parameters.Add(Parametros.parametro("@Stock", SqlDbType.Int, 0, medicamento.Stock));
                 SqlCmd.Parameters.Add(Parametros.parametro("@stockMinimo", SqlDbType.Int, 0, medicamento.StockMinimo));
+                SqlCmd.Parameters.Add(Parametros.parametro("@estado", SqlDbType.Bit, 0, medicamento.Estado));
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
 
 
@@ -92,7 +94,7 @@ namespace FarmaciaLaNuevaEra.Data
             }
             return rpta;
         }
-        public static DataTable MostrarMedicamentos()
+        public static DataTable MostrarMedicamentos(bool tipoMedicamento)
         {
             DataTable DtResultado = new DataTable("MostrarMedicamentos");
             SqlConnection SqlCon = new SqlConnection();
@@ -104,7 +106,7 @@ namespace FarmaciaLaNuevaEra.Data
                 SqlCmd.Connection = SqlCon;
                 SqlCmd.CommandText = "Mostrar_Medicamentos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
-
+                SqlCmd.Parameters.Add(Parametros.parametro("@tipoMedicamentos", SqlDbType.Bit, 0, tipoMedicamento));
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
 
@@ -141,6 +143,30 @@ namespace FarmaciaLaNuevaEra.Data
                 DtResultado = null;
             }
             return Cantidad;
+        }
+
+        public static DataTable MostrarMedicamento(int id)
+        {
+            DataTable DtResultado = new DataTable("MostrarMedicamento");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "MostrarMedicamento";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.Add(Parametros.parametro("@idMedicamento", SqlDbType.Int, 0, id));
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
         }
     }
 }

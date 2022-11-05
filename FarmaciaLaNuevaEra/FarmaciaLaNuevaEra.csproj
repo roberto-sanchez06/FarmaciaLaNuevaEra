@@ -62,6 +62,18 @@
     <Compile Include="Data\Helper\Parametros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FrmEspecificacionLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEspecificacionLaboratorio.Designer.cs">
+      <DependentUpon>FrmEspecificacionLaboratorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLaboratorio.Designer.cs">
+      <DependentUpon>FrmLaboratorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,8 +116,14 @@
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEspecificacionLaboratorio.resx">
+      <DependentUpon>FrmEspecificacionLaboratorio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmEspecificacionMedicamento.resx">
       <DependentUpon>FrmEspecificacionMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLaboratorio.resx">
+      <DependentUpon>FrmLaboratorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmMedicamentos.resx">
       <DependentUpon>FrmMedicamentos.cs</DependentUpon>

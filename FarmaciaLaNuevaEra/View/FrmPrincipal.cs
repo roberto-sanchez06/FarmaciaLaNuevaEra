@@ -36,9 +36,18 @@ namespace FarmaciaLaNuevaEra.View
                 
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+        private void FrmPrincipal_Activated(object sender, EventArgs e)
         {
-            this.guna2NotificationPaint1.Text = CMedicamentos.CantidadMedicamentos().ToString();
+            this.NPMedicamentos.Text = CMedicamentos.CantidadMedicamentos().ToString();
+        }
+
+        private void btnLaboratorio_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLaboratorio frmLaboratorio = new FrmLaboratorio();
+            frmLaboratorio.ShowDialog();
+            this.Show();
+
         }
     }
 }

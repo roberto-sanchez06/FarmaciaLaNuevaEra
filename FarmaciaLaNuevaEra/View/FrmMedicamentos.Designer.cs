@@ -30,12 +30,12 @@ namespace FarmaciaLaNuevaEra.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMedicamentos));
-            Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -44,9 +44,16 @@ namespace FarmaciaLaNuevaEra.View
             this.dgvMedicamentos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnAgregarMedicamento = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.lblTipoMedicamento = new System.Windows.Forms.Label();
+            this.cmbTipoMedicamento = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
             this.SuspendLayout();
+            // 
+            // guna2AnimateWindow1
+            // 
+            guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_ACTIVATE;
+            guna2AnimateWindow1.TargetForm = this;
             // 
             // guna2BorderlessForm1
             // 
@@ -156,6 +163,7 @@ namespace FarmaciaLaNuevaEra.View
             this.dgvMedicamentos.ThemeStyle.RowsStyle.Height = 22;
             this.dgvMedicamentos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMedicamentos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvMedicamentos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvMedicamentos_MouseClick);
             // 
             // guna2Elipse1
             // 
@@ -178,10 +186,35 @@ namespace FarmaciaLaNuevaEra.View
             this.btnAgregarMedicamento.TabIndex = 9;
             this.btnAgregarMedicamento.Click += new System.EventHandler(this.btnAgregarMedicamento_Click);
             // 
-            // guna2AnimateWindow1
+            // lblTipoMedicamento
             // 
-            guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_ACTIVATE;
-            guna2AnimateWindow1.TargetForm = this;
+            this.lblTipoMedicamento.AutoSize = true;
+            this.lblTipoMedicamento.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoMedicamento.Location = new System.Drawing.Point(698, 132);
+            this.lblTipoMedicamento.Name = "lblTipoMedicamento";
+            this.lblTipoMedicamento.Size = new System.Drawing.Size(116, 18);
+            this.lblTipoMedicamento.TabIndex = 15;
+            this.lblTipoMedicamento.Text = "Medicamentos";
+            // 
+            // cmbTipoMedicamento
+            // 
+            this.cmbTipoMedicamento.BackColor = System.Drawing.Color.Transparent;
+            this.cmbTipoMedicamento.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTipoMedicamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoMedicamento.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTipoMedicamento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTipoMedicamento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipoMedicamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmbTipoMedicamento.ItemHeight = 30;
+            this.cmbTipoMedicamento.Items.AddRange(new object[] {
+            "Operando",
+            "Eliminados"});
+            this.cmbTipoMedicamento.Location = new System.Drawing.Point(820, 122);
+            this.cmbTipoMedicamento.Name = "cmbTipoMedicamento";
+            this.cmbTipoMedicamento.Size = new System.Drawing.Size(227, 36);
+            this.cmbTipoMedicamento.StartIndex = 0;
+            this.cmbTipoMedicamento.TabIndex = 14;
+            this.cmbTipoMedicamento.SelectedIndexChanged += new System.EventHandler(this.cmbTipoMedicamento_SelectedIndexChanged);
             // 
             // FrmMedicamentos
             // 
@@ -189,6 +222,8 @@ namespace FarmaciaLaNuevaEra.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.lblTipoMedicamento);
+            this.Controls.Add(this.cmbTipoMedicamento);
             this.Controls.Add(this.btnAgregarMedicamento);
             this.Controls.Add(this.dgvMedicamentos);
             this.Controls.Add(this.lblMedicamentos);
@@ -215,5 +250,7 @@ namespace FarmaciaLaNuevaEra.View
         private Guna.UI2.WinForms.Guna2DataGridView dgvMedicamentos;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ImageButton btnAgregarMedicamento;
+        private System.Windows.Forms.Label lblTipoMedicamento;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTipoMedicamento;
     }
 }

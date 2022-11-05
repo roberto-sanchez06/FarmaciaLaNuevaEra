@@ -11,16 +11,7 @@ namespace FarmaciaLaNuevaEra.Controller
 {
     public class CMedicamentos
     {
-        /*
-         *   public int Id { get; set; }
-        public int IdLaboratorio { get; set; }
-        public string Nombre { get; set; }
-        public decimal PrecioCompra { get; set; }
-        public decimal PrecioVenta { get; set; }
-        public int Stock { get; set; }
-        public int StockMinimo { get; set; }
-         * 
-         */
+     
 
         public static string InsertarMedicamento(int IdLaboratorio, string nombre, decimal precioCompra, decimal precioVenta,int stock,int stockMinimo)
         {
@@ -33,7 +24,7 @@ namespace FarmaciaLaNuevaEra.Controller
             dMedicamentos.StockMinimo = stockMinimo;
             return dMedicamentos.InsertarMedicamento(dMedicamentos);
         }
-        public static string ActualizarMedicamento(int id,int IdLaboratorio, string nombre, decimal precioCompra, decimal precioVenta, int stock, int stockMinimo)
+        public static string ActualizarMedicamento(int id,int IdLaboratorio, string nombre, decimal precioCompra, decimal precioVenta, int stock, int stockMinimo, bool Estado)
         {
 
             DMedicamentos dMedicamentos = new DMedicamentos();
@@ -44,15 +35,20 @@ namespace FarmaciaLaNuevaEra.Controller
             dMedicamentos.PrecioVenta = precioVenta;
             dMedicamentos.Stock = stock;
             dMedicamentos.StockMinimo = stockMinimo;
+            dMedicamentos.Estado = Estado;
             return dMedicamentos.ActualizarMedicamento(dMedicamentos);
         }
-        public static DataTable MostrarMedicamentos()
+        public static DataTable MostrarMedicamentos(bool tipoMedicamentos)
         {
-            return DMedicamentos.MostrarMedicamentos();
+            return DMedicamentos.MostrarMedicamentos(tipoMedicamentos);
         }
         public static int CantidadMedicamentos()
         {
             return DMedicamentos.CantidadMedicamento();
+        }
+        public static DataTable MostrarMedicamento(int id)
+        {
+            return DMedicamentos.MostrarMedicamento(id);
         }
     }
 }

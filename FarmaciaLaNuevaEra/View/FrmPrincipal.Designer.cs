@@ -38,7 +38,10 @@ namespace FarmaciaLaNuevaEra.View
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
+            this.NPMedicamentos = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
+            this.btnPedidos = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnLaboratorio = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -107,12 +110,58 @@ namespace FarmaciaLaNuevaEra.View
             this.guna2ControlBox2.Size = new System.Drawing.Size(23, 29);
             this.guna2ControlBox2.TabIndex = 4;
             // 
-            // guna2NotificationPaint1
+            // NPMedicamentos
             // 
-            this.guna2NotificationPaint1.Alignment = Guna.UI2.WinForms.Enums.CustomContentAlignment.TopRight;
-            this.guna2NotificationPaint1.BorderRadius = 8;
-            this.guna2NotificationPaint1.Location = new System.Drawing.Point(96, 0);
-            this.guna2NotificationPaint1.TargetControl = this.btnMedicamentos;
+            this.NPMedicamentos.Alignment = Guna.UI2.WinForms.Enums.CustomContentAlignment.TopRight;
+            this.NPMedicamentos.BorderRadius = 8;
+            this.NPMedicamentos.Location = new System.Drawing.Point(96, 0);
+            this.NPMedicamentos.TargetControl = this.btnMedicamentos;
+            // 
+            // btnPedidos
+            // 
+            this.btnPedidos.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPedidos.HoverState.ImageSize = new System.Drawing.Size(75, 75);
+            this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
+            this.btnPedidos.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnPedidos.ImageRotate = 0F;
+            this.btnPedidos.ImageSize = new System.Drawing.Size(80, 80);
+            this.btnPedidos.Location = new System.Drawing.Point(570, 114);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.PressedState.ImageSize = new System.Drawing.Size(70, 70);
+            this.btnPedidos.Size = new System.Drawing.Size(114, 96);
+            this.btnPedidos.TabIndex = 5;
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(75, 75);
+            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(80, 80);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(417, 114);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(70, 70);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(114, 96);
+            this.guna2ImageButton1.TabIndex = 6;
+            // 
+            // btnLaboratorio
+            // 
+            this.btnLaboratorio.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLaboratorio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLaboratorio.HoverState.ImageSize = new System.Drawing.Size(75, 75);
+            this.btnLaboratorio.Image = ((System.Drawing.Image)(resources.GetObject("btnLaboratorio.Image")));
+            this.btnLaboratorio.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnLaboratorio.ImageRotate = 0F;
+            this.btnLaboratorio.ImageSize = new System.Drawing.Size(80, 80);
+            this.btnLaboratorio.Location = new System.Drawing.Point(267, 114);
+            this.btnLaboratorio.Name = "btnLaboratorio";
+            this.btnLaboratorio.PressedState.ImageSize = new System.Drawing.Size(70, 70);
+            this.btnLaboratorio.Size = new System.Drawing.Size(114, 96);
+            this.btnLaboratorio.TabIndex = 7;
+            this.btnLaboratorio.Click += new System.EventHandler(this.btnLaboratorio_Click);
             // 
             // FrmPrincipal
             // 
@@ -120,6 +169,9 @@ namespace FarmaciaLaNuevaEra.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.btnLaboratorio);
+            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.btnPedidos);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.btnMedicamentos);
@@ -128,7 +180,7 @@ namespace FarmaciaLaNuevaEra.View
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
-            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
+            this.Activated += new System.EventHandler(this.FrmPrincipal_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,6 +195,9 @@ namespace FarmaciaLaNuevaEra.View
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2NotificationPaint guna2NotificationPaint1;
+        private Guna.UI2.WinForms.Guna2NotificationPaint NPMedicamentos;
+        private Guna.UI2.WinForms.Guna2ImageButton btnPedidos;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnLaboratorio;
     }
 }
