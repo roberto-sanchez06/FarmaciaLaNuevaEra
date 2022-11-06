@@ -25,6 +25,7 @@ namespace FarmaciaLaNuevaEra.View
         }
         public FrmEspecificacionMedicamento()
         {
+            this.Creacion = true;
             InitializeComponent();
             AgregarTooltips();
         }

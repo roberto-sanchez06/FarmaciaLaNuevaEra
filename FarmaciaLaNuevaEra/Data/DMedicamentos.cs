@@ -41,7 +41,7 @@ namespace FarmaciaLaNuevaEra.Data
                 SqlCmd.Parameters.Add(Parametros.parametro("@precioVenta", SqlDbType.Money, 0, medicamento.PrecioVenta));
                 SqlCmd.Parameters.Add(Parametros.parametro("@Stock", SqlDbType.Int, 0, medicamento.Stock));
                 SqlCmd.Parameters.Add(Parametros.parametro("@stockMinimo", SqlDbType.Int, 0, medicamento.StockMinimo));
-                SqlCmd.Parameters.Add(Parametros.parametro("@estado", SqlDbType.Bit, 0, medicamento.Estado));
+                //SqlCmd.Parameters.Add(Parametros.parametro("@estado", SqlDbType.Bit, 0, true));
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
 
 
