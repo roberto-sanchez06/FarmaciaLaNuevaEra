@@ -75,8 +75,12 @@
             this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
             this.ttAgregar = new System.Windows.Forms.ToolTip(this.components);
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.gunaPieDataset1 = new Guna.Charts.WinForms.GunaPieDataset();
             this.gunaChart2 = new Guna.Charts.WinForms.GunaChart();
+            this.gunaPieDataset1 = new Guna.Charts.WinForms.GunaPieDataset();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel2.SuspendLayout();
@@ -134,6 +138,11 @@
             this.dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPedidos.ColumnHeadersHeight = 40;
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.IdEmpleado,
+            this.Fecha,
+            this.Estado});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -279,29 +288,25 @@
             this.guna2ShadowPanel2.Size = new System.Drawing.Size(333, 202);
             this.guna2ShadowPanel2.TabIndex = 13;
             // 
-            // gunaPieDataset1
-            // 
-            this.gunaPieDataset1.Label = "Pie1";
-            this.gunaPieDataset1.TargetChart = this.gunaChart2;
-            // 
             // gunaChart2
             // 
             this.gunaChart2.BackColor = System.Drawing.Color.White;
             this.gunaChart2.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] {
             this.gunaPieDataset1});
-            chartFont1.FontName = "Arial";
+            chartFont1.FontName = "Verdana";
             this.gunaChart2.Legend.LabelFont = chartFont1;
             this.gunaChart2.Location = new System.Drawing.Point(23, 17);
+            this.gunaChart2.Misc.BarCornerRadius = 10;
             this.gunaChart2.Name = "gunaChart2";
             this.gunaChart2.Size = new System.Drawing.Size(300, 167);
             this.gunaChart2.TabIndex = 0;
-            chartFont2.FontName = "Arial";
+            chartFont2.FontName = "Verdanal";
             chartFont2.Size = 12;
             chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
             this.gunaChart2.Title.Font = chartFont2;
-            chartFont3.FontName = "Arial";
+            chartFont3.FontName = "Verdana";
             this.gunaChart2.Tooltips.BodyFont = chartFont3;
-            chartFont4.FontName = "Arial";
+            chartFont4.FontName = "Verdana";
             chartFont4.Size = 9;
             chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
             this.gunaChart2.Tooltips.TitleFont = chartFont4;
@@ -320,6 +325,35 @@
             chartFont8.FontName = "Arial";
             tick3.Font = chartFont8;
             this.gunaChart2.ZAxes.Ticks = tick3;
+            // 
+            // gunaPieDataset1
+            // 
+            this.gunaPieDataset1.Label = "Pie1";
+            this.gunaPieDataset1.TargetChart = this.gunaChart2;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id del Pedido";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // IdEmpleado
+            // 
+            this.IdEmpleado.HeaderText = "Id del empleado";
+            this.IdEmpleado.Name = "IdEmpleado";
+            this.IdEmpleado.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // FrmVentas
             // 
@@ -362,5 +396,9 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Guna.Charts.WinForms.GunaChart gunaChart2;
         private Guna.Charts.WinForms.GunaPieDataset gunaPieDataset1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

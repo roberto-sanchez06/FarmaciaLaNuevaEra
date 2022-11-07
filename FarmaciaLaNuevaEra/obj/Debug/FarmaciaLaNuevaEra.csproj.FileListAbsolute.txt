@@ -82,11 +82,6 @@ C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.
 C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
 C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
 C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniLaboratorio.resources
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmPrincipal.resources
 C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmVentas.resources
 C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
 C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache

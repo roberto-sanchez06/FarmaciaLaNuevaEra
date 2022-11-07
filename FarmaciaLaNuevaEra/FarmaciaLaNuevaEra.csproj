@@ -72,12 +72,6 @@
     <Compile Include="View\FrmEspecificacionesVenta.Designer.cs">
       <DependentUpon>FrmEspecificacionesVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmMiniLaboratorio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FrmMiniLaboratorio.Designer.cs">
-      <DependentUpon>FrmMiniLaboratorio.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FrmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,9 +89,6 @@
     </Compile>
     <EmbeddedResource Include="View\FrmEspecificacionesVenta.resx">
       <DependentUpon>FrmEspecificacionesVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmMiniLaboratorio.resx">
-      <DependentUpon>FrmMiniLaboratorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>

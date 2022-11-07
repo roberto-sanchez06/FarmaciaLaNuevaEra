@@ -1,16 +1,18 @@
 Use Farmacia
 go
 
-Create Trigger VentaValidacion
+create Trigger VentaValidacion
 on [DetalleOrdenPedido]
 for Insert 
 as 
-	Declare @cantidadMedicamentos int 
-	Select @cantidadMedicamentos = Stock from Medicamento m inner join inserted on inserted.CantidadPedida = m.Stock where inserted.CantidadPedida = m.Stock
+	Declare @cantidadMedicamentos int
+	Select @cantidadMedicamentos = inserted.CantidadPedida from Medicamento m inner join inserted on inserted.IdMedicamento = m.IdMedicamento where inserted.IdMedicamento = m.IdMedicamento
 	if(@cantidadMedicamentos >= (Select CantidadPedida from inserted))
+	begin
 	update Medicamento set Stock = Stock - @cantidadMedicamentos
 	from Medicamento m inner join inserted on inserted.IdMedicamento = m.IdMedicamento
 	where m.IdMedicamento = inserted.IdMedicamento
+	end
 	else 
 	begin 
 	update Pedidos set Estado = 0
@@ -198,13 +200,11 @@ begin
 	group by Day(p.Fecha) 
 end
 
-create procedure Ventas_Satisfechas @Mes int, @Ano int
+create procedure Ventas_Estado @Mes int, @Ano int, @Estado int
 as 
 begin
 	Select Sum(m.PrecioVenta * op.CantidadPedida) as [Cantidad Vendida]
 	from DetalleOrdenPedido op inner join Medicamento m on m.IdMedicamento = op.IdMedicamento inner join 
 	Pedidos p on p.IdPedidos = op.IdPedidos
-    where @Mes = MONTH(p.Fecha) and @Ano = YEAR(p.Fecha) and p.Estado = 1
+    where @Mes = MONTH(p.Fecha) and @Ano = YEAR(p.Fecha) and p.Estado = @Estado
 end
-
-execute Ventas_Satisfechas 11, 2022

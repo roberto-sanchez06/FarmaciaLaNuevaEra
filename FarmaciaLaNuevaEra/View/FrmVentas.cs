@@ -40,17 +40,27 @@ namespace FarmaciaLaNuevaEra.View
             {
                 return;
             }
+            dgvPedidos.Rows.Clear();
             for (int i = 0; i < table.Rows.Count; i++)
             {
+                DataRow Row = table.Rows[i];
                 DateTime fecha = Convert.ToDateTime(table.Rows[i]["Fecha"].ToString());
                 CultureInfo provider = new CultureInfo("es-ES");
                 string FechaFormateada = fecha.ToString("dd", provider) + "-" + 
                     fecha.ToString("MM", provider)+ "-" + fecha.ToString("yyyy", provider);
                 CPedidos.VentaValidacion(Convert.ToInt32(table.Rows[i]["Id del Pedido"].ToString()));
-                table.Rows[i]["Fecha"] = Convert.ToDateTime(FechaFormateada);
-                DataRow ROW = table.Rows[i];
+                string cadena = Row.ItemArray[3].ToString();
+                if (cadena == "False")
+                {
+                    cadena = "Insatisfecho";
+                }
+                else
+                {
+                    cadena = "Satisfecho";
+                }
+                dgvPedidos.Rows.Add(Row.ItemArray[0], Row.ItemArray[1], FechaFormateada, cadena);
+                          
             }
-            dgvPedidos.DataSource = table;
 
             gunaChart1.YAxes.GridLines.Display = false;
 
@@ -78,9 +88,9 @@ namespace FarmaciaLaNuevaEra.View
             gunaChart2.Legend.Position = Guna.Charts.WinForms.LegendPosition.Right;
             gunaChart2.XAxes.Display = false;
             gunaChart2.YAxes.Display = false;
-
             DataTable piv = new DataTable();
             var data = new Guna.Charts.WinForms.GunaPieDataset();
+
             gunaChart2.Datasets.Clear();
             try
             {
@@ -103,7 +113,7 @@ namespace FarmaciaLaNuevaEra.View
                 piv = CDetalleOrdenPedido.VentasEstado(DateTime.Today.Month,
                 DateTime.Today.Year, 0);
                 double VentasInsatisfechas = Convert.ToDouble(piv.Rows[0]["Cantidad Vendida"].ToString());
-                data.DataPoints.Add("Pedidos insatisfechos", VentasInsatisfechas);
+                data.DataPoints.Add("Ventas insatisfechos", VentasInsatisfechas);
 
                 gunaChart2.Datasets.Add(data);
 
