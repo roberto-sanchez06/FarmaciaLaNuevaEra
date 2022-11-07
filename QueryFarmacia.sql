@@ -34,6 +34,10 @@ create table Pedidos(
 	Estado bit not null,
 )
 go 
+drop table Pedidos
+
+alter table Pedidos
+drop constraint IdLaboratorio
 
 
 create table Laboratorio(

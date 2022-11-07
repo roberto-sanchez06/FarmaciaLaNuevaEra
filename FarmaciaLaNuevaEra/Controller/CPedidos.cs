@@ -21,9 +21,9 @@ namespace FarmaciaLaNuevaEra.Controller
             DPedidos pedidos = new DPedidos();
             return pedidos.VentaValidacion(Id);
         }
-        public static DataTable MostrarPedidos(int Fecha, int Mes)
+        public static DataTable MostrarPedidos(int Mes, int Ano)
         {
-            return DPedidos.MostrarPedidos(Fecha, Mes);
+            return DPedidos.MostrarPedidos(Mes, Ano);
         }
         public static DataTable UltimoRegistro()
         {

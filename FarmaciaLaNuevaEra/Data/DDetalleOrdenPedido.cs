@@ -27,7 +27,7 @@ namespace FarmaciaLaNuevaEra.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "CrearDetallePedidos";
+                SqlCmd.CommandText = "Crear_Detalle_Pedidos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
                 SqlCmd.Parameters.Add(Parametros.parametro("@IdPedido", SqlDbType.Int, 0, detalleOrdenPedido.IdPedidos));
                 SqlCmd.Parameters.Add(Parametros.parametro("@IdMedicamento", SqlDbType.Int, 0, detalleOrdenPedido.IdMedicamentos));
@@ -43,6 +43,58 @@ namespace FarmaciaLaNuevaEra.Data
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return rpta;
+        }
+        public static DataTable VentasMensuales(int Mes, int Ano)
+        {
+
+            DataTable dtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Ventas_Mensuales";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.Add(Parametros.parametro("@Mes", SqlDbType.Int, 0, Mes));
+                SqlCmd.Parameters.Add(Parametros.parametro("@Ano", SqlDbType.Int, 0, Ano));
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(dtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                dtResultado = null;
+            }
+            return dtResultado;
+        }
+        public static DataTable VentasEstado(int Mes, int Ano, int Estado)
+        {
+            DataTable dtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Ventas_Estado";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.Add(Parametros.parametro("@Mes", SqlDbType.Int, 0, Mes));
+                SqlCmd.Parameters.Add(Parametros.parametro("@Ano", SqlDbType.Int, 0, Ano));
+                SqlCmd.Parameters.Add(Parametros.parametro("@Estado", SqlDbType.Int, 0, Estado));
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(dtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                dtResultado = null;
+            }
+            return dtResultado;
         }
     }
 }

@@ -138,8 +138,7 @@ execute CantidadMedicamento
 
 
 */
-
-create procedure VentaValidacion @IdPedido int 
+create procedure Venta_Validacion @IdPedido int 
 as 
 begin 
 	declare @IdMedicamento int, @CantidadPedida int, @CantidadMedicamento int
@@ -158,7 +157,7 @@ begin
 end
 
 
-create procedure MostrarPedidos @Mes int, @Ano int
+create procedure Mostrar_Pedidos @Mes int, @Ano int
 as 
 begin
 Select p.IdPedidos as [Id del Pedido], p.IdEmpleado as [Id del Empleado],
@@ -167,13 +166,13 @@ from Pedidos p
 where MONTH(p.Fecha) = @Mes and YEAR(p.Fecha) = @Ano
 end
 
-create procedure CrearPedidos @IdEmpleado int
+create procedure Crear_Pedidos @IdEmpleado int
 as 
 declare @fecha datetime, @IdPedido int
 set @fecha = GETDATE()
 Insert into Pedidos values(@IdEmpleado, @fecha, 1)
 
-create procedure CrearDetallePedidos @IdPedido int, @IdMedicamento int, @CantidadPedida int
+create procedure Crear_Detalle_Pedidos @IdPedido int, @IdMedicamento int, @CantidadPedida int
 as
 begin
 Insert into DetalleOrdenPedido values (@IdPedido, @IdMedicamento, @CantidadPedida)
@@ -181,10 +180,31 @@ end
 
 Insert into Empleado values('Kevin', 'Admin', '0')
 
-create procedure UltimoPedido
+create procedure Ultimo_Pedido
 as 
 begin
 	Select Top 1 IdPedidos as [Id]
 	from Pedidos
 	order by IdPedidos desc
 end
+
+create procedure Ventas_Mensuales @Mes int, @Ano int
+as 
+begin 
+	Select Day(p.Fecha) as Fecha, Sum(m.PrecioVenta * op.CantidadPedida) as [Cantidad Vendida]
+	from DetalleOrdenPedido op inner join Medicamento m on m.IdMedicamento = op.IdMedicamento inner join 
+	Pedidos p on p.IdPedidos = op.IdPedidos
+    where @Mes = MONTH(p.Fecha) and @Ano = YEAR(p.Fecha)
+	group by Day(p.Fecha) 
+end
+
+create procedure Ventas_Satisfechas @Mes int, @Ano int
+as 
+begin
+	Select Sum(m.PrecioVenta * op.CantidadPedida) as [Cantidad Vendida]
+	from DetalleOrdenPedido op inner join Medicamento m on m.IdMedicamento = op.IdMedicamento inner join 
+	Pedidos p on p.IdPedidos = op.IdPedidos
+    where @Mes = MONTH(p.Fecha) and @Ano = YEAR(p.Fecha) and p.Estado = 1
+end
+
+execute Ventas_Satisfechas 11, 2022

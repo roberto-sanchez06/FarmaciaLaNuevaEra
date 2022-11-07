@@ -27,7 +27,7 @@ namespace FarmaciaLaNuevaEra.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "CrearPedidos";
+                SqlCmd.CommandText = "Crear_Pedidos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
                 SqlCmd.Parameters.Add(Parametros.parametro("@IdEmpleado", SqlDbType.Int, 0, pedidos.IdEmpleado));
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
@@ -53,7 +53,7 @@ namespace FarmaciaLaNuevaEra.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "CrearPedidos";
+                SqlCmd.CommandText = "Venta_Validacion";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
                 SqlCmd.Parameters.Add(Parametros.parametro("@IdLaboratorio", SqlDbType.Int, 0, Id));
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
@@ -68,7 +68,7 @@ namespace FarmaciaLaNuevaEra.Data
             }
             return rpta;
         }
-        public static DataTable MostrarPedidos(int Fecha, int Ano)
+        public static DataTable MostrarPedidos(int Mes, int Ano)
         {
             DataTable dtResultado = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
@@ -78,9 +78,9 @@ namespace FarmaciaLaNuevaEra.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "MostrarPedidos";
+                SqlCmd.CommandText = "Mostrar_Pedidos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
-                SqlCmd.Parameters.Add(Parametros.parametro("@Mes", SqlDbType.Int, 0, Fecha));
+                SqlCmd.Parameters.Add(Parametros.parametro("@Mes", SqlDbType.Int, 0, Mes));
                 SqlCmd.Parameters.Add(Parametros.parametro("@Ano", SqlDbType.Int, 0, Ano));
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
@@ -103,7 +103,7 @@ namespace FarmaciaLaNuevaEra.Data
                 // Creando un objeto SQLCommand que llamará al procedimiento almacenado
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "UltimoPedido";
+                SqlCmd.CommandText = "Ultimo_Pedido";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
