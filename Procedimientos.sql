@@ -1,16 +1,18 @@
 Use Farmacia
 go
 
-Create Trigger VentaValidacion
+create Trigger VentaValidacion
 on [DetalleOrdenPedido]
 for Insert 
 as 
-	Declare @cantidadMedicamentos int 
-	Select @cantidadMedicamentos = Stock from Medicamento m inner join inserted on inserted.CantidadPedida = m.Stock where inserted.CantidadPedida = m.Stock
+	Declare @cantidadMedicamentos int
+	Select @cantidadMedicamentos = inserted.CantidadPedida from Medicamento m inner join inserted on inserted.IdMedicamento = m.IdMedicamento where inserted.IdMedicamento = m.IdMedicamento
 	if(@cantidadMedicamentos >= (Select CantidadPedida from inserted))
+	begin
 	update Medicamento set Stock = Stock - @cantidadMedicamentos
 	from Medicamento m inner join inserted on inserted.IdMedicamento = m.IdMedicamento
 	where m.IdMedicamento = inserted.IdMedicamento
+	end
 	else 
 	begin 
 	update Pedidos set Estado = 0
@@ -81,7 +83,7 @@ begin
 insert into Laboratorio values(@Nombre)
 end
 
-execute Insertar_Laboratorio 'Ramos'
+execute Insertar_Laboratorio 'Ramos S.A'
 
 select * from Laboratorio
  create procedure Actualizar_Laboratorio
@@ -138,3 +140,71 @@ execute CantidadMedicamento
 
 
 */
+create procedure Venta_Validacion @IdPedido int 
+as 
+begin 
+	declare @IdMedicamento int, @CantidadPedida int, @CantidadMedicamento int
+	declare detalleOrdenPedido Cursor for Select IdMedicamento, CantidadPedida from DetalleOrdenPedido where @IdPedido = DetalleOrdenPedido.IdPedidos
+	Open detalleOrdenPedido 
+	fetch detalleOrdenPedido into @IdMedicamento, @CantidadPedida
+	while(@@FETCH_STATUS = 0)
+	begin 
+		select @CantidadMedicamento = Medicamento.Stock from Medicamento where @IdMedicamento = Medicamento.IdMedicamento
+		if(@CantidadPedida > @CantidadMedicamento)
+		begin
+		update Pedidos set Estado = 0
+		break
+		end
+	end
+end
+
+
+create procedure Mostrar_Pedidos @Mes int, @Ano int
+as 
+begin
+Select p.IdPedidos as [Id del Pedido], p.IdEmpleado as [Id del Empleado],
+	p.Fecha as [Fecha], p.Estado as [Estado del pedido]
+from Pedidos p
+where MONTH(p.Fecha) = @Mes and YEAR(p.Fecha) = @Ano
+end
+
+create procedure Crear_Pedidos @IdEmpleado int
+as 
+declare @fecha datetime, @IdPedido int
+set @fecha = GETDATE()
+Insert into Pedidos values(@IdEmpleado, @fecha, 1)
+
+create procedure Crear_Detalle_Pedidos @IdPedido int, @IdMedicamento int, @CantidadPedida int
+as
+begin
+Insert into DetalleOrdenPedido values (@IdPedido, @IdMedicamento, @CantidadPedida)
+end
+
+Insert into Empleado values('Kevin', 'Admin', '0')
+
+create procedure Ultimo_Pedido
+as 
+begin
+	Select Top 1 IdPedidos as [Id]
+	from Pedidos
+	order by IdPedidos desc
+end
+
+create procedure Ventas_Mensuales @Mes int, @Ano int
+as 
+begin 
+	Select Day(p.Fecha) as Fecha, Sum(m.PrecioVenta * op.CantidadPedida) as [Cantidad Vendida]
+	from DetalleOrdenPedido op inner join Medicamento m on m.IdMedicamento = op.IdMedicamento inner join 
+	Pedidos p on p.IdPedidos = op.IdPedidos
+    where @Mes = MONTH(p.Fecha) and @Ano = YEAR(p.Fecha)
+	group by Day(p.Fecha) 
+end
+
+create procedure Ventas_Estado @Mes int, @Ano int, @Estado int
+as 
+begin
+	Select Sum(m.PrecioVenta * op.CantidadPedida) as [Cantidad Vendida]
+	from DetalleOrdenPedido op inner join Medicamento m on m.IdMedicamento = op.IdMedicamento inner join 
+	Pedidos p on p.IdPedidos = op.IdPedidos
+    where @Mes = MONTH(p.Fecha) and @Ano = YEAR(p.Fecha) and p.Estado = @Estado
+end
