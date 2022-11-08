@@ -182,6 +182,26 @@ create table EstadoResultado(
 )
 go
 
+alter table Empleado
+add Activo bit not null
+
+alter table Empleado
+drop column Nombre 
+
+alter table Empleado
+add Nombres varchar(60) not null
+
+alter table Empleado 
+add Apellidos varchar(60) not null
+
+--alter table Empleado 
+--add Nombre varchar(30) not null 
+
+alter table Empleado
+drop column Activo 
+
+alter table Empleado
+add Estado varchar(20) not null
 
 backup database Farmacia
 to disk = 'D:\BackupFarmacia.bak'

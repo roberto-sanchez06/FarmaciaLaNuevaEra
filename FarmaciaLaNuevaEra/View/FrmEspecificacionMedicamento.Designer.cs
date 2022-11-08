@@ -93,7 +93,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblNombreMedicamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblNombreMedicamento.Location = new System.Drawing.Point(15, 23);
             this.lblNombreMedicamento.Name = "lblNombreMedicamento";
-            this.lblNombreMedicamento.Size = new System.Drawing.Size(146, 16);
+            this.lblNombreMedicamento.Size = new System.Drawing.Size(145, 16);
             this.lblNombreMedicamento.TabIndex = 1;
             this.lblNombreMedicamento.Text = "Nombre del medicamento";
             // 
@@ -129,7 +129,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblCantidadDeLetras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblCantidadDeLetras.Location = new System.Drawing.Point(268, 81);
             this.lblCantidadDeLetras.Name = "lblCantidadDeLetras";
-            this.lblCantidadDeLetras.Size = new System.Drawing.Size(30, 16);
+            this.lblCantidadDeLetras.Size = new System.Drawing.Size(29, 16);
             this.lblCantidadDeLetras.TabIndex = 9;
             this.lblCantidadDeLetras.Text = "0/30";
             // 
@@ -140,7 +140,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblPrecioDeCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblPrecioDeCompra.Location = new System.Drawing.Point(21, 112);
             this.lblPrecioDeCompra.Name = "lblPrecioDeCompra";
-            this.lblPrecioDeCompra.Size = new System.Drawing.Size(104, 16);
+            this.lblPrecioDeCompra.Size = new System.Drawing.Size(103, 16);
             this.lblPrecioDeCompra.TabIndex = 11;
             this.lblPrecioDeCompra.Text = "Precio de compra";
             // 
@@ -172,7 +172,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblPrecioDeVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblPrecioDeVenta.Location = new System.Drawing.Point(178, 112);
             this.lblPrecioDeVenta.Name = "lblPrecioDeVenta";
-            this.lblPrecioDeVenta.Size = new System.Drawing.Size(93, 16);
+            this.lblPrecioDeVenta.Size = new System.Drawing.Size(92, 16);
             this.lblPrecioDeVenta.TabIndex = 13;
             this.lblPrecioDeVenta.Text = "Precio de venta";
             // 
@@ -204,7 +204,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblStockMinimo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblStockMinimo.Location = new System.Drawing.Point(15, 199);
             this.lblStockMinimo.Name = "lblStockMinimo";
-            this.lblStockMinimo.Size = new System.Drawing.Size(116, 16);
+            this.lblStockMinimo.Size = new System.Drawing.Size(115, 16);
             this.lblStockMinimo.TabIndex = 17;
             this.lblStockMinimo.Text = "Cantidades mínimas:";
             // 
@@ -237,7 +237,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblAgregarLaboratorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblAgregarLaboratorio.Location = new System.Drawing.Point(21, 320);
             this.lblAgregarLaboratorio.Name = "lblAgregarLaboratorio";
-            this.lblAgregarLaboratorio.Size = new System.Drawing.Size(214, 16);
+            this.lblAgregarLaboratorio.Size = new System.Drawing.Size(213, 16);
             this.lblAgregarLaboratorio.TabIndex = 18;
             this.lblAgregarLaboratorio.Text = "Agregar laboratorio del medicamento:";
             // 

@@ -42,6 +42,10 @@ namespace FarmaciaLaNuevaEra.View
             this.btnPedidos = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLaboratorio = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnUsuarios = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnEmpleados = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.npEmpleados = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
+            this.npUsuarios = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -63,7 +67,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblFuncionalidad.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuncionalidad.Location = new System.Drawing.Point(100, 58);
             this.lblFuncionalidad.Name = "lblFuncionalidad";
-            this.lblFuncionalidad.Size = new System.Drawing.Size(260, 32);
+            this.lblFuncionalidad.Size = new System.Drawing.Size(259, 32);
             this.lblFuncionalidad.TabIndex = 0;
             this.lblFuncionalidad.Text = "Funcionalidades";
             // 
@@ -97,6 +101,7 @@ namespace FarmaciaLaNuevaEra.View
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(35, 29);
             this.guna2ControlBox1.TabIndex = 3;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ControlBox2
             // 
@@ -163,12 +168,60 @@ namespace FarmaciaLaNuevaEra.View
             this.btnLaboratorio.TabIndex = 7;
             this.btnLaboratorio.Click += new System.EventHandler(this.btnLaboratorio_Click);
             // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.HoverState.ImageSize = new System.Drawing.Size(75, 75);
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
+            this.btnUsuarios.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnUsuarios.ImageRotate = 0F;
+            this.btnUsuarios.ImageSize = new System.Drawing.Size(80, 80);
+            this.btnUsuarios.Location = new System.Drawing.Point(705, 114);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.PressedState.ImageSize = new System.Drawing.Size(70, 70);
+            this.btnUsuarios.Size = new System.Drawing.Size(114, 96);
+            this.btnUsuarios.TabIndex = 12;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpleados.HoverState.ImageSize = new System.Drawing.Size(75, 75);
+            this.btnEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleados.Image")));
+            this.btnEmpleados.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnEmpleados.ImageRotate = 0F;
+            this.btnEmpleados.ImageSize = new System.Drawing.Size(80, 80);
+            this.btnEmpleados.Location = new System.Drawing.Point(841, 114);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.PressedState.ImageSize = new System.Drawing.Size(70, 70);
+            this.btnEmpleados.Size = new System.Drawing.Size(114, 96);
+            this.btnEmpleados.TabIndex = 13;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
+            // npEmpleados
+            // 
+            this.npEmpleados.Alignment = Guna.UI2.WinForms.Enums.CustomContentAlignment.TopRight;
+            this.npEmpleados.Location = new System.Drawing.Point(96, 0);
+            this.npEmpleados.TargetControl = this.btnEmpleados;
+            this.npEmpleados.Visible = false;
+            // 
+            // npUsuarios
+            // 
+            this.npUsuarios.Alignment = Guna.UI2.WinForms.Enums.CustomContentAlignment.TopRight;
+            this.npUsuarios.Location = new System.Drawing.Point(96, 0);
+            this.npUsuarios.TargetControl = this.btnUsuarios;
+            this.npUsuarios.Visible = false;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.btnEmpleados);
+            this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnLaboratorio);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.btnPedidos);
@@ -181,6 +234,7 @@ namespace FarmaciaLaNuevaEra.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
             this.Activated += new System.EventHandler(this.FrmPrincipal_Activated);
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +253,9 @@ namespace FarmaciaLaNuevaEra.View
         private Guna.UI2.WinForms.Guna2ImageButton btnPedidos;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ImageButton btnLaboratorio;
+        private Guna.UI2.WinForms.Guna2ImageButton btnEmpleados;
+        private Guna.UI2.WinForms.Guna2ImageButton btnUsuarios;
+        private Guna.UI2.WinForms.Guna2NotificationPaint npEmpleados;
+        private Guna.UI2.WinForms.Guna2NotificationPaint npUsuarios;
     }
 }

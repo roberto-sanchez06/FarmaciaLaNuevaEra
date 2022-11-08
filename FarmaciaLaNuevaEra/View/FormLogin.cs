@@ -16,6 +16,7 @@ namespace FarmaciaLaNuevaEra.View
         public FormLogin()
         {
             InitializeComponent();
+            txtName.Focus();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -33,16 +34,26 @@ namespace FarmaciaLaNuevaEra.View
                 {
                     DataRow dr;
                     dr = dato.Rows[0];
-
-                    if(dr["Resultado"].ToString()=="Acceso Exitoso")
+                    if (dr["Resultado"].ToString() == "Acceso Exitoso")
                     {
-                        MessageBox.Show("Si");
+                        string Rol = dato.Rows[0][1].ToString();
+                        MessageBox.Show("Bienvenido al Sistema", "Farmacia La Nueva Era", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmPrincipal frmPrincipal = new FrmPrincipal(Rol);
+                        frmPrincipal.Show();
+                        this.Hide();
                     }
                     else
                     {
-
+                        MessageBox.Show("Acceso Denegado al sistema", "Farmacia La Nueva Era", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtName.Text = string.Empty;
+                        txtPassword.Text = string.Empty;
+                        txtName.Focus();
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("No hay conexión al Servidor", "Farmacia La Nueva Era", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
