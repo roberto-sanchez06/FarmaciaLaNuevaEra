@@ -1,115 +1,21 @@
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\Quezada\source\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.SuggestedBindingRedirects.cache
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.SuggestedBindingRedirects.cache
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
-F:\Tarea de curso base de datos I\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmPrincipal.resources
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniLaboratorio.resources
-<<<<<<< HEAD
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionLaboratorio.resources
-C:\Users\Quezada\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmLaboratorio.resources
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionLaboratorio.resources
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmLaboratorio.resources
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniLaboratorio.resources
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmPrincipal.resources
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\Quezada\Desktop\H\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
-=======
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.SuggestedBindingRedirects.cache
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniLaboratorio.resources
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmPrincipal.resources
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmVentas.resources
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\CCBB\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmVentas.resources
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
-C:\Users\Kevin Roa\Desktop\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionesVenta.resources
->>>>>>> origin/Kevin
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionLaboratorio.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmLaboratorio.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniLaboratorio.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmPrincipal.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionesVenta.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmVentas.resources
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\Quezada\Desktop\kl\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb

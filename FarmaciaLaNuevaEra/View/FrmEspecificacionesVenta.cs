@@ -28,7 +28,7 @@ namespace FarmaciaLaNuevaEra.View
 
         private void FrmEspecificacionesVenta_Load(object sender, EventArgs e)
         {
-            Lista = CMedicamentos.MostrarMedicamentos();
+            Lista = CMedicamentos.MostrarMedicamentos(true);
             if (Lista is null)
                 return;
             for(int i = 0; i < Lista.Rows.Count; i++)
@@ -44,7 +44,7 @@ namespace FarmaciaLaNuevaEra.View
             if(VerificarCantidad() && VerificarSeleccion())
             {
                 Medicamentos.Add(Convert.ToInt32(dgvMedicamento.Rows[row].Cells[0].Value));
-                Lista = CMedicamentos.MostrarMedicamentos();
+                Lista = CMedicamentos.MostrarMedicamentos(true);
                 for (int i = 0; i < Lista.Rows.Count; i++)
                 {
                     if(Lista.Rows[i]["Id del Medicamento"].ToString() == Medicamentos.Last().ToString())
@@ -76,7 +76,7 @@ namespace FarmaciaLaNuevaEra.View
             if(dgvMedicamentoAñadidos.Rows.Count > 0)
             {
                 CPedidos.InsertarPedido(0);
-                Lista = CMedicamentos.MostrarMedicamentos();
+                Lista = CMedicamentos.MostrarMedicamentos(true);
                 bool bandera = true;
                 int index = 0,
                 id = CPedidos.UltimoRegistro().Rows.Count > 0 ?
