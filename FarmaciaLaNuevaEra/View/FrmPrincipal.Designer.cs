@@ -42,6 +42,8 @@ namespace FarmaciaLaNuevaEra.View
             this.btnPedidos = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLaboratorio = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.IngresoDinero = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -63,7 +65,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblFuncionalidad.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuncionalidad.Location = new System.Drawing.Point(100, 58);
             this.lblFuncionalidad.Name = "lblFuncionalidad";
-            this.lblFuncionalidad.Size = new System.Drawing.Size(260, 32);
+            this.lblFuncionalidad.Size = new System.Drawing.Size(259, 32);
             this.lblFuncionalidad.TabIndex = 0;
             this.lblFuncionalidad.Text = "Funcionalidades";
             // 
@@ -131,6 +133,7 @@ namespace FarmaciaLaNuevaEra.View
             this.btnPedidos.PressedState.ImageSize = new System.Drawing.Size(70, 70);
             this.btnPedidos.Size = new System.Drawing.Size(114, 96);
             this.btnPedidos.TabIndex = 5;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // guna2ImageButton1
             // 
@@ -163,12 +166,46 @@ namespace FarmaciaLaNuevaEra.View
             this.btnLaboratorio.TabIndex = 7;
             this.btnLaboratorio.Click += new System.EventHandler(this.btnLaboratorio_Click);
             // 
+            // IngresoDinero
+            // 
+            this.IngresoDinero.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.IngresoDinero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IngresoDinero.HoverState.ImageSize = new System.Drawing.Size(75, 75);
+            this.IngresoDinero.Image = ((System.Drawing.Image)(resources.GetObject("IngresoDinero.Image")));
+            this.IngresoDinero.ImageOffset = new System.Drawing.Point(0, 0);
+            this.IngresoDinero.ImageRotate = 0F;
+            this.IngresoDinero.ImageSize = new System.Drawing.Size(80, 80);
+            this.IngresoDinero.Location = new System.Drawing.Point(30, 420);
+            this.IngresoDinero.Name = "IngresoDinero";
+            this.IngresoDinero.PressedState.ImageSize = new System.Drawing.Size(70, 70);
+            this.IngresoDinero.Size = new System.Drawing.Size(99, 92);
+            this.IngresoDinero.TabIndex = 8;
+            this.IngresoDinero.Click += new System.EventHandler(this.IngresoDinero_Click);
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(75, 75);
+            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
+            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton2.ImageRotate = 0F;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(80, 80);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(211, 420);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(70, 70);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(99, 92);
+            this.guna2ImageButton2.TabIndex = 9;
+            this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.guna2ImageButton2);
+            this.Controls.Add(this.IngresoDinero);
             this.Controls.Add(this.btnLaboratorio);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.btnPedidos);
@@ -199,5 +236,7 @@ namespace FarmaciaLaNuevaEra.View
         private Guna.UI2.WinForms.Guna2ImageButton btnPedidos;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ImageButton btnLaboratorio;
+        private Guna.UI2.WinForms.Guna2ImageButton IngresoDinero;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
     }
 }

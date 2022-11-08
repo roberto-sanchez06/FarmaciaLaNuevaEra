@@ -97,3 +97,5 @@ C:\Users\larry\Desktop\proyectofinal\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\D
 C:\Users\larry\Desktop\proyectofinal\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
 C:\Users\larry\Desktop\proyectofinal\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
 C:\Users\larry\Desktop\proyectofinal\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\larry\Desktop\proyectofinal\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.IngresoDinero.resources
+C:\Users\larry\Desktop\proyectofinal\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.Donacion.resources

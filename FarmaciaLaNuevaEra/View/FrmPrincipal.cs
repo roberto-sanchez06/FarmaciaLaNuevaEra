@@ -49,5 +49,26 @@ namespace FarmaciaLaNuevaEra.View
             this.Show();
 
         }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IngresoDinero_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            IngresoDinero money = new IngresoDinero();
+            money.ShowDialog();
+            this.Show();
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Donacion  donacion = new Donacion();
+            donacion.ShowDialog();
+            this.Show();
+        }
     }
 }
