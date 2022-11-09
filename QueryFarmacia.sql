@@ -164,19 +164,44 @@ alter table Usuario
 add Estado varchar(30) not null
 
 
-Create table BalanceGeneral(
+create table BalanceGeneral(
 	IdBalanceGeneral int primary key identity(0, 1),
-	Nombre varchar(max) not null,
-	Valor money null,
-	Tipo varchar(max) null,
-	Fecha Datetime null
+	Nombre varchar(Max) not null,
+	Valor money,
+	Tipo bit,
+	Fecha datetime
 )
+go
 
-
-create table EstadoDeResultado(
-	IdEstadoDeResultado int primary key identity(0, 1),
-	Nombre varchar(max) not null,
-	Valor money null,
-	Tipo varchar(max) null,
-	Fecha Datetime null
+create table EstadoResultado(
+	IdEstadoResultado int primary key identity(0, 1),
+	Nombre varchar(Max) not null,
+	Valor money,
+	Tipo bit,
+	Fecha datetime
 )
+go
+
+alter table Empleado
+add Activo bit not null
+
+alter table Empleado
+drop column Nombre 
+
+alter table Empleado
+add Nombres varchar(60) not null
+
+alter table Empleado 
+add Apellidos varchar(60) not null
+
+--alter table Empleado 
+--add Nombre varchar(30) not null 
+
+alter table Empleado
+drop column Activo 
+
+alter table Empleado
+add Estado varchar(20) not null
+
+backup database Farmacia
+to disk = 'D:\BackupFarmacia.bak'
