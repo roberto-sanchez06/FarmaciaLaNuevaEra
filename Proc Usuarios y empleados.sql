@@ -94,7 +94,7 @@ as
 --añadiendo empleado a administrador 
 select * from Usuario
 select * from Empleado
-exec InsertarEmpleado 'Oscar Antonio', 'Muñoz Sánchez', 'Gerente', 30000
+
 update Usuario set IdEmpleado = 1 where IdUsuario = 0
 
 --añadiendo funcion para validar administrador
@@ -161,3 +161,12 @@ end
 
 update Empleado set Estado = 'Activo' where IdEmpleado = 0
 update Usuario set Estado = 'Habilitado' where IdUsuario = 4
+
+--ejectuando procedimientos
+exec InsertarEmpleado 'Oscar Antonio', 'Muñoz Sánchez', 'Gerente', 30000
+exec Insertar_Usuario 'admin1', '123', 'Administrador', 1
+
+delete from Usuario where IdUsuario <4
+select * from Usuario
+
+drop proc [dbo].[MostrarEmpleadoPorID]

@@ -20,7 +20,7 @@ insert into Usuario(NombrePerfil, Contra, Rolconexion, Estado, idEmpleado) value
  exec Insertar_Usuario 'EmpleadoJuan', 'juanEmpleado123', 'Empleado', null
 
 --Procedimiento para validar acceso
-create procedure [dbo].[Validar_Acceso]
+alter procedure [dbo].[Validar_Acceso]
 @nombrePerfil varchar(30),
 @contraseña varchar(50)
 as
@@ -30,10 +30,13 @@ if exists (Select NombrePerfil from Usuario
 			 select 'Acceso Exitoso' as Resultado,
 			 (Select Rolconexion from Usuario
               where  cast (DECRYPTBYPASSPHRASE(@contraseña, Contra) as Varchar(100)) = @contraseña
-			 and NombrePerfil = @nombrePerfil and Estado = 'Habilitado') as Rol
+			 and NombrePerfil = @nombrePerfil and Estado = 'Habilitado') as Rol,
 			 --(Select IdUsuario from Usuario
     --          where  cast (DECRYPTBYPASSPHRASE(@contraseña, Contra) as Varchar(100)) = @contraseña
 			 --and NombrePerfil = @nombrePerfil and Estado = 'Habilitado') as IdUsuario
+			 (Select IdEmpleado from Usuario
+              where  cast (DECRYPTBYPASSPHRASE(@contraseña, Contra) as Varchar(100)) = @contraseña
+			 and NombrePerfil = @nombrePerfil and Estado = 'Habilitado') as IdEmpleado
 			 else
 			 Select 'Acceso Denegado' as Resultado
 
@@ -46,3 +49,5 @@ grant execute on schema:: dbo to adminFarmacia
 
 select * from Usuario
 select * from Empleado
+
+select * from Medicamento
