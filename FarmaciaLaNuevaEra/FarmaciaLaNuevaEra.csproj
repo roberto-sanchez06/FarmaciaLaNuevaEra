@@ -57,9 +57,11 @@
     <Compile Include="Controller\CMedicamentos.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Data\Conexion.cs" />
+    <Compile Include="Data\DDetalleCompra.cs" />
     <Compile Include="Data\DEfectivo.cs" />
     <Compile Include="Data\DLaboratorio.cs" />
     <Compile Include="Data\DMedicamentos.cs" />
+    <Compile Include="Data\DOrdenCompra.cs" />
     <Compile Include="Data\DUsuario.cs" />
     <Compile Include="Data\Helper\Parametros.cs" />
     <Compile Include="Program.cs" />
