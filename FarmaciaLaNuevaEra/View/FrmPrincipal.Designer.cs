@@ -42,6 +42,7 @@ namespace FarmaciaLaNuevaEra.View
             this.btnPedidos = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLaboratorio = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.NPPedidos = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -63,7 +64,7 @@ namespace FarmaciaLaNuevaEra.View
             this.lblFuncionalidad.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuncionalidad.Location = new System.Drawing.Point(100, 58);
             this.lblFuncionalidad.Name = "lblFuncionalidad";
-            this.lblFuncionalidad.Size = new System.Drawing.Size(260, 32);
+            this.lblFuncionalidad.Size = new System.Drawing.Size(259, 32);
             this.lblFuncionalidad.TabIndex = 0;
             this.lblFuncionalidad.Text = "Funcionalidades";
             // 
@@ -131,6 +132,7 @@ namespace FarmaciaLaNuevaEra.View
             this.btnPedidos.PressedState.ImageSize = new System.Drawing.Size(70, 70);
             this.btnPedidos.Size = new System.Drawing.Size(114, 96);
             this.btnPedidos.TabIndex = 5;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // guna2ImageButton1
             // 
@@ -162,6 +164,12 @@ namespace FarmaciaLaNuevaEra.View
             this.btnLaboratorio.Size = new System.Drawing.Size(114, 96);
             this.btnLaboratorio.TabIndex = 7;
             this.btnLaboratorio.Click += new System.EventHandler(this.btnLaboratorio_Click);
+            // 
+            // NPPedidos
+            // 
+            this.NPPedidos.Alignment = Guna.UI2.WinForms.Enums.CustomContentAlignment.TopRight;
+            this.NPPedidos.Location = new System.Drawing.Point(96, 0);
+            this.NPPedidos.TargetControl = this.btnPedidos;
             // 
             // FrmPrincipal
             // 
@@ -199,5 +207,6 @@ namespace FarmaciaLaNuevaEra.View
         private Guna.UI2.WinForms.Guna2ImageButton btnPedidos;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ImageButton btnLaboratorio;
+        private Guna.UI2.WinForms.Guna2NotificationPaint NPPedidos;
     }
 }

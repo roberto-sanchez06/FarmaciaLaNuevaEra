@@ -29,16 +29,12 @@ go
 
 create table Pedidos(
 	IdPedidos int primary key identity(0, 1),
+	IdLaboratorio int,
 	IdEmpleado int,
 	Fecha datetime not null, 
 	Estado bit not null,
 )
 go 
-drop table Pedidos
-
-alter table Pedidos
-drop constraint IdLaboratorio
-
 
 create table Laboratorio(
 	IdLaboratorio int primary key identity(0, 1),
@@ -51,6 +47,10 @@ add foreign key(IdEmpleado)
 references Empleado(IdEmpleado)
 go 
 
+alter table Pedidos
+add foreign key(IdLaboratorio)
+references Laboratorio(IdLaboratorio)
+go 
 
 create table Medicamento(
 	IdMedicamento int primary key identity(0, 1),
@@ -164,20 +164,19 @@ alter table Usuario
 add Estado varchar(30) not null
 
 
-create table BalanceGeneral(
+Create table BalanceGeneral(
 	IdBalanceGeneral int primary key identity(0, 1),
-	Nombre varchar(Max) not null,
-	Valor money,
-	Tipo bit,
-	Fecha datetime
+	Nombre varchar(max) not null,
+	Valor money null,
+	Tipo varchar(max) null,
+	Fecha Datetime null
 )
-go
 
-create table EstadoResultado(
-	IdEstadoResultado int primary key identity(0, 1),
-	Nombre varchar(Max) not null,
-	Valor money,
-	Tipo bit,
-	Fecha datetime
+
+create table EstadoDeResultado(
+	IdEstadoDeResultado int primary key identity(0, 1),
+	Nombre varchar(max) not null,
+	Valor money null,
+	Tipo varchar(max) null,
+	Fecha Datetime null
 )
-go

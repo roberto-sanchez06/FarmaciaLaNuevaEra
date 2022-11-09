@@ -1,18 +1,16 @@
 Use Farmacia
 go
 
-create Trigger VentaValidacion
+Create Trigger VentaValidacion
 on [DetalleOrdenPedido]
 for Insert 
 as 
-	Declare @cantidadMedicamentos int
-	Select @cantidadMedicamentos = inserted.CantidadPedida from Medicamento m inner join inserted on inserted.IdMedicamento = m.IdMedicamento where inserted.IdMedicamento = m.IdMedicamento
+	Declare @cantidadMedicamentos int 
+	Select @cantidadMedicamentos = Stock from Medicamento m inner join inserted on inserted.CantidadPedida = m.Stock where inserted.CantidadPedida = m.Stock
 	if(@cantidadMedicamentos >= (Select CantidadPedida from inserted))
-	begin
 	update Medicamento set Stock = Stock - @cantidadMedicamentos
 	from Medicamento m inner join inserted on inserted.IdMedicamento = m.IdMedicamento
 	where m.IdMedicamento = inserted.IdMedicamento
-	end
 	else 
 	begin 
 	update Pedidos set Estado = 0
@@ -83,7 +81,7 @@ begin
 insert into Laboratorio values(@Nombre)
 end
 
-execute Insertar_Laboratorio 'Ramos S.A'
+execute Insertar_Laboratorio 'Ramos'
 
 select * from Laboratorio
  create procedure Actualizar_Laboratorio
@@ -140,6 +138,8 @@ execute CantidadMedicamento
 
 
 */
+
+
 create procedure Venta_Validacion @IdPedido int 
 as 
 begin 
@@ -208,3 +208,148 @@ begin
 	Pedidos p on p.IdPedidos = op.IdPedidos
     where @Mes = MONTH(p.Fecha) and @Ano = YEAR(p.Fecha) and p.Estado = @Estado
 end
+
+create procedure [dbo].[Donaciones] @monto money 
+as
+begin 
+declare @monto_anterior  money
+declare @monto_total money
+set @monto_anterior = (select valor from BalanceGeneral where IdBalanceGeneral = 2)
+set @monto_total = @monto+@monto_anterior
+
+update BalanceGeneral
+set Valor = @monto_total
+where IdBalanceGeneral = 2
+
+declare @monto_anterior1  money
+declare @monto_total1 money
+set @monto_anterior1 = (select valor from BalanceGeneral where IdBalanceGeneral = 3)
+set @monto_total1 = @monto+@monto_anterior1
+
+update BalanceGeneral
+set Valor = @monto_total1
+where IdBalanceGeneral = 3
+end
+
+create procedure [dbo].[ingresar_dinero] @monto money
+as
+begin
+declare @monto_anterior  money
+declare @monto_total money
+set @monto_anterior = (select valor from BalanceGeneral where IdBalanceGeneral = 1)
+set @monto_total = @monto+@monto_anterior
+
+update BalanceGeneral
+set Valor = @monto_total
+where IdBalanceGeneral = 1
+
+declare @monto_anterior1  money
+declare @monto_total1 money
+set @monto_anterior1 = (select valor from BalanceGeneral where IdBalanceGeneral = 3)
+set @monto_total1 = @monto+@monto_anterior1
+
+update BalanceGeneral
+set Valor = @monto_total1
+where IdBalanceGeneral = 3
+end
+
+
+create procedure [dbo].[insertar_detalleCompra] @idcompra int , @idmedicamento int , @cantidad int 
+as
+begin
+insert into DetalleOrdenCompra(IdOrdenCompra, IdMedicamento, CantidadPedida) values (@idcompra, @idmedicamento, @cantidad)
+----------------------------------------------------------------------------------------------------------------------------------
+declare @montocompra money 
+declare @precio_compra money
+declare @monto_anterior  money
+declare @monto_total money
+set @monto_anterior = (select valor from BalanceGeneral where IdBalanceGeneral = 2)
+set @precio_compra = (select PrecioCompra from Medicamento where IdMedicamento=@idmedicamento)
+set @montocompra = @precio_compra*@cantidad
+
+set @monto_total = @monto_anterior-@montocompra
+
+update BalanceGeneral
+set Valor = @monto_total
+where IdBalanceGeneral = 3
+----------------------------------------------------------------------------
+declare @stock_anterior int 
+declare @stock_total int
+set @stock_anterior = (select Stock from Medicamento where IdMedicamento=@idmedicamento)
+set @stock_total = @stock_anterior+@cantidad
+
+update Medicamento
+set Stock = @stock_total
+where IdMedicamento = @idmedicamento
+------------------------------------------------------------------------------------------------
+declare @monto_anteriorcompra  money
+declare @monto_totalcompra money
+set @monto_anteriorcompra = (select valor from EstadoResultado where IdEstadoResultado = 2)
+set @monto_totalcompra = @monto_anterior+@montocompra
+
+update EstadoResultado
+set Valor = @monto_totalcompra
+where IdEstadoResultado = 2
+end
+
+
+create procedure [dbo].[insertar_ordencompra] @idlab int
+as
+begin
+insert into OrdenCompra(IdLaboratorio, Fecha)
+values(@idlab, sysdatetime())
+end
+
+
+create procedure [dbo].[mostrar_laboratorio_activo] 
+as
+begin
+select *
+from Laboratorio
+where Estado =1
+end
+
+
+create procedure [dbo].[ultimo_idcompra] 
+as
+begin
+select top 1 IdOrdenCompra
+from OrdenCompra
+order by IdOrdenCompra desc
+end
+
+--create procedure [dbo].[Validar_Acceso]
+--@nombrePerfil varchar(30),
+--@contraseña varchar(50)
+--as
+--if exists (Select NombrePerfil from Usuario
+--            where  cast (DECRYPTBYPASSPHRASE(@contraseña, Contra) as Varchar(100)) = @contraseña
+--			 and NombrePerfil = @nombrePerfil and Estado = 'Habilitado' )
+--			 select 'Acceso Exitoso' as Resultado,
+--			 (Select Rolconexion from Usuario
+--              where  cast (DECRYPTBYPASSPHRASE(@contraseña, Contra) as Varchar(100)) = @contraseña
+--			 and NombrePerfil = @nombrePerfil and Estado = 'Habilitado') as Rol
+--			 (Select IdUsuario from Usuario
+--              where  cast (DECRYPTBYPASSPHRASE(@contraseña, Contra) as Varchar(100)) = @contraseña
+--			 and NombrePerfil = @nombrePerfil and Estado = 'Habilitado') as IdUsuario
+--			 else
+--			 Select 'Acceso Denegado' as Resultado
+
+--create procedure Insertar_Usuario
+--@nombrePerfil varchar(50),
+--@contraseña varchar(max),
+--@rol varchar(50),
+--@idEmpleado int
+--as
+--insert into Usuario(NombrePerfil, Contra, Rolconexion, Estado, idEmpleado) values
+--(@nombrePerfil, ENCRYPTBYPASSPHRASE( @contraseña,  @contraseña), @rol, 'Habilitado', @idEmpleado)
+
+
+create procedure [dbo].[verificar_efectivo] @monto_total money
+as
+declare @efectivo money
+set @efectivo = (select valor from BalanceGeneral where IdBalanceGeneral = 3)
+if @efectivo<@monto_total
+select 'invalido'
+else 
+select 'valido'

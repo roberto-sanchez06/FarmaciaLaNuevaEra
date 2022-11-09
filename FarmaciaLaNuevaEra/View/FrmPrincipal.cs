@@ -39,6 +39,7 @@ namespace FarmaciaLaNuevaEra.View
         private void FrmPrincipal_Activated(object sender, EventArgs e)
         {
             this.NPMedicamentos.Text = CMedicamentos.CantidadMedicamentos().ToString();
+
         }
 
         private void btnLaboratorio_Click(object sender, EventArgs e)
@@ -48,6 +49,14 @@ namespace FarmaciaLaNuevaEra.View
             frmLaboratorio.ShowDialog();
             this.Show();
 
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmVentas frmVentas = new FrmVentas();
+            frmVentas.ShowDialog();
+            this.Show();
         }
     }
 }
