@@ -41,7 +41,7 @@ namespace FarmaciaLaNuevaEra.Data
             }
             return dtResultado;
         }
-        public string InsertarDetalleOrdenPedido(DDetalleCompra detalleOrdencompra)
+        public static string InsertarDetalleOrdenCompra(DDetalleCompra detalleOrdencompra)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -68,6 +68,33 @@ namespace FarmaciaLaNuevaEra.Data
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return rpta;
+        }
+        public static int UltimoIdCompra()
+        {
+            int Cantidad = 0;
+            DataTable DtResultado = new DataTable("CantidadMedicamento");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "ultimo_idcompra";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+                DataRow dr;
+                dr = DtResultado.Rows[0];
+                Cantidad = Convert.ToInt32(dr["IdOrdenCompra"]);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return Cantidad;
         }
     }
 }

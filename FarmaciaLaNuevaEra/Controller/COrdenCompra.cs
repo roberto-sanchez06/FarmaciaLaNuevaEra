@@ -10,9 +10,9 @@ namespace FarmaciaLaNuevaEra.Controller
 {
     public class COrdenCompra
     {
-        public static DataTable Mostrar_labs()
+       public static DataTable BuscarMedicamentoPorIdLaboratorio(int IdLaboratorio)
         {
-            return DOrdenCompra.LaboratorioActivo();
+            return DOrdenCompra.BuscarMedicamentoPorIdLaboratorio(IdLaboratorio);
         }
     }
 }

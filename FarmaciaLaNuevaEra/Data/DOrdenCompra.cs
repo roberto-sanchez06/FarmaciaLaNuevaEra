@@ -61,6 +61,29 @@ namespace FarmaciaLaNuevaEra.Data
             }
             return dtResultado;
         }
-        
+        public static DataTable BuscarMedicamentoPorIdLaboratorio(int IdLaboratorio)
+        {
+
+            DataTable DtResultado = new DataTable("MostrarMedicamentos");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "BuscarMedicamentoPorIdLaboratorio";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.Add(Parametros.parametro("@idLaboratorio", SqlDbType.Int, 0, IdLaboratorio));
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
     }
 }
