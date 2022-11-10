@@ -52,10 +52,7 @@ namespace FarmaciaLaNuevaEra.View
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmCompra compra = new frmCompra();
-            compra.ShowDialog();
-            this.Show();
+           
         }
 
         private void IngresoDinero_Click(object sender, EventArgs e)

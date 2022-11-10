@@ -129,5 +129,10 @@ namespace FarmaciaLaNuevaEra.View
                 dgvMedicamentos.DataSource = CMedicamentos.MostrarMedicamentos(false);
             }
         }
+
+        private void dgvMedicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

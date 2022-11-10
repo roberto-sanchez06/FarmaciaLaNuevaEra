@@ -52,9 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CDetalleOrdenCompra.cs" />
     <Compile Include="Controller\CEfectivo.cs" />
     <Compile Include="Controller\CLaboratorio.cs" />
     <Compile Include="Controller\CMedicamentos.cs" />
+    <Compile Include="Controller\COrdenCompra.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Data\Conexion.cs" />
     <Compile Include="Data\DDetalleCompra.cs" />
@@ -140,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCompra.resx">
+      <DependentUpon>frmCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmEspecificacionLaboratorio.resx">
       <DependentUpon>FrmEspecificacionLaboratorio.cs</DependentUpon>

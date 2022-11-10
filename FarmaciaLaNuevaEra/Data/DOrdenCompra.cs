@@ -61,28 +61,6 @@ namespace FarmaciaLaNuevaEra.Data
             }
             return dtResultado;
         }
-        public static DataTable LaboratorioActivo()
-        {
-            DataTable dtResultado = new DataTable();
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {    // Cargando el conexión al servidor
-                SqlCon.ConnectionString = Conexion.Cn;
-                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "mostrar_laboratorio_activo";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                SqlDat.Fill(dtResultado);
-
-            }
-            catch (Exception ex)
-            {
-                dtResultado = null;
-            }
-            return dtResultado;
-        }
+        
     }
 }
