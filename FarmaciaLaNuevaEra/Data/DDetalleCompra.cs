@@ -15,7 +15,7 @@ namespace FarmaciaLaNuevaEra.Data
         public int idMedicamento { get; set; }
         public int CantidadPedida { get; set; }
 
-        public DataTable Verificar_Efectivo(decimal monto)
+        public static  DataTable Verificar_Efectivo(decimal monto)
         {
 
             DataTable dtResultado = new DataTable();

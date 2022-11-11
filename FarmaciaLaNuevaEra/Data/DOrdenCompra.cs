@@ -11,7 +11,7 @@ namespace FarmaciaLaNuevaEra.Data
 {
     public  class DOrdenCompra
     {
-        public string Insertar_OrdenCompra(int idlabotarorio)
+        public static string Insertar_OrdenCompra(int idlabotarorio)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();

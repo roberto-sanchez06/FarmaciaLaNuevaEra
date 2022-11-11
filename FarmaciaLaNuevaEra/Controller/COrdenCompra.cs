@@ -14,5 +14,13 @@ namespace FarmaciaLaNuevaEra.Controller
         {
             return DOrdenCompra.BuscarMedicamentoPorIdLaboratorio(IdLaboratorio);
         }
+        public static string insertar_orden_compra(int idlaboratorio)
+        {
+            return DOrdenCompra.Insertar_OrdenCompra(idlaboratorio);
+        }
+        public static DataTable Ultimoidcompra()
+        {
+            return DOrdenCompra.Ultimoidcompra();
+        }
     }
 }
