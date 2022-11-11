@@ -15,6 +15,7 @@ namespace FarmaciaLaNuevaEra.View
     public partial class FrmVentas : Form
     {
         private DataTable table;
+        public int idEmpleado;
         public FrmVentas()
         {
             InitializeComponent();
@@ -30,11 +31,11 @@ namespace FarmaciaLaNuevaEra.View
         {
             FrmEspecificacionesVenta frmEspecificacionesVenta = new FrmEspecificacionesVenta();
             frmEspecificacionesVenta.ShowDialog();
+            frmEspecificacionesVenta.idEmpleado = idEmpleado;
         }
 
         private void FrmVentas_Activated(object sender, EventArgs e)
         {
-            //Estoy arreglando la fecha, solo falta pasar la fecha a la columna
             table = CPedidos.MostrarPedidos(DateTime.Today.Month, DateTime.Today.Year);
             if(table is null)
             {
@@ -48,7 +49,6 @@ namespace FarmaciaLaNuevaEra.View
                 CultureInfo provider = new CultureInfo("es-ES");
                 string FechaFormateada = fecha.ToString("dd", provider) + "-" + 
                     fecha.ToString("MM", provider)+ "-" + fecha.ToString("yyyy", provider);
-                CPedidos.VentaValidacion(Convert.ToInt32(table.Rows[i]["Id del Pedido"].ToString()));
                 string cadena = Row.ItemArray[3].ToString();
                 if (cadena == "False")
                 {
@@ -90,38 +90,40 @@ namespace FarmaciaLaNuevaEra.View
             gunaChart2.YAxes.Display = false;
             DataTable piv = new DataTable();
             var data = new Guna.Charts.WinForms.GunaPieDataset();
+            DataRow dr;
 
             gunaChart2.Datasets.Clear();
-            try
-            {
-                piv = CDetalleOrdenPedido.VentasEstado(DateTime.Today.Month,
+
+            piv = CDetalleOrdenPedido.VentasEstado(DateTime.Today.Month,
                 DateTime.Today.Year, 1);
-                double VentasSatisfechas = Convert.ToDouble(piv.Rows[0]["Cantidad Vendida"].ToString());
-                data.DataPoints.Add("Ventas satisfechos", VentasSatisfechas);
-
-                gunaChart2.Datasets.Add(data);
-
-                gunaChart2.Update();
-            }
-            catch
+            if (!(piv is null))
             {
-                
-            }
-            try
-            {
+                dr = piv.Rows[0];
+                if (!(dr.ItemArray[0].ToString() == ""))
+                {
+                    double VentasSatisfechas = Convert.ToDouble(piv.Rows[0]["Cantidad Vendida"].ToString());
+                    data.DataPoints.Add("Ventas satisfechos del mes", VentasSatisfechas);
 
-                piv = CDetalleOrdenPedido.VentasEstado(DateTime.Today.Month,
+                    gunaChart2.Datasets.Add(data);
+
+                    gunaChart2.Update();
+                }
+
+            }
+            piv = CDetalleOrdenPedido.VentasEstado(DateTime.Today.Month,
                 DateTime.Today.Year, 0);
-                double VentasInsatisfechas = Convert.ToDouble(piv.Rows[0]["Cantidad Vendida"].ToString());
-                data.DataPoints.Add("Ventas insatisfechos", VentasInsatisfechas);
-
-                gunaChart2.Datasets.Add(data);
-
-                gunaChart2.Update();
-            }
-            catch
+            if (!(piv is null))
             {
-               
+                dr = piv.Rows[0];
+                if (!(dr.ItemArray[0].ToString() == ""))
+                {
+                    double VentasInsatisfechas = Convert.ToDouble(piv.Rows[0]["Cantidad Vendida"].ToString());
+                    data.DataPoints.Add("Ventas insatisfechos del mes", VentasInsatisfechas);
+
+                    gunaChart2.Datasets.Add(data);
+
+                    gunaChart2.Update();
+                }
             }
         }
     }

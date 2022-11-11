@@ -41,6 +41,7 @@ namespace FarmaciaLaNuevaEra.View
                         MessageBox.Show("Bienvenido al Sistema", "Farmacia La Nueva Era", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmPrincipal frmPrincipal = new FrmPrincipal(Rol);
                         frmPrincipal.Show();
+                        frmPrincipal.idEmpleado = idEmpleado;
                         this.Hide();
                     }
                     else

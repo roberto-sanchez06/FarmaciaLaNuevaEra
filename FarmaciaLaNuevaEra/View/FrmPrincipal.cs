@@ -14,10 +14,13 @@ namespace FarmaciaLaNuevaEra.View
     public partial class FrmPrincipal : Form
     {
         private string rol;
+        public int idEmpleado;
         public void AgregarTooltips()
         {
             ToolTip toolTipMedicamentos = new ToolTip();
             toolTipMedicamentos.SetToolTip( this.btnMedicamentos, "Agregar o ver medicamentos");
+            ToolTip toolTipPedidos = new ToolTip();
+            toolTipPedidos.SetToolTip(this.btnPedidos, "Agregar o ver los pedidos");
             if (rol == "Administrador")
             {
                 ToolTip tooltipEmpleados = new ToolTip();
@@ -46,6 +49,7 @@ namespace FarmaciaLaNuevaEra.View
         private void FrmPrincipal_Activated(object sender, EventArgs e)
         {
             this.NPMedicamentos.Text = CMedicamentos.CantidadMedicamentos().ToString();
+            this.NPPedidos.Text = CPedidos.MostrarPedidos(DateTime.Now.Month, DateTime.Now.Year).Rows.Count.ToString();
             if (rol == "Administrador")
             {
                 npEmpleados.Text = CEmpleado.CantidadEmpleados().ToString();
@@ -69,6 +73,7 @@ namespace FarmaciaLaNuevaEra.View
             this.Hide();
             FrmVentas frmVentas = new FrmVentas();
             frmVentas.ShowDialog();
+            frmVentas.idEmpleado = idEmpleado;
             this.Show();
         }
 

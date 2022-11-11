@@ -17,6 +17,7 @@ namespace FarmaciaLaNuevaEra.View
         private int RowMedicamento;
         private List<int> Medicamentos;
         private DataTable Lista;
+        public int idEmpleado;
         public FrmEspecificacionesVenta()
         {
             InitializeComponent();
@@ -75,7 +76,7 @@ namespace FarmaciaLaNuevaEra.View
         {
             if(dgvMedicamentoAñadidos.Rows.Count > 0)
             {
-                CPedidos.InsertarPedido(0);
+                CPedidos.InsertarPedido(idEmpleado);
                 Lista = CMedicamentos.MostrarMedicamentos(true);
                 bool bandera = true;
                 int index = 0,
@@ -134,21 +135,42 @@ namespace FarmaciaLaNuevaEra.View
             return false;
         }
 
-        private void borrarMedicamentoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Medicamentos.RemoveAt(RowMedicamento);
-            dgvMedicamentoAñadidos.Rows.Remove(dgvMedicamentoAñadidos.Rows[RowMedicamento]);
-        }
-
         private void dgvMedicamentoAñadidos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             RowMedicamento = dgvMedicamentoAñadidos.CurrentCell.RowIndex;
         }
 
-        private void dgvMedicamentoAñadidos_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvMedicamentoAñadidos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            cmsOpciones.Show(dgvMedicamentoAñadidos, e.Location);
-            cmsOpciones.Show(Cursor.Position);
+            if (e.Button == MouseButtons.Right)
+            {
+                dgvMedicamentoAñadidos.CurrentCell = dgvMedicamentoAñadidos.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                ContextMenuStrip menu = new ContextMenuStrip();
+                menu.Items.Add("Eliminar").Name = "Eliminar";
+                
+
+                //Rectangle coordenada = dgvMedicamentoAñadidos.GetCellDisplayRectangle(e.ColumnIndex,
+                //    e.RowIndex, false);
+
+                //int anchoCelda = coordenada.Location.X + 105;
+                //int alotCelda = coordenada.Location.Y + 15;
+
+                //int X = anchoCelda + dgvMedicamentoAñadidos.Location.X;
+                //int Y = alotCelda + dgvMedicamentoAñadidos.Location.Y + 15;
+
+                menu.Show(dgvMedicamentoAñadidos, e.X, e.Y);
+                menu.ItemClicked += new ToolStripItemClickedEventHandler(menuClick);
+            }
+        }
+        private void menuClick(object sender, ToolStripItemClickedEventArgs e)
+        {
+            string id = e.ClickedItem.Name.ToString();
+            if(id.Contains("Eliminar"))
+            {
+                Medicamentos.RemoveAt(RowMedicamento);
+                dgvMedicamentoAñadidos.Rows.Remove(dgvMedicamentoAñadidos.Rows[RowMedicamento]);
+            }
         }
     }
 }
