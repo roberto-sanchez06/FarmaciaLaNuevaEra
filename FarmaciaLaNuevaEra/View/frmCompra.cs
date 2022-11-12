@@ -18,7 +18,8 @@ namespace FarmaciaLaNuevaEra.View
         private DataTable detalles;
         private int IdMedicamento;
         private List<int> Medicamentos;
-        private decimal total;
+        //private decimal total;
+        private int idmedicamentoborrado;
         
         
 
@@ -45,9 +46,17 @@ namespace FarmaciaLaNuevaEra.View
 
         private void btnAgregarLaboratorio_Click(object sender, EventArgs e)
         {
-            dgvLaboratorios.DataSource = CLaboratorio.MostrarLaboratorios(true);
-            dgvLaboratorios.Visible = true;
-            dgvMedicamentos.Visible = false;
+            if(dgvMedicamentosDetalle.Rows.Count == 0)
+            {
+                dgvLaboratorios.DataSource = CLaboratorio.MostrarLaboratorios(true);
+                dgvLaboratorios.Visible = true;
+                dgvMedicamentos.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("No puede cambiar de laboratorio ya que ya tiene medicamentos en el carrito, como recomendacion eliminelos si desea cambiar de laboratorio");
+            }
+            
             
 
         }
@@ -95,50 +104,32 @@ namespace FarmaciaLaNuevaEra.View
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            //var respuesta = CDetalleOrdenCompra.verificar_efectivo(total);
-            //string respuesta1 = respuesta.Rows[0].ToString();
-            //if (respuesta1 == "valido")
-            //{
+            DataTable dato;
+            dato = CDetalleOrdenCompra.verificar_efectivo(totalizado());
+            if (dato != null)
+            {
+                if (dato.Rows.Count > 0)
+                {
+                    DataRow dr;
+                    dr = dato.Rows[0];
 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("no hay suficiente dineroi en caha");
-            //}
-            //if (dgvMedicamentosDetalle.Rows.Count > 0)
-            //{
-            //    COrdenCompra.insertar_orden_compra(idlaboratorio);
-            //    detalles = COrdenCompra.BuscarMedicamentoPorIdLaboratorio(idlaboratorio);
-            //    bool bandera = true;
-            //    int index = 0,
-            //    id = 
-            //        Convert.ToInt32(COrdenCompra.Ultimoidcompra) : 0;
-            //    while (bandera)
-            //    {
-            //        for (int i = 0; i < Lista.Rows.Count; i++)
-            //        {
-            //            if (index > Medicamentos.Count - 1 || i == Lista.Rows.Count)
-            //            {
-            //                bandera = false;
-            //                break;
-            //            }
-            //            if (Lista.Rows[i]["Id del Medicamento"].ToString() == Medicamentos[index].ToString())
-            //            {
-            //                if (index > Medicamentos.Count)
-            //                {
-            //                    bandera = false;
-            //                    break;
-            //                }
-            //                CDetalleOrdenPedido.InsertarDetalleOrdenPedido(id,
-            //                    Convert.ToInt32(Lista.Rows[i]["Id del Medicamento"].ToString()),
-            //                    Convert.ToInt32(dgvMedicamentoAñadidos.Rows[index].Cells[1].Value.ToString()));
-            //                index++;
-            //            }
-            //        }
-            //    }
-            //    this.Close();
-            //    return;
-            //}
+                    if (dr["Resultado"].ToString() == "valido" && dgvMedicamentosDetalle.Rows.Count>0)
+                    {
+                        COrdenCompra.insertar_orden_compra(idlaboratorio);
+                        var idorden = Convert.ToInt32(COrdenCompra.Ultimoidcompra().Rows[0]["Id"].ToString());
+                        foreach (DataGridViewRow item in dgvMedicamentosDetalle.Rows)
+                        {
+                            CDetalleOrdenCompra.InsertarDetalleOrdenCompra(Convert.ToInt32(item.Cells["Id_Medicamento"].Value), idorden, Convert.ToInt32(item.Cells["cantidad_comprar"].Value));
+                        }
+                        MessageBox.Show("compra realizada con exito");
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("debe agregar un medicaemnto o no tiene el efectivo para pagar esta compra");
+                    }
+                }
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -157,7 +148,7 @@ namespace FarmaciaLaNuevaEra.View
                     {
                         if (detalles.Rows[i]["Id del Medicamento"].ToString() == Medicamentos.Last().ToString())
                         {
-                            dgvMedicamentosDetalle.Rows.Add(detalles.Rows[i]["Medicamento"].ToString(), detalles.Rows[i]["Precio comprado"].ToString(),
+                            dgvMedicamentosDetalle.Rows.Add(detalles.Rows[i]["Id del Medicamento"], detalles.Rows[i]["Medicamento"].ToString(), detalles.Rows[i]["Precio comprado"].ToString(),
                             txtCantidad.Text.ToString());
                             break;
                         }
@@ -168,19 +159,39 @@ namespace FarmaciaLaNuevaEra.View
 
             }
         }
-        public void totalizado()
+        public decimal totalizado()
         {
-           
+            decimal total = 0;
             foreach (DataGridViewRow item in dgvMedicamentosDetalle.Rows)
             {
                 total += Convert.ToDecimal(item.Cells["Precio_comprado"].Value) * Convert.ToDecimal(item.Cells["cantidad_comprar"].Value);
             }
             Totall.Text = total.ToString(); 
+            return total;
         }
 
         private void frmCompra_Load(object sender, EventArgs e)
         {
             totalizado();
+        }
+
+        private void dgvMedicamentosDetalle_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idmedicamentoborrado  = Convert.ToInt32(dgvMedicamentosDetalle.Rows[e.RowIndex].Cells[0].Value);
+            RowMedicamento = dgvMedicamentosDetalle.CurrentCell.RowIndex;
+            btn_eliminar.Visible = true;
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            if(RowMedicamento >= 0)
+            {
+                Medicamentos.Remove(idmedicamentoborrado);
+                dgvMedicamentosDetalle.Rows.Remove(dgvMedicamentosDetalle.Rows[RowMedicamento]);
+                totalizado();
+                btn_eliminar.Visible = false;
+            }
+            
         }
     }
 }

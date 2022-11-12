@@ -70,5 +70,13 @@ namespace FarmaciaLaNuevaEra.View
             donacion.ShowDialog();
             this.Show();
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmCompra compra = new frmCompra();
+            compra.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -149,6 +149,7 @@ namespace FarmaciaLaNuevaEra.View
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(70, 70);
             this.guna2ImageButton1.Size = new System.Drawing.Size(114, 96);
             this.guna2ImageButton1.TabIndex = 6;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // btnLaboratorio
             // 

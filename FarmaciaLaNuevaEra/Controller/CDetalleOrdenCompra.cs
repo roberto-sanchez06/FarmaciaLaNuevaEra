@@ -14,8 +14,18 @@ namespace FarmaciaLaNuevaEra.Controller
         {
             return DDetalleCompra.Verificar_Efectivo(monto);
         }
+        public static string InsertarDetalleOrdenCompra(int idmedicamento, int idcompra, int cantidad)
+        {
+            DDetalleCompra detalleOrdencompra = new DDetalleCompra();
+            detalleOrdencompra.CantidadPedida = cantidad;
+            detalleOrdencompra.idMedicamento = idmedicamento;
+            detalleOrdencompra.idOrdenCompra = idcompra;
+
+            return DDetalleCompra.InsertarDetalleOrdenCompra(detalleOrdencompra);
+        }
 
 
-        
+
+
     }
 }
