@@ -121,7 +121,9 @@ namespace FarmaciaLaNuevaEra.View
                         {
                             CDetalleOrdenCompra.InsertarDetalleOrdenCompra(Convert.ToInt32(item.Cells["Id_Medicamento"].Value), idorden, Convert.ToInt32(item.Cells["cantidad_comprar"].Value));
                         }
+                        dgvMedicamentosDetalle.Rows.Clear();
                         MessageBox.Show("compra realizada con exito");
+                        totalizado();
                         
                     }
                     else
