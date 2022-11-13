@@ -123,3 +123,4 @@ C:\Users\CCBB\Desktop\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\Farm
 C:\Users\CCBB\Desktop\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
 C:\Users\CCBB\Desktop\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
 C:\Users\CCBB\Desktop\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\larry\Desktop\proyectofinal\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmRemito.resources

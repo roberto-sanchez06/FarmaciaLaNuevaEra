@@ -57,6 +57,7 @@
     <Compile Include="Controller\CLaboratorio.cs" />
     <Compile Include="Controller\CMedicamentos.cs" />
     <Compile Include="Controller\COrdenCompra.cs" />
+    <Compile Include="Controller\CRemito.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Data\Conexion.cs" />
     <Compile Include="Data\DDetalleCompra.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Data\DLaboratorio.cs" />
     <Compile Include="Data\DMedicamentos.cs" />
     <Compile Include="Data\DOrdenCompra.cs" />
+    <Compile Include="Data\DRemito.cs" />
     <Compile Include="Data\DUsuario.cs" />
     <Compile Include="Data\Helper\Parametros.cs" />
     <Compile Include="Program.cs" />
@@ -122,6 +124,12 @@
     <Compile Include="View\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmRemito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmRemito.Designer.cs">
+      <DependentUpon>FrmRemito.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\IngresoDinero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmRemito.resx">
+      <DependentUpon>FrmRemito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\IngresoDinero.resx">
       <DependentUpon>IngresoDinero.cs</DependentUpon>

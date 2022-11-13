@@ -124,6 +124,7 @@ namespace FarmaciaLaNuevaEra.View
                         dgvMedicamentosDetalle.Rows.Clear();
                         MessageBox.Show("compra realizada con exito");
                         totalizado();
+                        Medicamentos.Clear();
                         
                     }
                     else
