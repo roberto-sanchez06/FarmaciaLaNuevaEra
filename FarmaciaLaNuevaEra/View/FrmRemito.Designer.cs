@@ -42,6 +42,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnagregarordenpedido = new Guna.UI2.WinForms.Guna2ImageButton();
             this.dgvdetallescompra = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelorden = new System.Windows.Forms.Label();
+            this.Recibir = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnRemitir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetallescompra)).BeginInit();
             this.SuspendLayout();
@@ -161,6 +165,8 @@
             this.dgvdetallescompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvdetallescompra.ColumnHeadersHeight = 40;
             this.dgvdetallescompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvdetallescompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Recibir});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,9 +178,8 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvdetallescompra.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvdetallescompra.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvdetallescompra.Location = new System.Drawing.Point(426, 245);
+            this.dgvdetallescompra.Location = new System.Drawing.Point(80, 250);
             this.dgvdetallescompra.Name = "dgvdetallescompra";
-            this.dgvdetallescompra.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,7 +189,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvdetallescompra.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvdetallescompra.RowHeadersVisible = false;
-            this.dgvdetallescompra.Size = new System.Drawing.Size(340, 138);
+            this.dgvdetallescompra.Size = new System.Drawing.Size(360, 138);
             this.dgvdetallescompra.TabIndex = 27;
             this.dgvdetallescompra.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvdetallescompra.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -199,7 +204,7 @@
             this.dgvdetallescompra.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvdetallescompra.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvdetallescompra.ThemeStyle.HeaderStyle.Height = 40;
-            this.dgvdetallescompra.ThemeStyle.ReadOnly = true;
+            this.dgvdetallescompra.ThemeStyle.ReadOnly = false;
             this.dgvdetallescompra.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvdetallescompra.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvdetallescompra.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,12 +213,50 @@
             this.dgvdetallescompra.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvdetallescompra.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvdetallescompra.Visible = false;
+            this.dgvdetallescompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdetallescompra_CellContentClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "no Orden de compra";
+            // 
+            // labelorden
+            // 
+            this.labelorden.AutoSize = true;
+            this.labelorden.Location = new System.Drawing.Point(146, 137);
+            this.labelorden.Name = "labelorden";
+            this.labelorden.Size = new System.Drawing.Size(35, 13);
+            this.labelorden.TabIndex = 30;
+            this.labelorden.Text = "label3";
+            this.labelorden.Visible = false;
+            // 
+            // Recibir
+            // 
+            this.Recibir.HeaderText = "Recibir";
+            this.Recibir.Name = "Recibir";
+            // 
+            // btnRemitir
+            // 
+            this.btnRemitir.Location = new System.Drawing.Point(482, 310);
+            this.btnRemitir.Name = "btnRemitir";
+            this.btnRemitir.Size = new System.Drawing.Size(75, 23);
+            this.btnRemitir.TabIndex = 31;
+            this.btnRemitir.Text = "Remitir";
+            this.btnRemitir.UseVisualStyleBackColor = true;
+            this.btnRemitir.Click += new System.EventHandler(this.btnRemitir_Click);
             // 
             // FrmRemito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRemitir);
+            this.Controls.Add(this.labelorden);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvdetallescompra);
             this.Controls.Add(this.btnagregarordenpedido);
             this.Controls.Add(this.label1);
@@ -235,5 +278,9 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ImageButton btnagregarordenpedido;
         private Guna.UI2.WinForms.Guna2DataGridView dgvdetallescompra;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelorden;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Recibir;
+        private System.Windows.Forms.Button btnRemitir;
     }
 }

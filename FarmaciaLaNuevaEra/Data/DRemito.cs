@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarmaciaLaNuevaEra.Data.Helper;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -33,5 +34,111 @@ namespace FarmaciaLaNuevaEra.Data
             }
             return DtResultado;
         }
+        public static DataTable MostrarDetallesdecompra(int idcompra)
+        {
+
+            DataTable DtResultado = new DataTable("Mostrar_Detallesdecompra");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Mostrar_DetalleCompras_PorIdCompra";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.Add(Parametros.parametro("@idCompra", SqlDbType.Int, 0, idcompra));
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+        public static string Insertar_DetalleRemito(int idcompra, int idmedicamento, int cantidad, int idremito)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Insertar_DetalleRemito";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.Add(Parametros.parametro("@idcompra", SqlDbType.Int, 0, idcompra));
+                SqlCmd.Parameters.Add(Parametros.parametro("@idmedicamento", SqlDbType.Int, 0, idmedicamento));
+                SqlCmd.Parameters.Add(Parametros.parametro("@cantidad", SqlDbType.Int, 0, cantidad));
+                SqlCmd.Parameters.Add(Parametros.parametro("@idremito", SqlDbType.Int, 0, idremito));
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+
+        }
+        public static string Insertar_Remito(int idcompra)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Insertar_Remito";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.Add(Parametros.parametro("@idordencompra", SqlDbType.Int, 0, idcompra));
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+
+        }
+        public static DataTable MostrarUltimoRemito()
+        {
+
+            DataTable DtResultado = new DataTable("MostrarUltimoremito");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "Ultimo_Remito";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
+
     }
 }
