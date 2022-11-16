@@ -30,5 +30,9 @@ namespace FarmaciaLaNuevaEra.Controller
         {
             return DRemito.MostrarUltimoRemito();
         }
+        public static DataTable MostrarRemitos(int Mes, int Ano)
+        {
+            return DRemito.MostrarRemitos(Mes, Ano);
+        }
     }
 }

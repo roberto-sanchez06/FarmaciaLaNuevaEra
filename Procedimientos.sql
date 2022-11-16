@@ -138,3 +138,11 @@ execute CantidadMedicamento
 
 
 */
+
+create procedure Mostrar_Remitos @Mes int, @Ano int
+as 
+begin
+Select Remito.IdRemito, Remito.IdOrdenCompra, CONVERT(date, Remito.Fecha) as Fecha
+From Remito
+where @Mes = MONTH(Remito.Fecha) and @Ano = YEAR(Remito.Fecha)
+end

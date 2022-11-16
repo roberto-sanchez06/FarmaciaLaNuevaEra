@@ -124,3 +124,27 @@ C:\Users\CCBB\Desktop\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\Farm
 C:\Users\CCBB\Desktop\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
 C:\Users\CCBB\Desktop\repos\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
 C:\Users\larry\Desktop\proyectofinal\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmRemito.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.Donacion.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.frmCompra.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionLaboratorio.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmLaboratorio.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniLaboratorio.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmPrincipal.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmRemito.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.IngresoDinero.resources
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionesRemito.resources

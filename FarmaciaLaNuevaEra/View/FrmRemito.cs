@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,70 +14,40 @@ namespace FarmaciaLaNuevaEra.View
 {
     public partial class FrmRemito : Form
     {
-        private int idordencompra;
+        public void AgregarTooltips()
+        {
+            ToolTip toolTipAgregarRemito = new ToolTip();
+            toolTipAgregarRemito.SetToolTip(this.btnAgregarRemito, "Agregar Remito");
+        }
         public FrmRemito()
         {
             InitializeComponent();
+            AgregarTooltips();
         }
-
-        private void btnagregarordenpedido_Click(object sender, EventArgs e)
+        private void FrmRemito_Activated(object sender, EventArgs e)
         {
-            
-            
-                dgvOrdenes.DataSource = CRemito.MostrarOrdenCompra();
-                dgvOrdenes.Visible = true;
-           
-        
-           
-          
-        }
-
-        private void dgvOrdenes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
+            DataTable table = CRemito.MostrarRemitos(DateTime.Now.Month, DateTime.Now.Year);
+            if(table is null)
             {
-                idordencompra = Convert.ToInt32(dgvOrdenes.Rows[e.RowIndex].Cells[0].Value);
-                labelorden.Visible = true;
-                labelorden.Text = idordencompra.ToString();
-                dgvOrdenes.Visible = false;
-                cargardetallescompra();
-                dgvdetallescompra.Visible = true;
-                
-
-                //dgvMedicamentosDetalle.Rows[dgvMedicamentosDetalle.Rows.Count-1].Cells[dgvMedicamentosDetalle.Columns.Count-1].Value = 22;
+                return;
+            }
+            dgvOrdenes.Rows.Clear();
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                DataRow Row = table.Rows[i];
+                DateTime fecha = Convert.ToDateTime(table.Rows[i]["Fecha"].ToString());
+                CultureInfo provider = new CultureInfo("es-ES");
+                string FechaFormateada = fecha.ToString("dd", provider) + "-" +
+                    fecha.ToString("MM", provider) + "-" + fecha.ToString("yyyy", provider);
+                dgvOrdenes.Rows.Add(Row.ItemArray[0], Row.ItemArray[1], FechaFormateada);
 
             }
         }
-        private void cargardetallescompra()
-        {
-            dgvdetallescompra.DataSource = CRemito.MostrarDetallesdecompra(idordencompra);
-        }
 
-        private void dgvdetallescompra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAgregarRemito_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnRemitir_Click(object sender, EventArgs e)
-        {
-            int totalseleccion = dgvdetallescompra.Rows.Cast<DataGridViewRow>().Where(p => Convert.ToBoolean(p.Cells["Recibir"].Value)).Count();
-            if (totalseleccion >= 1)
-            {
-                CRemito.Insertar_Remito(idordencompra);
-                var idremito = Convert.ToInt32(CRemito.MostrarUltimoRemito().Rows[0]["Id"].ToString());
-                foreach (DataGridViewRow row in dgvdetallescompra.Rows)
-                {
-                    if (Convert.ToBoolean(row.Cells["Recibir"].Value))
-                    {
-                        CRemito.Insertar_DetalleRemito(idordencompra, Convert.ToInt32(row.Cells["Id Medicamento"].Value), Convert.ToInt32(row.Cells["Cantidad pedida"].Value), idremito);
-                    }
-                }
-                cargardetallescompra();
-            }
-            else
-            {
-                MessageBox.Show("no tiene ningun medicamento seleccionado para remitir a inventario");
-            }
+            FrmEspecificacionesRemito frmEspecificacionesRemito = new FrmEspecificacionesRemito();
+            frmEspecificacionesRemito.ShowDialog();
         }
     }
 }

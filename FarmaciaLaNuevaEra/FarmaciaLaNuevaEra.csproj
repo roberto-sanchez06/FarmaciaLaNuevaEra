@@ -82,6 +82,12 @@
     <Compile Include="View\frmCompra.Designer.cs">
       <DependentUpon>frmCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmEspecificacionesRemito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEspecificacionesRemito.Designer.cs">
+      <DependentUpon>FrmEspecificacionesRemito.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmEspecificacionLaboratorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCompra.resx">
       <DependentUpon>frmCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEspecificacionesRemito.resx">
+      <DependentUpon>FrmEspecificacionesRemito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmEspecificacionLaboratorio.resx">
       <DependentUpon>FrmEspecificacionLaboratorio.cs</DependentUpon>

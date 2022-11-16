@@ -28,27 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRemito));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvOrdenes = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblMedicamentos = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnagregarordenpedido = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.dgvdetallescompra = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelorden = new System.Windows.Forms.Label();
-            this.Recibir = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnRemitir = new System.Windows.Forms.Button();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.dgvOrdenes = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnAgregarRemito = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.IdRemito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvdetallescompra)).BeginInit();
             this.SuspendLayout();
+            // 
+            // guna2AnimateWindow1
+            // 
+            guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_ACTIVATE;
+            guna2AnimateWindow1.TargetForm = this;
+            // 
+            // lblMedicamentos
+            // 
+            this.lblMedicamentos.AutoSize = true;
+            this.lblMedicamentos.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMedicamentos.Location = new System.Drawing.Point(12, 99);
+            this.lblMedicamentos.Name = "lblMedicamentos";
+            this.lblMedicamentos.Size = new System.Drawing.Size(397, 32);
+            this.lblMedicamentos.TabIndex = 24;
+            this.lblMedicamentos.Text = "Remito de Medicamentos";
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.BorderRadius = 8;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.ResizeForm = false;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 8;
+            this.guna2ShadowForm1.TargetForm = this;
             // 
             // dgvOrdenes
             // 
@@ -65,6 +94,10 @@
             this.dgvOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvOrdenes.ColumnHeadersHeight = 40;
             this.dgvOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdRemito,
+            this.IdOrden,
+            this.Fecha});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,7 +109,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvOrdenes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOrdenes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvOrdenes.Location = new System.Drawing.Point(426, 72);
+            this.dgvOrdenes.Location = new System.Drawing.Point(48, 153);
             this.dgvOrdenes.Name = "dgvOrdenes";
             this.dgvOrdenes.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -88,8 +121,8 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvOrdenes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvOrdenes.RowHeadersVisible = false;
-            this.dgvOrdenes.Size = new System.Drawing.Size(340, 138);
-            this.dgvOrdenes.TabIndex = 23;
+            this.dgvOrdenes.Size = new System.Drawing.Size(820, 528);
+            this.dgvOrdenes.TabIndex = 32;
             this.dgvOrdenes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvOrdenes.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvOrdenes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -111,176 +144,101 @@
             this.dgvOrdenes.ThemeStyle.RowsStyle.Height = 22;
             this.dgvOrdenes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvOrdenes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvOrdenes.Visible = false;
-            this.dgvOrdenes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdenes_CellClick);
             // 
-            // lblMedicamentos
+            // guna2ControlBox2
             // 
-            this.lblMedicamentos.AutoSize = true;
-            this.lblMedicamentos.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedicamentos.Location = new System.Drawing.Point(12, 24);
-            this.lblMedicamentos.Name = "lblMedicamentos";
-            this.lblMedicamentos.Size = new System.Drawing.Size(396, 32);
-            this.lblMedicamentos.TabIndex = 24;
-            this.lblMedicamentos.Text = "Remito de Medicamentos";
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.DimGray;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1020, 2);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(23, 29);
+            this.guna2ControlBox2.TabIndex = 33;
             // 
-            // label1
+            // guna2ControlBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(230, 162);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 13);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Escoja la orden de compra";
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.DimGray;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1043, 2);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(35, 29);
+            this.guna2ControlBox1.TabIndex = 34;
             // 
-            // btnagregarordenpedido
+            // guna2Elipse1
             // 
-            this.btnagregarordenpedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnagregarordenpedido.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnagregarordenpedido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnagregarordenpedido.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnagregarordenpedido.Image = ((System.Drawing.Image)(resources.GetObject("btnagregarordenpedido.Image")));
-            this.btnagregarordenpedido.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnagregarordenpedido.ImageRotate = 0F;
-            this.btnagregarordenpedido.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnagregarordenpedido.Location = new System.Drawing.Point(369, 121);
-            this.btnagregarordenpedido.Name = "btnagregarordenpedido";
-            this.btnagregarordenpedido.PressedState.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnagregarordenpedido.Size = new System.Drawing.Size(51, 54);
-            this.btnagregarordenpedido.TabIndex = 26;
-            this.btnagregarordenpedido.Click += new System.EventHandler(this.btnagregarordenpedido_Click);
+            this.guna2Elipse1.TargetControl = this.dgvOrdenes;
             // 
-            // dgvdetallescompra
+            // btnAgregarRemito
             // 
-            this.dgvdetallescompra.AllowUserToAddRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dgvdetallescompra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdetallescompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvdetallescompra.ColumnHeadersHeight = 40;
-            this.dgvdetallescompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvdetallescompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Recibir});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = null;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdetallescompra.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvdetallescompra.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvdetallescompra.Location = new System.Drawing.Point(80, 250);
-            this.dgvdetallescompra.Name = "dgvdetallescompra";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdetallescompra.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvdetallescompra.RowHeadersVisible = false;
-            this.dgvdetallescompra.Size = new System.Drawing.Size(360, 138);
-            this.dgvdetallescompra.TabIndex = 27;
-            this.dgvdetallescompra.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvdetallescompra.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvdetallescompra.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvdetallescompra.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvdetallescompra.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvdetallescompra.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvdetallescompra.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvdetallescompra.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvdetallescompra.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvdetallescompra.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvdetallescompra.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvdetallescompra.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvdetallescompra.ThemeStyle.HeaderStyle.Height = 40;
-            this.dgvdetallescompra.ThemeStyle.ReadOnly = false;
-            this.dgvdetallescompra.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvdetallescompra.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvdetallescompra.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvdetallescompra.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvdetallescompra.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvdetallescompra.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvdetallescompra.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvdetallescompra.Visible = false;
-            this.dgvdetallescompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdetallescompra_CellContentClick);
+            this.btnAgregarRemito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarRemito.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAgregarRemito.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarRemito.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnAgregarRemito.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarRemito.Image")));
+            this.btnAgregarRemito.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAgregarRemito.ImageRotate = 0F;
+            this.btnAgregarRemito.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnAgregarRemito.Location = new System.Drawing.Point(415, 77);
+            this.btnAgregarRemito.Name = "btnAgregarRemito";
+            this.btnAgregarRemito.PressedState.ImageSize = new System.Drawing.Size(38, 38);
+            this.btnAgregarRemito.Size = new System.Drawing.Size(51, 54);
+            this.btnAgregarRemito.TabIndex = 35;
+            this.btnAgregarRemito.Click += new System.EventHandler(this.btnAgregarRemito_Click);
             // 
-            // label2
+            // IdRemito
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 13);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "no Orden de compra";
+            this.IdRemito.HeaderText = "Id del Remito";
+            this.IdRemito.Name = "IdRemito";
+            this.IdRemito.ReadOnly = true;
             // 
-            // labelorden
+            // IdOrden
             // 
-            this.labelorden.AutoSize = true;
-            this.labelorden.Location = new System.Drawing.Point(146, 137);
-            this.labelorden.Name = "labelorden";
-            this.labelorden.Size = new System.Drawing.Size(35, 13);
-            this.labelorden.TabIndex = 30;
-            this.labelorden.Text = "label3";
-            this.labelorden.Visible = false;
+            this.IdOrden.HeaderText = "Id de la Orden de Compra";
+            this.IdOrden.Name = "IdOrden";
+            this.IdOrden.ReadOnly = true;
             // 
-            // Recibir
+            // Fecha
             // 
-            this.Recibir.HeaderText = "Recibir";
-            this.Recibir.Name = "Recibir";
-            // 
-            // btnRemitir
-            // 
-            this.btnRemitir.Location = new System.Drawing.Point(482, 310);
-            this.btnRemitir.Name = "btnRemitir";
-            this.btnRemitir.Size = new System.Drawing.Size(75, 23);
-            this.btnRemitir.TabIndex = 31;
-            this.btnRemitir.Text = "Remitir";
-            this.btnRemitir.UseVisualStyleBackColor = true;
-            this.btnRemitir.Click += new System.EventHandler(this.btnRemitir_Click);
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
             // 
             // FrmRemito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnRemitir);
-            this.Controls.Add(this.labelorden);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvdetallescompra);
-            this.Controls.Add(this.btnagregarordenpedido);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblMedicamentos);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.btnAgregarRemito);
+            this.Controls.Add(this.guna2ControlBox1);
+            this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.dgvOrdenes);
+            this.Controls.Add(this.lblMedicamentos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRemito";
             this.Text = "FrmRemito";
+            this.Activated += new System.EventHandler(this.FrmRemito_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvdetallescompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2DataGridView dgvOrdenes;
         private System.Windows.Forms.Label lblMedicamentos;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ImageButton btnagregarordenpedido;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvdetallescompra;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelorden;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Recibir;
-        private System.Windows.Forms.Button btnRemitir;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvOrdenes;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAgregarRemito;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdRemito;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }
