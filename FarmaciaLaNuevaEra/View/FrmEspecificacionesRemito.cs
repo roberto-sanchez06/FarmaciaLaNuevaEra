@@ -93,7 +93,9 @@ namespace FarmaciaLaNuevaEra.View
                     break;
                 }
             }
+            dgvAgregados.Visible = true;
             btnAgregar.Visible = false;
+            btnTerminar.Visible = true;
         }
 
         private void btnTerminar_Click(object sender, EventArgs e)

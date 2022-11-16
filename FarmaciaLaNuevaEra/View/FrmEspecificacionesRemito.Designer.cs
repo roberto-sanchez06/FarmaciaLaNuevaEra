@@ -53,11 +53,11 @@ namespace FarmaciaLaNuevaEra.View
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.dgvAgregados = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.flpBotones = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.IdOrdernCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreLaboratorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flpBotones = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lblTitulo2 = new System.Windows.Forms.Label();
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetallescompra)).BeginInit();
@@ -266,6 +266,7 @@ namespace FarmaciaLaNuevaEra.View
             this.btnAgregar.TabIndex = 43;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.Tile = true;
+            this.btnAgregar.Visible = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dgvAgregados
@@ -335,20 +336,6 @@ namespace FarmaciaLaNuevaEra.View
             this.dgvAgregados.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvAgregados.Visible = false;
             // 
-            // flpBotones
-            // 
-            this.flpBotones.Controls.Add(this.btnAgregar);
-            this.flpBotones.Controls.Add(this.btnTerminar);
-            this.flpBotones.Controls.Add(this.btnCancelar);
-            this.flpBotones.Location = new System.Drawing.Point(246, 367);
-            this.flpBotones.Name = "flpBotones";
-            this.flpBotones.Size = new System.Drawing.Size(414, 52);
-            this.flpBotones.TabIndex = 45;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.TargetControl = this.dgvAgregados;
-            // 
             // IdOrdernCompra
             // 
             this.IdOrdernCompra.HeaderText = "Numero de Orden de Compra";
@@ -366,6 +353,20 @@ namespace FarmaciaLaNuevaEra.View
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
+            // 
+            // flpBotones
+            // 
+            this.flpBotones.Controls.Add(this.btnAgregar);
+            this.flpBotones.Controls.Add(this.btnTerminar);
+            this.flpBotones.Controls.Add(this.btnCancelar);
+            this.flpBotones.Location = new System.Drawing.Point(246, 367);
+            this.flpBotones.Name = "flpBotones";
+            this.flpBotones.Size = new System.Drawing.Size(414, 52);
+            this.flpBotones.TabIndex = 45;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this.dgvAgregados;
             // 
             // lblTitulo2
             // 
