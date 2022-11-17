@@ -34,56 +34,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
-            Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont12 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid4 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick4 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont13 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid5 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick5 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont14 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid6 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel2 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.dgvPedidos = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.lblVentas = new System.Windows.Forms.Label();
-            this.btnAgregarVentas = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
-            this.ttAgregar = new System.Windows.Forms.ToolTip(this.components);
-            this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.gunaChart2 = new Guna.Charts.WinForms.GunaChart();
-            this.gunaPieDataset1 = new Guna.Charts.WinForms.GunaPieDataset();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblVentas = new System.Windows.Forms.Label();
+            this.btnAgregarVentas = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.ttAgregar = new System.Windows.Forms.ToolTip(this.components);
+            this.gunaPieDataset1 = new Guna.Charts.WinForms.GunaPieDataset();
+            this.btnGraficos = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
-            this.guna2ShadowPanel1.SuspendLayout();
-            this.guna2ShadowPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -190,6 +155,30 @@
             this.dgvPedidos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPedidos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id del Pedido";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // IdEmpleado
+            // 
+            this.IdEmpleado.HeaderText = "Id del empleado";
+            this.IdEmpleado.Name = "IdEmpleado";
+            this.IdEmpleado.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // lblVentas
             // 
             this.lblVentas.AutoSize = true;
@@ -217,143 +206,26 @@
             this.btnAgregarVentas.TabIndex = 11;
             this.btnAgregarVentas.Click += new System.EventHandler(this.btnAgregarVentas_Click);
             // 
-            // guna2ShadowPanel1
-            // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.gunaChart1);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(236, 30);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.ShadowDepth = 10;
-            this.guna2ShadowPanel1.ShadowShift = 10;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(467, 202);
-            this.guna2ShadowPanel1.TabIndex = 12;
-            // 
-            // gunaChart1
-            // 
-            this.gunaChart1.BackColor = System.Drawing.Color.White;
-            chartFont9.FontName = "Verdana";
-            chartFont9.Size = 10;
-            this.gunaChart1.Legend.LabelFont = chartFont9;
-            this.gunaChart1.Location = new System.Drawing.Point(20, 17);
-            this.gunaChart1.Misc.BarCornerRadius = 3;
-            this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.PaletteCustomColors.BorderColors.AddRange(new System.Drawing.Color[] {
-            System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))))});
-            this.gunaChart1.PaletteCustomColors.FillColors.AddRange(new System.Drawing.Color[] {
-            System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))))});
-            this.gunaChart1.PaletteCustomColors.PointBorderColors.AddRange(new System.Drawing.Color[] {
-            System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(103)))), ((int)(((byte)(201)))))});
-            this.gunaChart1.PaletteCustomColors.PointFillColors.AddRange(new System.Drawing.Color[] {
-            System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(103)))), ((int)(((byte)(201)))))});
-            this.gunaChart1.Size = new System.Drawing.Size(432, 167);
-            this.gunaChart1.TabIndex = 13;
-            chartFont10.FontName = "Verdana";
-            chartFont10.Size = 12;
-            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Title.Font = chartFont10;
-            chartFont11.FontName = "Verdana";
-            this.gunaChart1.Tooltips.BodyFont = chartFont11;
-            chartFont12.FontName = "Verdana";
-            chartFont12.Size = 9;
-            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Tooltips.TitleFont = chartFont12;
-            this.gunaChart1.XAxes.GridLines = grid4;
-            chartFont13.FontName = "Arial";
-            tick4.Font = chartFont13;
-            this.gunaChart1.XAxes.Ticks = tick4;
-            this.gunaChart1.YAxes.GridLines = grid5;
-            chartFont14.FontName = "Arial";
-            tick5.Font = chartFont14;
-            this.gunaChart1.YAxes.Ticks = tick5;
-            this.gunaChart1.ZAxes.GridLines = grid6;
-            chartFont15.FontName = "Arial";
-            pointLabel2.Font = chartFont15;
-            this.gunaChart1.ZAxes.PointLabels = pointLabel2;
-            chartFont16.FontName = "Arial";
-            tick6.Font = chartFont16;
-            this.gunaChart1.ZAxes.Ticks = tick6;
-            // 
-            // guna2ShadowPanel2
-            // 
-            this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel2.Controls.Add(this.gunaChart2);
-            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel2.Location = new System.Drawing.Point(721, 30);
-            this.guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel2.ShadowDepth = 10;
-            this.guna2ShadowPanel2.ShadowShift = 10;
-            this.guna2ShadowPanel2.Size = new System.Drawing.Size(333, 202);
-            this.guna2ShadowPanel2.TabIndex = 13;
-            // 
-            // gunaChart2
-            // 
-            this.gunaChart2.BackColor = System.Drawing.Color.White;
-            this.gunaChart2.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] {
-            this.gunaPieDataset1});
-            chartFont1.FontName = "Verdana";
-            this.gunaChart2.Legend.LabelFont = chartFont1;
-            this.gunaChart2.Location = new System.Drawing.Point(23, 17);
-            this.gunaChart2.Misc.BarCornerRadius = 10;
-            this.gunaChart2.Name = "gunaChart2";
-            this.gunaChart2.Size = new System.Drawing.Size(300, 167);
-            this.gunaChart2.TabIndex = 0;
-            chartFont2.FontName = "Verdanal";
-            chartFont2.Size = 12;
-            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart2.Title.Font = chartFont2;
-            chartFont3.FontName = "Verdana";
-            this.gunaChart2.Tooltips.BodyFont = chartFont3;
-            chartFont4.FontName = "Verdana";
-            chartFont4.Size = 9;
-            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart2.Tooltips.TitleFont = chartFont4;
-            this.gunaChart2.XAxes.GridLines = grid1;
-            chartFont5.FontName = "Arial";
-            tick1.Font = chartFont5;
-            this.gunaChart2.XAxes.Ticks = tick1;
-            this.gunaChart2.YAxes.GridLines = grid2;
-            chartFont6.FontName = "Arial";
-            tick2.Font = chartFont6;
-            this.gunaChart2.YAxes.Ticks = tick2;
-            this.gunaChart2.ZAxes.GridLines = grid3;
-            chartFont7.FontName = "Arial";
-            pointLabel1.Font = chartFont7;
-            this.gunaChart2.ZAxes.PointLabels = pointLabel1;
-            chartFont8.FontName = "Arial";
-            tick3.Font = chartFont8;
-            this.gunaChart2.ZAxes.Ticks = tick3;
-            // 
             // gunaPieDataset1
             // 
             this.gunaPieDataset1.Label = "Pie1";
-            this.gunaPieDataset1.TargetChart = this.gunaChart2;
             // 
-            // Id
+            // btnGraficos
             // 
-            this.Id.HeaderText = "Id del Pedido";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // IdEmpleado
-            // 
-            this.IdEmpleado.HeaderText = "Id del empleado";
-            this.IdEmpleado.Name = "IdEmpleado";
-            this.IdEmpleado.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
+            this.btnGraficos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGraficos.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnGraficos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGraficos.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnGraficos.Image = ((System.Drawing.Image)(resources.GetObject("btnGraficos.Image")));
+            this.btnGraficos.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnGraficos.ImageRotate = 0F;
+            this.btnGraficos.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnGraficos.Location = new System.Drawing.Point(160, 100);
+            this.btnGraficos.Name = "btnGraficos";
+            this.btnGraficos.PressedState.ImageSize = new System.Drawing.Size(38, 38);
+            this.btnGraficos.Size = new System.Drawing.Size(51, 54);
+            this.btnGraficos.TabIndex = 15;
+            this.btnGraficos.Click += new System.EventHandler(this.btnGraficos_Click);
             // 
             // FrmVentas
             // 
@@ -361,8 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.guna2ShadowPanel2);
-            this.Controls.Add(this.guna2ShadowPanel1);
+            this.Controls.Add(this.btnGraficos);
             this.Controls.Add(this.btnAgregarVentas);
             this.Controls.Add(this.lblVentas);
             this.Controls.Add(this.dgvPedidos);
@@ -374,8 +245,6 @@
             this.Text = "FrmVentas";
             this.Activated += new System.EventHandler(this.FrmVentas_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            this.guna2ShadowPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,15 +259,12 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvPedidos;
         private System.Windows.Forms.Label lblVentas;
         private Guna.UI2.WinForms.Guna2ImageButton btnAgregarVentas;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private System.Windows.Forms.ToolTip ttAgregar;
-        private Guna.Charts.WinForms.GunaChart gunaChart1;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Guna.Charts.WinForms.GunaChart gunaChart2;
         private Guna.Charts.WinForms.GunaPieDataset gunaPieDataset1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private Guna.UI2.WinForms.Guna2ImageButton btnGraficos;
     }
 }

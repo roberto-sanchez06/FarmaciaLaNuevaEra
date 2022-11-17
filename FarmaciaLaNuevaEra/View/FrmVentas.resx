@@ -123,10 +123,103 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>77</value>
   </metadata>
-  <metadata name="gunaPieDataset1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>459, 14</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnGraficos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        qHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN
+        5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgW
+        gpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHM
+        VQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTt
+        Q83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqo
+        eBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83m
+        QcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaC
+        lO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxV
+        Cqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1D
+        zeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4
+        FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZB
+        zFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU
+        7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUK
+        qHgWgpTtQ83mQcxVCqh4FoKU7UPN5kHMVQqoeBaClO1DzeZBzFUKqHgWgpTtQ83mQcxVCqh4FoKU7UPN
+        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
+        33YOAYBvO4cAwLedQwDg284hAPBt5xAA+LZzCAB82zkEAL7tHAIA33YOAYBvO4cAwLedQwDg284hAPBt
+        5xAA+LZzCAB82zkEAL7tHAIA33YOAYBvO4cAwLf9fX9/AKDlHAIA33YOAYBvO4cAwLedQwDg284hAPBt
+        5xAA+LZzCAB82zkEAL7tHAIA33YOAYBvO4cAwLedQwDg284hAPBt5xAA+LZzCAB82zkEAL7tHAIA33YO
+        AYBvO4cAwLedQwDg284hAPBt5xAA+LZzCAB82zkEAL7tHAIA33YOAYBvO4cAwLedQwDg284hAPBt5xAA
+        +LZzCAB82zkEAL7tHAIA33YOAYBvO4cAwLedQwDg284hAPBt5xAA+LZzCAB82zkEAL7tHAIA33YOAYBv
+        O4cAwLedQwDg284hAPBt5xAA+LZzCAB82zkEAL7tHAIA33YOAYBvO4cAwLedQwDg284hAPBt5xAA+LZz
+        CAB82zkEAL7tHAIA33YOAYBvO4cAwLedQwDg284hAPBt5xAA+LZzCAB81s/vPyqhd4ny0fxBAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
   <data name="btnAgregarVentas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -317,5 +410,8 @@
   </metadata>
   <metadata name="ttAgregar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>355, 14</value>
+  </metadata>
+  <metadata name="gunaPieDataset1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>459, 14</value>
   </metadata>
 </root>

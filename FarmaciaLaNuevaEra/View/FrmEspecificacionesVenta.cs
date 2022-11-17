@@ -76,7 +76,7 @@ namespace FarmaciaLaNuevaEra.View
         {
             if(dgvMedicamentoAñadidos.Rows.Count > 0)
             {
-                CPedidos.InsertarPedido(idEmpleado);
+                CPedidos.InsertarPedido(1);
                 Lista = CMedicamentos.MostrarMedicamentos(true);
                 bool bandera = true;
                 int index = 0,
@@ -104,6 +104,11 @@ namespace FarmaciaLaNuevaEra.View
                             index++;
                         }
                     }
+                }
+                CDetalleOrdenPedido.ValidacionDetallesOrden(id);
+                foreach (int Id in Medicamentos)
+                {
+                    CDetalleOrdenPedido.Venta(id, Id);
                 }
                 this.Close();
                 return;
@@ -148,18 +153,8 @@ namespace FarmaciaLaNuevaEra.View
 
                 ContextMenuStrip menu = new ContextMenuStrip();
                 menu.Items.Add("Eliminar").Name = "Eliminar";
-                
 
-                //Rectangle coordenada = dgvMedicamentoAñadidos.GetCellDisplayRectangle(e.ColumnIndex,
-                //    e.RowIndex, false);
-
-                //int anchoCelda = coordenada.Location.X + 105;
-                //int alotCelda = coordenada.Location.Y + 15;
-
-                //int X = anchoCelda + dgvMedicamentoAñadidos.Location.X;
-                //int Y = alotCelda + dgvMedicamentoAñadidos.Location.Y + 15;
-
-                menu.Show(dgvMedicamentoAñadidos, e.X, e.Y);
+                menu.Show(dgvMedicamentoAñadidos, new Point(e.X, e.Y));
                 menu.ItemClicked += new ToolStripItemClickedEventHandler(menuClick);
             }
         }

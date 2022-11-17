@@ -1,23 +1,6 @@
 Use Farmacia
 go
 
-Create Trigger VentaValidacion
-on [DetalleOrdenPedido]
-for Insert 
-as 
-	Declare @cantidadMedicamentos int 
-	Select @cantidadMedicamentos = Stock from Medicamento m inner join inserted on inserted.CantidadPedida = m.Stock where inserted.CantidadPedida = m.Stock
-	if(@cantidadMedicamentos >= (Select CantidadPedida from inserted))
-	update Medicamento set Stock = Stock - @cantidadMedicamentos
-	from Medicamento m inner join inserted on inserted.IdMedicamento = m.IdMedicamento
-	where m.IdMedicamento = inserted.IdMedicamento
-	else 
-	begin 
-	update Pedidos set Estado = 0
-	from Pedidos p inner join inserted on inserted.IdPedidos = p.IdPedidos
-	where inserted.IdPedidos = p.IdPedidos
-	end
-
 create trigger AumentoInventario
 on [DetalleRemito]
 for Insert 
@@ -139,26 +122,6 @@ execute CantidadMedicamento
 
 */
 
-
-create procedure Venta_Validacion @IdPedido int 
-as 
-begin 
-	declare @IdMedicamento int, @CantidadPedida int, @CantidadMedicamento int
-	declare detalleOrdenPedido Cursor for Select IdMedicamento, CantidadPedida from DetalleOrdenPedido where @IdPedido = DetalleOrdenPedido.IdPedidos
-	Open detalleOrdenPedido 
-	fetch detalleOrdenPedido into @IdMedicamento, @CantidadPedida
-	while(@@FETCH_STATUS = 0)
-	begin 
-		select @CantidadMedicamento = Medicamento.Stock from Medicamento where @IdMedicamento = Medicamento.IdMedicamento
-		if(@CantidadPedida > @CantidadMedicamento)
-		begin
-		update Pedidos set Estado = 0
-		break
-		end
-	end
-end
-
-
 create procedure Mostrar_Pedidos @Mes int, @Ano int
 as 
 begin
@@ -207,6 +170,71 @@ begin
 	from DetalleOrdenPedido op inner join Medicamento m on m.IdMedicamento = op.IdMedicamento inner join 
 	Pedidos p on p.IdPedidos = op.IdPedidos
     where @Mes = MONTH(p.Fecha) and @Ano = YEAR(p.Fecha) and p.Estado = @Estado
+end
+
+create procedure ValidacionDetalleOrden @IdPedidos int 
+as
+begin 
+	declare @IdMedicamento int, @CantidadPedida int, @Stock int
+	declare DetallePedidos cursor for select IdMedicamento, CantidadPedida from DetalleOrdenPedido op inner join 
+	Pedidos p on p.IdPedidos = op.IdPedidos where p.IdPedidos = @IdPedidos
+	open DetallePedidos
+	fetch DetallePedidos into @IdMedicamento, @CantidadPedida
+	while (@@FETCH_STATUS = 0)
+	begin 
+	Select @Stock = m.Stock from Medicamento m inner join DetalleOrdenPedido op on op.IdMedicamento = m.IdMedicamento
+	where m.IdMedicamento = @IdMedicamento
+		if (@CantidadPedida > @Stock)
+		begin 
+		Update Pedidos set Estado = 0
+		from Pedidos 
+		where IdPedidos = @IdPedidos
+		break
+		end
+		Fetch next from DetallePedidos
+	end 
+	close DetallePedidos
+	deallocate DetallePedidos
+end
+
+create procedure Venta @IdPedidos int, @IdMedicamento int
+as 
+begin
+	Declare @Estado bit 
+	Select @Estado = Estado From Pedidos where Pedidos.IdPedidos = @IdPedidos
+	if (@Estado = 1)
+	begin
+		declare	@CantidadStock int, @CantidadDetalle int
+		declare Medicamento cursor for select Stock from Medicamento where IdMedicamento = @IdMedicamento
+		open Medicamento
+		fetch Medicamento into @CantidadDetalle
+		Select @CantidadDetalle = CantidadPedida from DetalleOrdenPedido where IdPedidos = @IdPedidos and IdMedicamento = @IdMedicamento
+		UPDATE Medicamento Set Stock = Stock - @CantidadDetalle
+		where IdMedicamento = @IdMedicamento
+		close Medicamento
+		deallocate Medicamento
+	end
+end
+
+create procedure Ventas_Mensuales_Empleado @Mes int, @Ano int
+as 
+begin
+	Select em.Nombres as Nombre, Sum(m.PrecioVenta * op.CantidadPedida) as [Cantidad Vendida]
+	from DetalleOrdenPedido op inner join Pedidos p on p.IdPedidos = op.IdPedidos inner join 
+	Empleado em on em.IdEmpleado = p.IdEmpleado inner join Medicamento m on m.IdMedicamento = op.IdMedicamento
+	Where MONTH(p.Fecha) = @Mes and @Ano = YEAR(p.Fecha)
+	group by em.Nombres 
+end
+
+create procedure Ventas_Por_Meses @Ano int
+as 
+begin
+	Set Language spanish
+	Select DATENAME(MONTH, p.Fecha) as Fecha, Sum(m.PrecioVenta * op.CantidadPedida) as [Cantidad Vendida]
+	from DetalleOrdenPedido op inner join Medicamento m on m.IdMedicamento = op.IdMedicamento inner join 
+	Pedidos p on p.IdPedidos = op.IdPedidos
+    where @Ano = YEAR(p.Fecha)
+	group by DATENAME(MONTH, p.Fecha)
 end
 
 create procedure [dbo].[Donaciones] @monto money 
@@ -353,3 +381,4 @@ if @efectivo<@monto_total
 select 'invalido'
 else 
 select 'valido'
+
