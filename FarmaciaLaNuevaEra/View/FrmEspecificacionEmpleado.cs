@@ -23,7 +23,7 @@ namespace FarmaciaLaNuevaEra.View
             InitializeComponent();
             this.nuevo = true;
         }
-        public FrmEspecificacionEmpleado(int idEmpleado,string nombres, string apellidos, decimal sueldo, string cargo)
+        public FrmEspecificacionEmpleado(int idEmpleado, string nombres, string apellidos, decimal sueldo, string cargo)
         {
             InitializeComponent();
             this.nuevo = false;
@@ -43,11 +43,13 @@ namespace FarmaciaLaNuevaEra.View
                 if (nuevo)
                 {
                     CEmpleado.InsertarEmpleado(txtNombres.Text, txtApellidos.Text, cmbCargo.Text, decimal.Parse(txtSueldo.Text));
+                    MessageBox.Show("El empleado fue ingresado satisfactoriamente");
                     LimpiarCampos();
                 }
                 else
                 {
                     CEmpleado.EditarEmpleado(idEmpleado, txtNombres.Text, txtApellidos.Text, cmbCargo.Text, decimal.Parse(txtSueldo.Text));
+                    MessageBox.Show("El empleado fue actualizado satisfactoriamente");
                     this.Close();
                 }
             }
@@ -84,7 +86,7 @@ namespace FarmaciaLaNuevaEra.View
         }
         private void Verificar()
         {
-            if(string.IsNullOrWhiteSpace(txtApellidos.Text) || string.IsNullOrWhiteSpace(txtNombres.Text) || string.IsNullOrWhiteSpace(txtSueldo.Text) || cmbCargo.SelectedIndex==-1)
+            if (string.IsNullOrWhiteSpace(txtApellidos.Text) || string.IsNullOrWhiteSpace(txtNombres.Text) || string.IsNullOrWhiteSpace(txtSueldo.Text) || cmbCargo.SelectedIndex == -1)
             {
                 throw new ArgumentException("Debe de rellenar todos los campos");
             }

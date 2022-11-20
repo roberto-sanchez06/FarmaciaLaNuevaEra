@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             this.lblBuscar = new System.Windows.Forms.Label();
             this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAgregarUsuarios = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -45,14 +45,8 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnEditarUsuario = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnEliminarUsuario = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.pbAux = new System.Windows.Forms.PictureBox();
-            this.pbAux2 = new System.Windows.Forms.PictureBox();
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAux)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAux2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -181,7 +175,7 @@
             this.dgvUsuarios.ThemeStyle.RowsStyle.Height = 22;
             this.dgvUsuarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvUsuarios.SelectionChanged += new System.EventHandler(this.dgvUsuarios_SelectionChanged);
+            this.dgvUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvUsuarios_MouseClick);
             // 
             // guna2BorderlessForm1
             // 
@@ -226,76 +220,12 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(28, 28);
             this.guna2ControlBox1.TabIndex = 20;
             // 
-            // btnEditarUsuario
-            // 
-            this.btnEditarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditarUsuario.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnEditarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarUsuario.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnEditarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarUsuario.Image")));
-            this.btnEditarUsuario.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnEditarUsuario.ImageRotate = 0F;
-            this.btnEditarUsuario.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnEditarUsuario.Location = new System.Drawing.Point(298, 95);
-            this.btnEditarUsuario.Name = "btnEditarUsuario";
-            this.btnEditarUsuario.PressedState.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnEditarUsuario.Size = new System.Drawing.Size(51, 54);
-            this.btnEditarUsuario.TabIndex = 22;
-            this.btnEditarUsuario.Click += new System.EventHandler(this.btnEditarUsuario_Click);
-            // 
-            // btnEliminarUsuario
-            // 
-            this.btnEliminarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminarUsuario.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnEliminarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarUsuario.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEliminarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarUsuario.Image")));
-            this.btnEliminarUsuario.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnEliminarUsuario.ImageRotate = 0F;
-            this.btnEliminarUsuario.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(355, 95);
-            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.PressedState.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(50, 50);
-            this.btnEliminarUsuario.TabIndex = 23;
-            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
-            // 
-            // pbAux
-            // 
-            this.pbAux.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbAux.ErrorImage")));
-            this.pbAux.Image = ((System.Drawing.Image)(resources.GetObject("pbAux.Image")));
-            this.pbAux.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbAux.InitialImage")));
-            this.pbAux.Location = new System.Drawing.Point(411, 95);
-            this.pbAux.Name = "pbAux";
-            this.pbAux.Size = new System.Drawing.Size(50, 50);
-            this.pbAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAux.TabIndex = 24;
-            this.pbAux.TabStop = false;
-            this.pbAux.Visible = false;
-            // 
-            // pbAux2
-            // 
-            this.pbAux2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbAux2.ErrorImage")));
-            this.pbAux2.Image = ((System.Drawing.Image)(resources.GetObject("pbAux2.Image")));
-            this.pbAux2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbAux2.InitialImage")));
-            this.pbAux2.Location = new System.Drawing.Point(467, 95);
-            this.pbAux2.Name = "pbAux2";
-            this.pbAux2.Size = new System.Drawing.Size(50, 50);
-            this.pbAux2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAux2.TabIndex = 25;
-            this.pbAux2.TabStop = false;
-            this.pbAux2.Visible = false;
-            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.pbAux2);
-            this.Controls.Add(this.pbAux);
-            this.Controls.Add(this.btnEliminarUsuario);
-            this.Controls.Add(this.btnEditarUsuario);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.dgvUsuarios);
@@ -310,8 +240,6 @@
             this.Activated += new System.EventHandler(this.FrmUsuarios_Activated);
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAux)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAux2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,9 +256,5 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ImageButton btnEditarUsuario;
-        private Guna.UI2.WinForms.Guna2ImageButton btnEliminarUsuario;
-        private System.Windows.Forms.PictureBox pbAux;
-        private System.Windows.Forms.PictureBox pbAux2;
     }
 }

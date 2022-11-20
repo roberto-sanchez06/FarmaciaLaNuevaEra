@@ -1,4 +1,4 @@
-Create login adminFarmacia with password = 'adminF4rmac1a$123'
+alter login adminFarmacia with password = 'adminF4rmac1a$123'
 create login empleadoFarmacia with password = 'empleadoF4rmac1a$123'
 use Farmacia
 go

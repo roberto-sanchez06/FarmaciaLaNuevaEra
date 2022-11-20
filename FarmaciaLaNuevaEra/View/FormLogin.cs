@@ -39,9 +39,8 @@ namespace FarmaciaLaNuevaEra.View
                         string Rol = dato.Rows[0][1].ToString();
                         idEmpleado = int.Parse(dato.Rows[0][2].ToString());
                         MessageBox.Show("Bienvenido al Sistema", "Farmacia La Nueva Era", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmPrincipal frmPrincipal = new FrmPrincipal(Rol);
+                        FrmPrincipal frmPrincipal = new FrmPrincipal(Rol, idEmpleado);
                         frmPrincipal.Show();
-                        frmPrincipal.idEmpleado = idEmpleado;
                         this.Hide();
                     }
                     else
@@ -57,6 +56,11 @@ namespace FarmaciaLaNuevaEra.View
             {
                 MessageBox.Show("No hay conexión al Servidor", "Farmacia La Nueva Era", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            this.txtName.Focus();
         }
     }
 }

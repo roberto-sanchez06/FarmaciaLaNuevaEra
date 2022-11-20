@@ -15,7 +15,7 @@ namespace FarmaciaLaNuevaEra.View
     public partial class FrmEspecificacionUsuario : Form
     {
         private Roles rol;
-        private int idEmpleado=-1;
+        private int idEmpleado = -1;
         private int idUsuario;
         private bool nuevo;
         public FrmEspecificacionUsuario()
@@ -26,7 +26,7 @@ namespace FarmaciaLaNuevaEra.View
         public FrmEspecificacionUsuario(int id, int idEmp, string nombrePerfil, string rol, string nombreEmpleado)
         {
             InitializeComponent();
-            this.nuevo =false;
+            this.nuevo = false;
             this.idUsuario = id;
             this.idEmpleado = idEmp;
             txtNombre.Text = nombrePerfil;
@@ -44,15 +44,19 @@ namespace FarmaciaLaNuevaEra.View
         }
         private void Verificar()
         {
-            if(string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text) || string.IsNullOrWhiteSpace(txtRepetirContraseña.Text) || cmbRol.SelectedIndex == -1)
+            if ((string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text) || string.IsNullOrWhiteSpace(txtRepetirContraseña.Text) || cmbRol.SelectedIndex == -1) && nuevo)
             {
-                throw new ArgumentException("No ha rellenado todos los campos");
+                throw new ArgumentException("No ha rellenado todos los campos necesarios para insertar usuario");
             }
-            if(idEmpleado == -1)
+            if ((string.IsNullOrWhiteSpace(txtNombre.Text) || cmbRol.SelectedIndex == -1) && nuevo == false)
+            {
+                throw new ArgumentException("No ha rellenado todos los campos para actualizar usuario");
+            }
+            if (idEmpleado == -1)
             {
                 throw new ArgumentException("Debe asignarle un empleado al usuario");
             }
-            if(txtContraseña.Text != txtRepetirContraseña.Text)
+            if (txtContraseña.Text != txtRepetirContraseña.Text)
             {
                 throw new ArgumentException("Las contraseñas no coinciden");
             }
@@ -76,11 +80,14 @@ namespace FarmaciaLaNuevaEra.View
                         throw new ArgumentException("No pueden repetirse nombres de usuarios");
                     }
                     CUsuario.InsertarUsuario(idEmpleado, txtNombre.Text, cmbRol.Text, txtContraseña.Text);
+                    MessageBox.Show("El usuario fue ingresado satisfactoriamente");
                     LimpiarCampos();
                 }
                 else
                 {
-                    CUsuario.EditarUsuario(idUsuario,idEmpleado, txtNombre.Text, cmbRol.Text, txtContraseña.Text);
+                    string contra = string.IsNullOrEmpty(txtContraseña.Text) ? "No modificada" : txtContraseña.Text;
+                    CUsuario.EditarUsuario(idUsuario, idEmpleado, txtNombre.Text, cmbRol.Text, contra);
+                    MessageBox.Show("El usuario fue actualizado satisfactoriamente");
                     this.Close();
                 }
             }
@@ -101,7 +108,7 @@ namespace FarmaciaLaNuevaEra.View
         {
             FrmMiniEmpleado frmMiniEmpleado = new FrmMiniEmpleado();
             frmMiniEmpleado.ShowDialog();
-            if(frmMiniEmpleado.idEmpleado != -1)
+            if (frmMiniEmpleado.idEmpleado != -1)
             {
                 idEmpleado = frmMiniEmpleado.idEmpleado;
                 lblEmpleado.Text = frmMiniEmpleado.nombreEmpleado;

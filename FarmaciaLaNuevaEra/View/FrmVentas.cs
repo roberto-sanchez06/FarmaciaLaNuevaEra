@@ -15,12 +15,13 @@ namespace FarmaciaLaNuevaEra.View
     public partial class FrmVentas : Form
     {
         private DataTable table;
-        public int idEmpleado;
-        public FrmVentas()
+        private int idEmpleado;
+        public FrmVentas(int idEmpleado)
         {
             InitializeComponent();
             AgregarTooltip();
             table = CPedidos.MostrarPedidos(DateTime.Today.Month, DateTime.Today.Year);
+            this.idEmpleado = idEmpleado;
         }
         public void AgregarTooltip()
         {
@@ -29,9 +30,8 @@ namespace FarmaciaLaNuevaEra.View
         }
         private void btnAgregarVentas_Click(object sender, EventArgs e)
         {
-            FrmEspecificacionesVenta frmEspecificacionesVenta = new FrmEspecificacionesVenta();
+            FrmEspecificacionesVenta frmEspecificacionesVenta = new FrmEspecificacionesVenta(idEmpleado);
             frmEspecificacionesVenta.ShowDialog();
-            frmEspecificacionesVenta.idEmpleado = idEmpleado;
         }
 
         private void FrmVentas_Activated(object sender, EventArgs e)

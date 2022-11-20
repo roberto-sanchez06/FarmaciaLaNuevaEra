@@ -18,13 +18,14 @@ namespace FarmaciaLaNuevaEra.View
         private List<int> Medicamentos;
         private DataTable Lista;
         public int idEmpleado;
-        public FrmEspecificacionesVenta()
+        public FrmEspecificacionesVenta(int idEmpleado)
         {
             InitializeComponent();
             row = -1;
             Medicamentos = new List<int>();
             Lista = new DataTable();
             RowMedicamento = 0;
+            this.idEmpleado = idEmpleado;
         }
 
         private void FrmEspecificacionesVenta_Load(object sender, EventArgs e)
@@ -76,7 +77,7 @@ namespace FarmaciaLaNuevaEra.View
         {
             if(dgvMedicamentoAñadidos.Rows.Count > 0)
             {
-                CPedidos.InsertarPedido(1);
+                CPedidos.InsertarPedido(idEmpleado);
                 Lista = CMedicamentos.MostrarMedicamentos(true);
                 bool bandera = true;
                 int index = 0,

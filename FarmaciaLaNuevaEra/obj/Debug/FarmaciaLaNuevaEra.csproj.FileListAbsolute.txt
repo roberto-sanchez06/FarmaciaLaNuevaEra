@@ -121,3 +121,31 @@ C:\Users\Kevin Roa\Desktop\Git\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\F
 C:\Users\Kevin Roa\Desktop\Git\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
 C:\Users\Kevin Roa\Desktop\Git\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
 C:\Users\Kevin Roa\Desktop\Git\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.SuggestedBindingRedirects.cache
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEmpleados.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionEmpleado.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionLaboratorio.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionUsuario.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.frmGraficos.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmLaboratorio.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniEmpleado.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniLaboratorio.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmPrincipal.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionesVenta.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmUsuarios.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmVentas.resources
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb

@@ -14,7 +14,7 @@ namespace FarmaciaLaNuevaEra.View
     public partial class FrmPrincipal : Form
     {
         private string rol;
-        public int idEmpleado;
+        private int idEmpleado;
         public void AgregarTooltips()
         {
             ToolTip toolTipMedicamentos = new ToolTip();
@@ -29,10 +29,11 @@ namespace FarmaciaLaNuevaEra.View
                 tooltipEmpleados.SetToolTip(this.btnUsuarios, "Agregar o ver usuarios");
             }
         }
-        public FrmPrincipal(string rol)
+        public FrmPrincipal(string rol, int idEmpleado)
         {
             InitializeComponent();
             this.rol = rol;
+            this.idEmpleado = idEmpleado;
             AgregarTooltips();
         }
 
@@ -71,9 +72,8 @@ namespace FarmaciaLaNuevaEra.View
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmVentas frmVentas = new FrmVentas();
+            FrmVentas frmVentas = new FrmVentas(idEmpleado);
             frmVentas.ShowDialog();
-            frmVentas.idEmpleado = idEmpleado;
             this.Show();
         }
 

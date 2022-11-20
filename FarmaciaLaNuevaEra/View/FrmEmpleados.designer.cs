@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleados));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleados));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAgregarEmpleados = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblEmpleados = new System.Windows.Forms.Label();
             this.dgvEmpleados = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -42,18 +42,17 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnEditarEmpleado = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnEliminarEmpleado = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pbAux = new System.Windows.Forms.PictureBox();
-            this.pbAux2 = new System.Windows.Forms.PictureBox();
             guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAux)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAux2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // guna2AnimateWindow1
+            // 
+            guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_ACTIVATE;
+            guna2AnimateWindow1.TargetForm = this;
             // 
             // btnAgregarEmpleados
             // 
@@ -85,41 +84,41 @@
             // dgvEmpleados
             // 
             this.dgvEmpleados.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvEmpleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvEmpleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEmpleados.ColumnHeadersHeight = 40;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvEmpleados.Location = new System.Drawing.Point(62, 174);
             this.dgvEmpleados.MultiSelect = false;
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvEmpleados.RowHeadersVisible = false;
             this.dgvEmpleados.Size = new System.Drawing.Size(985, 487);
             this.dgvEmpleados.TabIndex = 12;
@@ -144,7 +143,7 @@
             this.dgvEmpleados.ThemeStyle.RowsStyle.Height = 22;
             this.dgvEmpleados.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvEmpleados.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvEmpleados.SelectionChanged += new System.EventHandler(this.dgvEmpleados_SelectionChanged);
+            this.dgvEmpleados.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvEmpleados_MouseClick);
             // 
             // txtBuscar
             // 
@@ -203,45 +202,6 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(28, 28);
             this.guna2ControlBox1.TabIndex = 15;
             // 
-            // btnEditarEmpleado
-            // 
-            this.btnEditarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEditarEmpleado.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnEditarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarEmpleado.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnEditarEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarEmpleado.Image")));
-            this.btnEditarEmpleado.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnEditarEmpleado.ImageRotate = 0F;
-            this.btnEditarEmpleado.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnEditarEmpleado.Location = new System.Drawing.Point(298, 102);
-            this.btnEditarEmpleado.Name = "btnEditarEmpleado";
-            this.btnEditarEmpleado.PressedState.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnEditarEmpleado.Size = new System.Drawing.Size(51, 54);
-            this.btnEditarEmpleado.TabIndex = 17;
-            this.btnEditarEmpleado.Click += new System.EventHandler(this.btnEditarEmpleado_Click);
-            // 
-            // btnEliminarEmpleado
-            // 
-            this.btnEliminarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminarEmpleado.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnEliminarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarEmpleado.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEliminarEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarEmpleado.Image")));
-            this.btnEliminarEmpleado.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnEliminarEmpleado.ImageRotate = 0F;
-            this.btnEliminarEmpleado.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnEliminarEmpleado.Location = new System.Drawing.Point(355, 102);
-            this.btnEliminarEmpleado.Name = "btnEliminarEmpleado";
-            this.btnEliminarEmpleado.PressedState.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnEliminarEmpleado.Size = new System.Drawing.Size(50, 50);
-            this.btnEliminarEmpleado.TabIndex = 24;
-            this.btnEliminarEmpleado.Click += new System.EventHandler(this.btnEliminarEmpleado_Click);
-            // 
-            // guna2AnimateWindow1
-            // 
-            guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_ACTIVATE;
-            guna2AnimateWindow1.TargetForm = this;
-            // 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
@@ -260,42 +220,12 @@
             // 
             this.guna2Elipse1.TargetControl = this.dgvEmpleados;
             // 
-            // pbAux
-            // 
-            this.pbAux.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbAux.ErrorImage")));
-            this.pbAux.Image = ((System.Drawing.Image)(resources.GetObject("pbAux.Image")));
-            this.pbAux.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbAux.InitialImage")));
-            this.pbAux.Location = new System.Drawing.Point(411, 102);
-            this.pbAux.Name = "pbAux";
-            this.pbAux.Size = new System.Drawing.Size(50, 50);
-            this.pbAux.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAux.TabIndex = 25;
-            this.pbAux.TabStop = false;
-            this.pbAux.Visible = false;
-            // 
-            // pbAux2
-            // 
-            this.pbAux2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbAux2.ErrorImage")));
-            this.pbAux2.Image = ((System.Drawing.Image)(resources.GetObject("pbAux2.Image")));
-            this.pbAux2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbAux2.InitialImage")));
-            this.pbAux2.Location = new System.Drawing.Point(467, 102);
-            this.pbAux2.Name = "pbAux2";
-            this.pbAux2.Size = new System.Drawing.Size(50, 50);
-            this.pbAux2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAux2.TabIndex = 26;
-            this.pbAux2.TabStop = false;
-            this.pbAux2.Visible = false;
-            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.pbAux2);
-            this.Controls.Add(this.pbAux);
-            this.Controls.Add(this.btnEliminarEmpleado);
-            this.Controls.Add(this.btnEditarEmpleado);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.lblBuscar);
@@ -307,10 +237,9 @@
             this.Name = "FrmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmEmpleados";
+            this.Activated += new System.EventHandler(this.FrmEmpleados_Activated);
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAux)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAux2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,12 +253,8 @@
         private System.Windows.Forms.Label lblBuscar;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ImageButton btnEditarEmpleado;
-        private Guna.UI2.WinForms.Guna2ImageButton btnEliminarEmpleado;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.PictureBox pbAux;
-        private System.Windows.Forms.PictureBox pbAux2;
     }
 }

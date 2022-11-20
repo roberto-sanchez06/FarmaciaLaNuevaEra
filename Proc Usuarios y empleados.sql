@@ -2,10 +2,18 @@ use Farmacia
 go
 
 --procedimientos para usuarios
-create proc ActualizarUsuario @idUsuario int,@idEmpleado int,@nombre varchar(60), @contraseña varchar(300), @rolConexion varchar(20)
+alter proc ActualizarUsuario @idUsuario int,@idEmpleado int,@nombre varchar(60), @contraseña varchar(300), @rolConexion varchar(20)
 as
-	update Usuario set NombrePerfil = @nombre, Rolconexion = @rolConexion, IdEmpleado = @idEmpleado,
-	Contra = ENCRYPTBYPASSPHRASE( @contraseña,  @contraseña) where IdUsuario = @idUsuario
+	if(@contraseña<>'No modificada')
+		begin
+			update Usuario set NombrePerfil = @nombre, Rolconexion = @rolConexion, IdEmpleado = @idEmpleado,
+			Contra = ENCRYPTBYPASSPHRASE( @contraseña,  @contraseña) where IdUsuario = @idUsuario
+		end
+	else
+		begin
+			update Usuario set NombrePerfil = @nombre, Rolconexion = @rolConexion, IdEmpleado = @idEmpleado
+			where IdUsuario = @idUsuario
+		end
 
 create proc MostrarUsuario
 as
