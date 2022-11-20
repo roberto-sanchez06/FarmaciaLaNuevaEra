@@ -148,3 +148,4 @@ C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\Fa
 C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
 C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
 C:\Users\Kevin Roa\Desktop\ab\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionesRemito.resources
+C:\Users\larry\Desktop\proyectofinal\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionesRemito.resources

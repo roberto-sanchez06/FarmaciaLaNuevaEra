@@ -49,5 +49,10 @@ namespace FarmaciaLaNuevaEra.View
             FrmEspecificacionesRemito frmEspecificacionesRemito = new FrmEspecificacionesRemito();
             frmEspecificacionesRemito.ShowDialog();
         }
+
+        private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
