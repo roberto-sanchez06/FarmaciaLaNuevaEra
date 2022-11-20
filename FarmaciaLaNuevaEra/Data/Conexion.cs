@@ -10,6 +10,6 @@ namespace FarmaciaLaNuevaEra.Data
 {
     public class Conexion
     {
-        public static string Cn = @"Data Source=WIN10-LARRY; Initial Catalog=Farmacia; user=sa; password=Larry2020&";
+        public static string Cn = @"Data Source=Localhost; Initial Catalog=Farmacia; user=adminFarmacia; password=adminF4rmac1a$123";
     }
 }

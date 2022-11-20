@@ -1,23 +1,6 @@
 Use Farmacia
 go
 
-Create Trigger VentaValidacion
-on [DetalleOrdenPedido]
-for Insert 
-as 
-	Declare @cantidadMedicamentos int 
-	Select @cantidadMedicamentos = Stock from Medicamento m inner join inserted on inserted.CantidadPedida = m.Stock where inserted.CantidadPedida = m.Stock
-	if(@cantidadMedicamentos >= (Select CantidadPedida from inserted))
-	update Medicamento set Stock = Stock - @cantidadMedicamentos
-	from Medicamento m inner join inserted on inserted.IdMedicamento = m.IdMedicamento
-	where m.IdMedicamento = inserted.IdMedicamento
-	else 
-	begin 
-	update Pedidos set Estado = 0
-	from Pedidos p inner join inserted on inserted.IdPedidos = p.IdPedidos
-	where inserted.IdPedidos = p.IdPedidos
-	end
-
 create trigger AumentoInventario
 on [DetalleRemito]
 for Insert 
@@ -138,11 +121,3 @@ execute CantidadMedicamento
 
 
 */
-
-create procedure Mostrar_Remitos @Mes int, @Ano int
-as 
-begin
-Select Remito.IdRemito, Remito.IdOrdenCompra, CONVERT(date, Remito.Fecha) as Fecha
-From Remito
-where @Mes = MONTH(Remito.Fecha) and @Ano = YEAR(Remito.Fecha)
-end

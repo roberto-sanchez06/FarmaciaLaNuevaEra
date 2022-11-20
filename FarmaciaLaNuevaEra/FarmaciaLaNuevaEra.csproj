@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CDetalleOrdenPedido.cs" />
+    <Compile Include="Controller\CEmpleado.cs" />
+    <Compile Include="Data\DDetalleOrdenPedido.cs" />
+    <Compile Include="Data\DEmpleado.cs" />
+    <Compile Include="Data\DPedidos.cs" />
+    <Compile Include="Controller\CPedidos.cs" />
     <Compile Include="Controller\CDetalleOrdenCompra.cs" />
     <Compile Include="Controller\CEfectivo.cs" />
     <Compile Include="Controller\CLaboratorio.cs" />
@@ -67,9 +73,23 @@
     <Compile Include="Data\DOrdenCompra.cs" />
     <Compile Include="Data\DRemito.cs" />
     <Compile Include="Data\DUsuario.cs" />
+    <Compile Include="Data\Enums\Cargos.cs" />
+    <Compile Include="Data\Enums\Roles.cs" />
     <Compile Include="Data\Helper\Parametros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEmpleados.designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEspecificacionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEspecificacionEmpleado.designer.cs">
+      <DependentUpon>FrmEspecificacionEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Donacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +114,18 @@
     <Compile Include="View\FrmEspecificacionLaboratorio.Designer.cs">
       <DependentUpon>FrmEspecificacionLaboratorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmEspecificacionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEspecificacionUsuario.designer.cs">
+      <DependentUpon>FrmEspecificacionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmGraficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmGraficos.Designer.cs">
+      <DependentUpon>frmGraficos.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmLaboratorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +149,12 @@
     </Compile>
     <Compile Include="View\FrmMedicamentos.Designer.cs">
       <DependentUpon>FrmMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmMiniEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmMiniEmpleado.designer.cs">
+      <DependentUpon>FrmMiniEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmMiniLaboratorio.cs">
       <SubType>Form</SubType>
@@ -150,12 +188,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\Donacion.resx">
       <DependentUpon>Donacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEspecificacionEmpleado.resx">
+      <DependentUpon>FrmEspecificacionEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCompra.resx">
       <DependentUpon>frmCompra.cs</DependentUpon>
@@ -169,17 +214,57 @@
     <EmbeddedResource Include="View\FrmEspecificacionMedicamento.resx">
       <DependentUpon>FrmEspecificacionMedicamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEspecificacionUsuario.resx">
+      <DependentUpon>FrmEspecificacionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmGraficos.resx">
+      <DependentUpon>frmGraficos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmLaboratorio.resx">
       <DependentUpon>FrmLaboratorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmMedicamentos.resx">
       <DependentUpon>FrmMedicamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmMiniEmpleado.resx">
+      <DependentUpon>FrmMiniEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmMiniLaboratorio.resx">
       <DependentUpon>FrmMiniLaboratorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="View\FrmEspecificacionesVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEspecificacionesVenta.Designer.cs">
+      <DependentUpon>FrmEspecificacionesVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmUsuarios.designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\FrmEspecificacionesVenta.resx">
+      <DependentUpon>FrmEspecificacionesVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmVentas.resx">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmRemito.resx">
       <DependentUpon>FrmRemito.cs</DependentUpon>
