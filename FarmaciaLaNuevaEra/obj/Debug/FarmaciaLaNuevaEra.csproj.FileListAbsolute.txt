@@ -149,3 +149,36 @@ C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master c
 C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete
 C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
 C:\Users\sanro\OneDrive\Escritorio\Tarea de curso base de datos I\Ramas\master commit 17 noviembre\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.AssemblyReference.cache
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.SuggestedBindingRedirects.cache
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.Properties.Resources.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.Donacion.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FormLogin.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEmpleados.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionEmpleado.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.frmCompra.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionesRemito.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionLaboratorio.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionMedicamento.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionUsuario.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.frmGraficos.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmLaboratorio.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMedicamentos.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniEmpleado.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmMiniLaboratorio.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmPrincipal.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmEspecificacionesVenta.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmUsuarios.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmVentas.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.FrmRemito.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.View.IngresoDinero.resources
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.GenerateResource.cache
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CoreCompileInputs.cache
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe.config
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.exe
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\FarmaciaLaNuevaEra.pdb
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\bin\Debug\Guna.UI2.dll
+C:\Users\larry\Desktop\merge\FarmaciaLaNuevaEra\FarmaciaLaNuevaEra\obj\Debug\FarmaciaLaNuevaEra.csproj.CopyComplete

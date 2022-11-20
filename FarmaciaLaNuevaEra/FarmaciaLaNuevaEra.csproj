@@ -58,12 +58,20 @@
     <Compile Include="Data\DEmpleado.cs" />
     <Compile Include="Data\DPedidos.cs" />
     <Compile Include="Controller\CPedidos.cs" />
+    <Compile Include="Controller\CDetalleOrdenCompra.cs" />
+    <Compile Include="Controller\CEfectivo.cs" />
     <Compile Include="Controller\CLaboratorio.cs" />
     <Compile Include="Controller\CMedicamentos.cs" />
+    <Compile Include="Controller\COrdenCompra.cs" />
+    <Compile Include="Controller\CRemito.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Data\Conexion.cs" />
+    <Compile Include="Data\DDetalleCompra.cs" />
+    <Compile Include="Data\DEfectivo.cs" />
     <Compile Include="Data\DLaboratorio.cs" />
     <Compile Include="Data\DMedicamentos.cs" />
+    <Compile Include="Data\DOrdenCompra.cs" />
+    <Compile Include="Data\DRemito.cs" />
     <Compile Include="Data\DUsuario.cs" />
     <Compile Include="Data\Enums\Cargos.cs" />
     <Compile Include="Data\Enums\Roles.cs" />
@@ -81,6 +89,24 @@
     </Compile>
     <Compile Include="View\FrmEspecificacionEmpleado.designer.cs">
       <DependentUpon>FrmEspecificacionEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Donacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Donacion.Designer.cs">
+      <DependentUpon>Donacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCompra.Designer.cs">
+      <DependentUpon>frmCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEspecificacionesRemito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEspecificacionesRemito.Designer.cs">
+      <DependentUpon>FrmEspecificacionesRemito.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmEspecificacionLaboratorio.cs">
       <SubType>Form</SubType>
@@ -142,6 +168,18 @@
     <Compile Include="View\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmRemito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmRemito.Designer.cs">
+      <DependentUpon>FrmRemito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\IngresoDinero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\IngresoDinero.Designer.cs">
+      <DependentUpon>IngresoDinero.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -152,6 +190,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Donacion.resx">
+      <DependentUpon>Donacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmEspecificacionEmpleado.resx">
       <DependentUpon>FrmEspecificacionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCompra.resx">
+      <DependentUpon>frmCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEspecificacionesRemito.resx">
+      <DependentUpon>FrmEspecificacionesRemito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmEspecificacionLaboratorio.resx">
       <DependentUpon>FrmEspecificacionLaboratorio.cs</DependentUpon>
@@ -218,6 +265,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmRemito.resx">
+      <DependentUpon>FrmRemito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\IngresoDinero.resx">
+      <DependentUpon>IngresoDinero.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
