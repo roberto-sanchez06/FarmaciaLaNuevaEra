@@ -44,11 +44,12 @@ namespace FarmaciaLaNuevaEra.View
             this.btnLaboratorio = new Guna.UI2.WinForms.Guna2ImageButton();
             this.NPPedidos = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.npEmpleados = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
-            this.npUsuarios = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.btnEmpleados = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.npUsuarios = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.btnUsuarios = new Guna.UI2.WinForms.Guna2ImageButton();
             this.IngresoDinero = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SuspendLayout();
             // 
             // guna2AnimateWindow1
@@ -185,12 +186,6 @@ namespace FarmaciaLaNuevaEra.View
             this.npEmpleados.Location = new System.Drawing.Point(96, 0);
             this.npEmpleados.TargetControl = this.btnEmpleados;
             // 
-            // npUsuarios
-            // 
-            this.npUsuarios.Alignment = Guna.UI2.WinForms.Enums.CustomContentAlignment.TopRight;
-            this.npUsuarios.Location = new System.Drawing.Point(96, 0);
-            this.npUsuarios.TargetControl = this.btnUsuarios;
-            // 
             // btnEmpleados
             // 
             this.btnEmpleados.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -206,6 +201,12 @@ namespace FarmaciaLaNuevaEra.View
             this.btnEmpleados.Size = new System.Drawing.Size(114, 96);
             this.btnEmpleados.TabIndex = 15;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
+            // npUsuarios
+            // 
+            this.npUsuarios.Alignment = Guna.UI2.WinForms.Enums.CustomContentAlignment.TopRight;
+            this.npUsuarios.Location = new System.Drawing.Point(96, 0);
+            this.npUsuarios.TargetControl = this.btnUsuarios;
             // 
             // btnUsuarios
             // 
@@ -232,7 +233,7 @@ namespace FarmaciaLaNuevaEra.View
             this.IngresoDinero.ImageOffset = new System.Drawing.Point(0, 0);
             this.IngresoDinero.ImageRotate = 0F;
             this.IngresoDinero.ImageSize = new System.Drawing.Size(80, 80);
-            this.IngresoDinero.Location = new System.Drawing.Point(30, 420);
+            this.IngresoDinero.Location = new System.Drawing.Point(282, 270);
             this.IngresoDinero.Name = "IngresoDinero";
             this.IngresoDinero.PressedState.ImageSize = new System.Drawing.Size(70, 70);
             this.IngresoDinero.Size = new System.Drawing.Size(99, 92);
@@ -248,12 +249,28 @@ namespace FarmaciaLaNuevaEra.View
             this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton2.ImageRotate = 0F;
             this.guna2ImageButton2.ImageSize = new System.Drawing.Size(80, 80);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(211, 420);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(432, 274);
             this.guna2ImageButton2.Name = "guna2ImageButton2";
             this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(70, 70);
             this.guna2ImageButton2.Size = new System.Drawing.Size(99, 92);
             this.guna2ImageButton2.TabIndex = 9;
             this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
+            // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(75, 75);
+            this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
+            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton3.ImageRotate = 0F;
+            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(80, 80);
+            this.guna2ImageButton3.Location = new System.Drawing.Point(106, 270);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(70, 70);
+            this.guna2ImageButton3.Size = new System.Drawing.Size(114, 96);
+            this.guna2ImageButton3.TabIndex = 16;
+            this.guna2ImageButton3.Click += new System.EventHandler(this.guna2ImageButton3_Click);
             // 
             // FrmPrincipal
             // 
@@ -261,6 +278,7 @@ namespace FarmaciaLaNuevaEra.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.guna2ImageButton3);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.guna2ImageButton2);
@@ -303,5 +321,6 @@ namespace FarmaciaLaNuevaEra.View
         private Guna.UI2.WinForms.Guna2NotificationPaint npUsuarios;
         private Guna.UI2.WinForms.Guna2ImageButton IngresoDinero;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
     }
 }

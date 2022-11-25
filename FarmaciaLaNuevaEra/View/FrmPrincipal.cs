@@ -140,5 +140,13 @@ namespace FarmaciaLaNuevaEra.View
             compra.ShowDialog();
             this.Show();
         }
+
+        private void guna2ImageButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmReporte frmReporte = new FrmReporte();
+            frmReporte.ShowDialog();
+            this.Show();
+        }
     }
 }

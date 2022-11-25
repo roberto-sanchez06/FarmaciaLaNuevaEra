@@ -48,6 +48,7 @@ namespace FarmaciaLaNuevaEra.View
         private void IngresoDinero_Load(object sender, EventArgs e)
         {
 
+           
         }
     }
 }
