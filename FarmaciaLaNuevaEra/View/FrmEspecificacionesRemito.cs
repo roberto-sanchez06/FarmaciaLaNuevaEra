@@ -100,16 +100,43 @@ namespace FarmaciaLaNuevaEra.View
 
         private void btnTerminar_Click(object sender, EventArgs e)
         {
-            foreach(int Id in Ids)
+            string Ids = "";
+            foreach (int Id in Ids)
             {
                 CRemito.Insertar_Remito(Id);
                 table = CRemito.MostrarDetallesdecompra(Id);
                 var IdRemito = CRemito.MostrarUltimoRemito().Rows[0]["Id"].ToString();
-                foreach(DataRow row in table.Rows)
+                foreach (DataRow row in table.Rows)
                 {
-                    CRemito.Insertar_DetalleRemito(Id, Convert.ToInt32(row.ItemArray[0].ToString()), 
+                    CRemito.Insertar_DetalleRemito(Id, Convert.ToInt32(row.ItemArray[0].ToString()),
                         Convert.ToInt32(row.ItemArray[2].ToString()), Convert.ToInt32(IdRemito));
                 }
+                table = CPedidos.MostrarPedidos(DateTime.Today.Month, DateTime.Today.Year);
+                foreach (DataRow row in table.Rows)
+                {
+                    if (row.ItemArray[3].ToString() == "False")
+                    {
+                        CDetalleOrdenPedido.ValidacionDetallesOrden(Convert.ToInt32(row.ItemArray[0].ToString()));
+                        DataTable IdMedicamentos = CDetalleOrdenPedido.ObtenerIdMedicamentos(Convert.ToInt32(row.ItemArray[0].ToString()));
+                        foreach (DataRow rowMedicamento in IdMedicamentos.Rows)
+                        {
+                            CDetalleOrdenPedido.Venta(Convert.ToInt32(row.ItemArray[0].ToString()), Convert.ToInt32(rowMedicamento.ItemArray[0].ToString()));
+                        }
+                        if (Ids.Length == 0)
+                        {
+                            Ids = $"{row.ItemArray[0].ToString()}, ";
+                        }
+                        else
+                        {
+                            Ids = Ids = $"{row.ItemArray[0].ToString()}, ";
+                        }
+                    }
+                }
+                if (Ids.Length > 0)
+                    MessageBox.Show("Con la entrega de mercadería se ha entregado medicamentos a las pedidos que " +
+                    "estaban insatisfechos, los cuales tiene el No de Orden: " + Ids, "Entrega de pedidos insatisfechos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             this.Close();
         }

@@ -198,5 +198,29 @@ namespace FarmaciaLaNuevaEra.Data
             }
             return rpta;
         }
+        public static DataTable ObtenerIdMedicamentos(int IdPedidos)
+        {
+            DataTable dtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexion.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "IdMedicamentos_DePedidos";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.Add(Parametros.parametro("@IdPedidos", SqlDbType.Int, 0, IdPedidos));
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(dtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                dtResultado = null;
+            }
+            return dtResultado;
+        }
     }
 }

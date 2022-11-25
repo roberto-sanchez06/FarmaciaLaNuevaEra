@@ -111,6 +111,19 @@ namespace FarmaciaLaNuevaEra.View
                 {
                     CDetalleOrdenPedido.Venta(id, Id);
                 }
+                //Aca iria la logica de aumentar caja y ventas. Aumentaria costo de venta Y disminuiria inventario
+                DataTable piv = CEstadosFinancieros.CambiarCuentas(id);
+                var prueba = piv.Rows[0][0].ToString();
+
+                foreach (DataRow dataRow in piv.Rows)
+                {
+
+                    CEstadosFinancieros.IngresarCuenta(DateTime.Now.Month, DateTime.Now.Year, Convert.ToDouble(dataRow.ItemArray[0].ToString()), "Efectivo", 0);
+                    CEstadosFinancieros.IngresarCuenta(DateTime.Now.Month, DateTime.Now.Year, -Convert.ToDouble(dataRow.ItemArray[1].ToString()), "Inventario", 0);
+                    CEstadosFinancieros.IngresarCuenta(DateTime.Now.Month, DateTime.Now.Year, Convert.ToDouble(dataRow.ItemArray[0].ToString()), "Venta", 1);
+                    CEstadosFinancieros.IngresarCuenta(DateTime.Now.Month, DateTime.Now.Year, Convert.ToDouble(dataRow.ItemArray[1].ToString()), "Gasto de venta", 1);
+
+                }
                 this.Close();
                 return;
             }

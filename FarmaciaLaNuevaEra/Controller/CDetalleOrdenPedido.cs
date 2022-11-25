@@ -47,5 +47,9 @@ namespace FarmaciaLaNuevaEra.Controller
             detalleOrdenPedido.IdMedicamentos = IdMedicamentos;
             return detalleOrdenPedido.Venta(detalleOrdenPedido.IdPedidos, detalleOrdenPedido.IdMedicamentos);
         }
+        public static DataTable ObtenerIdMedicamentos(int IdPedidos)
+        {
+            return DDetalleOrdenPedido.ObtenerIdMedicamentos(IdPedidos);
+        }
     }
 }

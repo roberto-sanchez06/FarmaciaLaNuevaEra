@@ -73,8 +73,10 @@
   <ItemGroup>
     <Compile Include="Controller\CDetalleOrdenPedido.cs" />
     <Compile Include="Controller\CEmpleado.cs" />
+    <Compile Include="Controller\CEstadosFinancieros.cs" />
     <Compile Include="Data\DDetalleOrdenPedido.cs" />
     <Compile Include="Data\DEmpleado.cs" />
+    <Compile Include="Data\DEstadosFinancieros.cs" />
     <Compile Include="Data\DPedidos.cs" />
     <Compile Include="Controller\CPedidos.cs" />
     <Compile Include="Controller\CDetalleOrdenCompra.cs" />

@@ -21,6 +21,8 @@ namespace FarmaciaLaNuevaEra.View
             toolTipMedicamentos.SetToolTip( this.btnMedicamentos, "Agregar o ver medicamentos");
             ToolTip toolTipPedidos = new ToolTip();
             toolTipPedidos.SetToolTip(this.btnPedidos, "Agregar o ver los pedidos");
+            ToolTip toolTipRemito = new ToolTip();
+            toolTipPedidos.SetToolTip(this.btnRemito, "Agregar o ver los remitos o entrega de mercancia");
             if (rol == "Administrador")
             {
                 ToolTip tooltipEmpleados = new ToolTip();
@@ -146,6 +148,15 @@ namespace FarmaciaLaNuevaEra.View
             this.Hide();
             FrmReporte frmReporte = new FrmReporte();
             frmReporte.ShowDialog();
+            this.Show();
+        }
+
+        private void btnRemito_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            FrmRemito frmRemito = new FrmRemito();
+            frmRemito.ShowDialog();
             this.Show();
         }
     }
