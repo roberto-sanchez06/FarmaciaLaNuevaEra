@@ -90,6 +90,10 @@ namespace FarmaciaLaNuevaEra.View
             {
                 throw new ArgumentException("Debe de rellenar todos los campos");
             }
+            if (decimal.TryParse(txtSueldo.Text, out decimal resultado) && resultado <= 0)
+            {
+                throw new ArgumentException("El sueldo del empleaado no puede ser menor o igual a 0");
+            }
         }
         #endregion
     }

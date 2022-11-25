@@ -101,7 +101,6 @@ namespace FarmaciaLaNuevaEra.Data
                 SqlCmd.CommandText = "MostrarEmpleados";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
 
@@ -153,10 +152,8 @@ namespace FarmaciaLaNuevaEra.Data
 
                 //   Cargando el parámetro de Búsqueda
                 SqlCmd.Parameters.Add(Parametros.parametro("@idEmpleado", SqlDbType.Int, 0, idEmpleado));
-
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
-
             }
             catch (Exception)
             {
@@ -183,7 +180,6 @@ namespace FarmaciaLaNuevaEra.Data
                 DataRow dr;
                 dr = DtResultado.Rows[0];
                 Cantidad = Convert.ToInt32(dr["CantidadEmpleados"]);
-
             }
             catch (Exception)
             {
@@ -225,6 +221,34 @@ namespace FarmaciaLaNuevaEra.Data
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return resultado;
+        }
+        public static string RealizarPago()
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                //SqlCmd.CommandText = "PagoEmpleados";
+                SqlCmd.CommandText = "PagoEmpleado2";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                rpta = SqlCmd.ExecuteNonQuery() > 0 ? "OK" : "NO se pudo ejecutar la operación";
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
         }
         #endregion
     }

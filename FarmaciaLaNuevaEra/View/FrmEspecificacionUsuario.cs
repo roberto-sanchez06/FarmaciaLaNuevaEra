@@ -85,8 +85,7 @@ namespace FarmaciaLaNuevaEra.View
                 }
                 else
                 {
-                    string contra = string.IsNullOrEmpty(txtContraseña.Text) ? "No modificada" : txtContraseña.Text;
-                    CUsuario.EditarUsuario(idUsuario, idEmpleado, txtNombre.Text, cmbRol.Text, contra);
+                    CUsuario.EditarUsuario(idUsuario, idEmpleado, txtNombre.Text, cmbRol.Text, txtContraseña.Text);
                     MessageBox.Show("El usuario fue actualizado satisfactoriamente");
                     this.Close();
                 }

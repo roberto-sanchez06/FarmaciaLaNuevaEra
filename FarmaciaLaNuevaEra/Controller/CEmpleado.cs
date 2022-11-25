@@ -49,5 +49,9 @@ namespace FarmaciaLaNuevaEra.Controller
         {
             return DEmpleado.VerificarAdminPorEmpleado(idEmpleado);
         }
+        public static string RealizarPago()
+        {
+            return DEmpleado.RealizarPago();
+        }
     }
 }

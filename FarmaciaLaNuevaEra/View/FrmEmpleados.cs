@@ -33,11 +33,21 @@ namespace FarmaciaLaNuevaEra.View
         {
             ToolTip ttAgregar = new ToolTip();
             ttAgregar.SetToolTip(btnAgregarEmpleados, "Agregar empleado");
+            ToolTip ttPagar = new ToolTip();
+            ttPagar.SetToolTip(btnPagoEmpleados, "Pagar a los empleados");
         }
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             MostrarToolTip();
+            if (DateTime.Today.Day == 25)
+            {
+                btnPagoEmpleados.Visible = true;
+            }
+            else
+            {
+                btnPagoEmpleados.Visible = false;
+            }
         }
         private void MenuItemsActualizar_Empleado(object sender, EventArgs e)
         {
@@ -93,6 +103,28 @@ namespace FarmaciaLaNuevaEra.View
         private void FrmEmpleados_Activated(object sender, EventArgs e)
         {
             dgvEmpleados.DataSource = CEmpleado.MostrarEmpleados();
+        }
+
+        private void btnPagoEmpleados_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string rpta = CEmpleado.RealizarPago();
+                if (rpta == "OK")
+                {
+                    MessageBox.Show("El pago se ha realizado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //btnPagoEmpleados.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show(rpta, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                //btnPagoEmpleados.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
